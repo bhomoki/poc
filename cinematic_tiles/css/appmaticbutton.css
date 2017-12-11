@@ -240,22 +240,22 @@ button::-moz-focus-inner {
     margin: 0
 }
 .circlebutton.b1 {
-    background-image: url("/img/btn1.png")
+    background-image: url("../img/btn1.png")
 }
 .circlebutton.b2 {
-    background-image: url("/img/btn2.png")
+    background-image: url("../img/btn2.png")
 }
 .circlebutton.b3 {
-    background-image: url("/img/btn3.png")
+    background-image: url("../img/btn3.png")
 }
 .circlebutton.b4 {
-    background-image: url("/img/btn41.png")
+    background-image: url("../img/btn41.png")
 }
 .circlebutton.b5 {
-    background-image: url("/img/btn5.png")
+    background-image: url("../img/btn5.png")
 }
 .circlebutton.b6 {
-    background-image: url("/img/btn6.png")
+    background-image: url("../img/btn6.png")
 }
 .circlebutton.disabled {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";

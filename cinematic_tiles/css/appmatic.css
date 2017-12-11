@@ -26,7 +26,7 @@ div.x {
     overflow: hidden;
     cursor: pointer;
     width: 24px; height: 24px;
-    background: url("/img/x-gray-normal.png") 0 0 no-repeat;
+    background: url("../img/x-gray-normal.png") 0 0 no-repeat;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
     -ms-transition: all .3s ease-out;
@@ -34,7 +34,7 @@ div.x {
     transition: all .3s ease-out;
 }
 div.x:hover {
-    background-image: url("/img/x-gray-hover.png");
+    background-image: url("../img/x-gray-hover.png");
 }
 div.policypanel ul.items li div.x {
     top: 8px; right: 3px;
@@ -46,8 +46,8 @@ div.note div.x {
 div.flyout div.x#x1 {
     border: 0; padding: 0;
     width: 26px; height: 26px;
-    background: #A0A0A0 url("/img/paneclose.png") 0 0 no-repeat;
-    background: rgba(0, 0, 0, .1) url("/img/paneclose.png") 4px 3px no-repeat;
+    background: #A0A0A0 url("../img/paneclose.png") 0 0 no-repeat;
+    background: rgba(0, 0, 0, .1) url("../img/paneclose.png") 4px 3px no-repeat;
     border-radius: 0;
     top: 10px; right: 20px;
 }
@@ -89,7 +89,7 @@ div#emailaddress2 {
 .editable:focus {
     color: white;
     background-color: #202020;
-    cursor: url("/img/pencil3.png?v=2") 4 19,auto;
+    cursor: url("../img/pencil3.png?v=2") 4 19,auto;
 }
 .editable:focus {
     outline: none;
@@ -450,7 +450,7 @@ div.draghere {
     line-height: 40px;
     padding-left: 50px;
     cursor: default;
-    background: url("/img/dropw.png") no-repeat 8px 3px;
+    background: url("../img/dropw.png") no-repeat 8px 3px;
 }
 
 
@@ -679,7 +679,7 @@ div.flyout div.policy.draghere {
     padding: 0;
     border-color: white;
     background-color: transparent;
-    background-image: url("/img/dropw.png");
+    background-image: url("../img/dropw.png");
     background-position: 34px 20px;
 }
 div.flyout div.policy.draghere div.policyname {
@@ -784,7 +784,7 @@ div.appcatalog div.app {
     cursor: pointer
 }
 div.appcatalog div.app.suggest {
-    background-image: url("/img/suggestapp.png");
+    background-image: url("../img/suggestapp.png");
     background-color: white;
 }
 div.policieswrap div.policy.blank {
@@ -792,7 +792,7 @@ div.policieswrap div.policy.blank {
     cursor: default;
 }
 div.policieswrap div.policy.blank.plus {
-    background-image: url("/img/pluspolicy.png");
+    background-image: url("../img/pluspolicy.png");
     background-repeat: no-repeat;
     background-position: 30px 30px;
     cursor: pointer;
@@ -1251,7 +1251,7 @@ div.loading.on {
     top: 165px;
 }
 div.loading div.inner {
-    background: #222 url("/img/spinner.gif") no-repeat 18px 16px;
+    background: #222 url("../img/spinner.gif") no-repeat 18px 16px;
     display: -moz-inline-stack;
     display: inline-block;
     *zoom: 1; *display: inline;
