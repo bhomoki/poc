@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Expires" content="-1">
+
+<title>AppGuru by LogMeIn</title>
+
+<script type="text/javascript"src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+
+<style>
+
+    html {
+        background: #eee;
+    }
+    
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-weight: inherit;
+		font-style: inherit;
+		font-size: 100%;
+		font-family: inherit;
+		vertical-align: baseline;
+	}
+
+	* { 
+  		margin: 0;
+  		padding: 0;
+  		outline: none;
+	}
+	
+	html	{ 
+    	margin: 0;
+    	padding: 0;
+  	}
+	
+	#panel {
+		width: 2%;
+		float: left;
+		position: relative;
+		background: gray;
+		height: 1000px;
+		
+		-webkit-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   		-moz-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    	-ms-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     	-o-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+	}
+	
+	#content {
+		width: 98%;
+		float: left;
+		position: relative;
+		height: 1000px;
+		overflow-x: hidden;
+		
+		-webkit-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   		-moz-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    	-ms-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     	-o-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+	}
+	
+	#policy-container {
+		position: absolute;
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		z-index: 999;
+	}
+	
+	.animate {
+		-webkit-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   		-moz-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    	-ms-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     	-o-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+	}
+	
+	#gray {
+		width: 100%;
+		height: 0px;
+		background: #444;
+		position: relative;
+		color: #fff;
+		
+		font-family: "Helvetica neue",Helvetica,arial,Tahoma,sans-serif;
+		font-size: 36px;
+		font-weight: 300;
+		
+		text-align: center;
+		color: #fff;
+		-webkit-font-smoothing: antialiased;
+		
+		 -webkit-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+  		 -moz-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+		-ms-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     	-o-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+	}
+	
+	.arrow {
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		border-bottom: 15px solid #444;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		position: absolute;
+		z-index: 99;
+		top: -10px;
+		display: none;
+		
+		-webkit-transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   		-moz-transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    	-ms-transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     	-o-transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+	}
+	
+	.tile {
+		width: 130px;
+		height: 90px;
+		background: #fff;
+		-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+		box-shadow: 0 1px 2px rgba(0,0,0,.15);
+		position: absolute;
+		z-index: 1;
+		
+		font-family: "Helvetica neue",Helvetica,arial,Tahoma,sans-serif;
+		font-size: 36px;
+		font-weight: 300;
+		padding-top: 40px;
+		text-align: center;
+		color: #555;
+		-webkit-font-smoothing: antialiased;
+		
+		-webkit-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   		-moz-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    	-ms-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     	-o-transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+	}
+    
+    .clear {
+    	float: none;
+    	clear: both;
+    }
+    
+    .clear:after{
+    	clear: both;
+    	content: " ";
+    	display: block;
+    	height: 0;
+    	visibility: hidden;
+    	font-size: 0;
+	}
+
+    
+</style>
+
+
+<script>
+
+    var currentPage = null;
+    var tileW = 130;
+    var tileH = 130;
+    var gap = 15;
+    var columns = 0;
+    var rows = 0;
+    var parent = $('#content');
+    var selectedRow = null;
+    var selectedItem = null;
+    var grayVisible = false;
+    var panelOpen = false
+    
+    $(document).ready(function() 
+	{	 
+		function resize()
+    	{
+    		$('#panel').height($(window).height());
+    		$('#content').height($(window).height());
+    		
+    		columns = Math.floor($('#content').width() / (tileW+gap));
+    		rows = Math.ceil($('#content').find('.tile').length / columns);
+    		
+    		var id = 0;
+    		
+    		for (var i = 0; i < rows; i++)
+    		{
+    			for ( var j = 0; j < columns; j++ ) // set a row
+    			{
+    				var posX = j * (tileW + gap );
+    			
+    				var tile = $('#content').find('.tile')[id];
+    				$(tile).css('z-index', (id+1));
+    				$(tile).attr('opos', i * (tileH + gap ));
+    				$(tile).attr('row', i);
+    				$(tile).css('top', (i * (tileH + gap ))+'px');
+    				$(tile).attr('id', id);
+    				$(tile).css('left', (j * (tileW + gap ))+'px');
+    				id++;		
+    			}
+    		}
+    			
+    		if (grayVisible)
+    		{
+    			setPolicyPosition();
+    			$('#content').find('.tile').each(function()
+    			{
+    				var row = Number($(this).attr('row'));
+    				var si = $('#content').find('.tile')[selectedItem];
+    				var sr = Number($(si).attr('row'));
+					
+					selectedRow = sr;
+					
+    				if ( row > sr ) 
+    				{
+    					var top = (row * (tileH + gap)) + 500 + gap;
+    					$(this).css('top', top + 'px' );
+    				}
+    			})
+    			
+    			window.setTimeout(updateGray, 400);
+    		};
+    	}
+    	
+		function checkGray()
+		{
+			if ( grayVisible )
+			{
+				if ( currentRow == selectedRow )
+				{
+					console.log('selectedRow:' + selectedRow, 'currentRow: ' + currentRow );
+					$('#policy-container').removeClass('animate');
+					updateGray();
+					selectedRow = currentRow;
+				}
+				else
+				{
+					console.log('selectedRow:' + selectedRow, 'currentRow: ' + currentRow );
+					$('#policy-container').addClass('animate');
+					changeTilePos();
+					setPolicyPosition();
+					updateGray();
+					selectedRow = currentRow;
+				}
+			}else{
+				console.log('selectedRow:' + selectedRow, 'currentRow: ' + currentRow );
+				$('#policy-container').removeClass('animate');
+				showGray();
+			}
+		}
+		
+		function setPolicyPosition()
+		{
+			var si = $('#content').find('.tile')[selectedItem];
+            var sr = Number($(si).attr('row')); 
+			var pos = (Number(sr)+1) * (tileH + gap);
+            $('#policy-container').css('top', pos + 'px');
+		}
+		
+		function changeTilePos()
+    	{
+    		$('#content').find('.tile').each(function()
+            {
+            	var row = Number($(this).attr('row'));
+            	var t = Number($(this).attr('opos'));
+            	var si = $('#content').find('.tile')[selectedItem];
+            	var sr = Number($(si).attr('row'));
+            	            	
+            	if ( row > sr )
+            	{
+            		$(this).css('top', ( t + 500 + gap ) + 'px');
+            	}else{
+            		$(this).css('top', t + 'px');
+            	}
+            });
+    	}
+		
+		function setOriginalPos()
+		{
+			$('#content').find('.tile').each(function()
+            {
+            	var row = Number($(this).attr('row'));
+            	var t = new Number($(this).attr('opos'));
+            	$(this).css('top', t + 'px');
+            });
+		}
+		
+		function showGray()
+		{	
+			$('#gray').unbind('webkitTransitionEnd');
+			$('#gray').unbind('transitionend');  
+			$('#gray').unbind('oTransitionEnd');
+		
+			grayVisible = true;
+			
+			changeTilePos();
+			setPolicyPosition();
+			
+			//$('#gray').css('opacity', '1');
+			$('#gray').css('height', '500px');
+            updateGray();
+            
+           	selectedRow = currentRow;
+		}
+		
+		function closeGray(fnc)
+		{
+			setOriginalPos();
+			
+            selectedItem = undefined;
+			$('#gray').bind('webkitTransitionEnd', function(e){ grayVisible = false; });
+			$('#gray').bind('transitionend', function(e){ grayVisible = false; });  
+			$('#gray').bind('oTransitionEnd', function(e){ grayVisible = false; });
+
+            $('#gray').css('height', '0px');
+            //$('#gray').css('opacity', '0');
+            $('.arrow').hide();
+            $('.label').text('');
+            
+            resetHighlight();
+    	}
+    	
+    	function updateGray()
+    	{
+    		$('.label').text(selectedItem+1);
+    		var si = $('#content').find('.tile')[selectedItem];
+    		var pos = Number($(si).css('left').replace('px', ''));
+    		var arrowPos = pos + Math.round((tileW - 20)/2);
+    		$('.arrow').show();
+    		$('.arrow').css('left', arrowPos + 'px');
+    		highlightedSelectedTile();
+    	}
+		
+		$('.tile').click(
+			function() 
+			{
+            	var si = Number($(this).attr('id'));
+            	currentRow = Number($(this).attr('row'));
+            	
+            	if ( si != selectedItem )
+            	{
+            		selectedItem = si;
+            		checkGray();
+            	} 
+        	}
+    	);
+		
+		function highlightedSelectedTile()
+		{
+			$('#content').find('.tile').each(function()
+            {
+            	var id =  Number($(this).attr('id'));
+            	var si = $('#content').find('.tile')[selectedItem];
+            	var sid = Number($(si).attr('id'));
+            	
+            	if ( id == sid ) $(this).css('opacity', '1');
+            	else $(this).css('opacity', '0.3');
+            });	
+		}
+		
+		function resetHighlight()
+		{
+			$('#content').find('.tile').each(function()
+            {
+            	$(this).css('opacity', '1');
+            });	
+		}
+		
+		$('#gray').click(function()
+		{
+			closeGray(false)
+		});
+		
+		$('#panel').click(function()
+		{
+			console.log(panelOpen);
+	
+			if ( panelOpen )
+			{
+				$('#panel').css('width', '2%');
+				$('#content').css('width', '98%');
+				panelOpen = false;
+			}
+			else
+			{
+				$('#panel').css('width', '30%');
+				$('#content').css('width', '70%');
+				panelOpen = true;
+			}
+			
+			window.setTimeout(resize, 200);
+			
+		});
+		
+		resize();
+		
+		$(window).resize(resize);
+    	
+    });
+
+</script>
+
+
+</head>
+
+
+
+<body>
+
+<div id="panel"></div>
+
+<div id="content">
+	<div class="tile">1</div>
+	<div class="tile">2</div>
+	<div class="tile">3</div>
+	<div class="tile">4</div>
+	<div class="tile">5</div>
+	<div class="tile">6</div>
+	<div class="tile">7</div>
+	<div class="tile">8</div>
+	<div class="tile">9</div>
+	<div class="tile">10</div>
+	<div class="tile">11</div>
+	<div class="tile">12</div>
+	<div class="tile">13</div>
+	<div class="tile">14</div>
+	<div class="tile">15</div>
+	<div class="tile">16</div>
+	<div class="tile">17</div>
+	<div class="tile">18</div>
+	<div id="policy-container"><div id="gray"><div class="arrow"></div><div class="label"></div></div></div>
+</div>
+<div class="clear"></div>
+</body>
+</html>

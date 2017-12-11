@@ -1,0 +1,1586 @@
+div.arrow, 
+span.arrow {
+    width: 0; height: 0; font-size: 0; line-height: 0; overflow: hidden;
+    border: 6px solid transparent;
+    _border: 4px solid #F3F3F3;
+    _filter: chroma(color=#F3F3F3);
+    cursor: pointer;
+}
+div.arrow.dArrow,
+span.arrow.dArrow, 
+span.arrow.select,
+.exp .arrow,
+.open .arrow {
+    border-top-color: #909090;
+    top: 3px;
+}
+div.arrow.rArrow,
+span.arrow.rArrow,
+.coll .arrow,
+.closed .arrow {
+    border-left-color: #909090;
+    top: 1px;
+}
+div.x {
+    position: absolute; z-index: 9; top: 15px; right: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 24px; height: 24px;
+    background: url("/img/x-gray-normal.png") 0 0 no-repeat;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+div.x:hover {
+    background-image: url("/img/x-gray-hover.png");
+}
+div.policypanel ul.items li div.x {
+    top: 8px; right: 3px;
+    display: none;
+}
+div.note div.x {
+    top: -5px; right: -5px;
+}
+div.flyout div.x#x1 {
+    border: 0; padding: 0;
+    width: 26px; height: 26px;
+    background: #A0A0A0 url("/img/paneclose.png") 0 0 no-repeat;
+    background: rgba(0, 0, 0, .1) url("/img/paneclose.png") 4px 3px no-repeat;
+    border-radius: 0;
+    top: 10px; right: 20px;
+}
+div.flyout div.x#x1:hover {
+    background-color: rgba(0, 0, 0, .3)
+}
+div.flyout div.policy div.x {
+    top: 2px; right: 1px;
+    display: none;
+}
+div.flyout div.policy:hover div.x,
+div.policypanel ul.items li:hover div.x {
+    display: block;
+}
+div.itemrow.ui-draggable-dragging div.x {
+    display: none !important;
+}
+
+
+div#bannerDiv {
+    margin: 0 -30px;   /* !!! -30 */
+    height: 177px;
+    width: 600px;
+}
+div#bannerDiv div.inner {
+    padding: 40px 40px 40px 280px;
+    color: white;
+}
+
+
+div.flyout .editable,
+div#emailaddress2 {
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+.editable:hover,
+.editable:focus {
+    color: white;
+    background-color: #202020;
+    cursor: url("/img/pencil3.png?v=2") 4 19,auto;
+}
+.editable:focus {
+    outline: none;
+    -moz-box-shadow: 0 0 1px 1px #FFCD46;
+    -webkit-box-shadow: 0 0 1px 1px #FFCD46;
+    box-shadow: 0 0 1px 1px #FFCD46;
+}
+.editable {
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+ul.items.fade {
+    opacity: 0;
+    -moz-transform: scale(.7);
+    -webkit-transform: scale(.7);
+    -ms-transform: scale(.7);
+    -o-transform: scale(.7);
+    transform: scale(.7);
+
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+
+
+div.header,
+div.footer {
+    position: absolute; z-index: 10; top: 0; left: 0;
+    width: 100%; min-width: 1000px;
+    height: 50px;
+    color: white;
+}
+div.footer {
+    top: auto; bottom: 0;
+    border-bottom: 0;
+    color: #808080;
+}
+div.header div.inner,
+div.footer div.inner {
+    width: 100%; min-width: 1000px;
+    margin: 0 auto;
+    line-height: normal;
+    position: relative; z-index: 1;
+    font-weight: bold;
+}
+div.footer div.inner {
+    font-weight: normal;
+    line-height: 50px;
+}
+div.footer div.inner p {
+    margin: 0 20px;
+    text-align: center
+}
+div.header {
+    color: #606060;
+    background-color: #FFCD46;
+}
+div.header div.account {
+    position: absolute; z-index: 10; top: 10px; right: 15px;
+    margin: 0;
+}
+div.header div.gettingstarted {
+    padding-right: 30px;
+}
+div.header div.gettingstarted i {
+    background: url('/img/getstart2.png') no-repeat top right;
+    width: 18px; height: 18px;
+    padding-left: 5px;
+    position: relative; z-index: 1; top: 4px;
+}
+div.header div.gettingstarted:hover i {
+    background-image: url('/img/getstart1.png');
+}
+div.header a {
+    color: #606060
+}
+div.header a.logo {
+    position: absolute; z-index: 1; top: 0; left: 0;
+    height: 50px;
+}
+div.header ul {
+    margin-left: 210px;
+    line-height: 50px;
+    font-size: 13px;
+    font-weight: normal
+}
+div.header ul li {
+    float: left;
+}
+div.header ul li a {
+    line-height: 50px;
+    padding: 0 15px;
+    display: block
+}
+div.header ul li a.active {
+    background-color: #FFF3D3;
+    color: #606060
+}
+div.header ul li a.active:hover {
+    background-color: #FFF3D3;
+    cursor: default;
+}
+div.header ul li a:hover {
+    background-color: #FFE698;
+}
+div.header div.gettingstarted a:hover {
+    color: white
+}
+div.buttons {
+    margin-bottom: 20px
+}
+div.sectionheader {
+    height: 80px;
+}
+div.sectionheader h1 {
+    white-space: nowrap;
+    height: auto; line-height: normal;
+    padding-top: 20px;
+}
+div.sectionheader div.buttons {
+    margin: 0 0 0 10px;
+    white-space: nowrap;
+    position: relative; z-index: 9; top: 7px;
+}
+
+
+
+
+div.peoplewrap,
+div.policieswrap {
+    min-height: 100%;
+    position: absolute; z-index: 1; top: 0; left: 0;
+}
+div.peoplewrap {
+    z-index: 2;
+    width: 31%; min-width: 310px;
+    padding-left: 0;
+}
+div.policieswrap {
+    width: 100%;
+    min-width: 1000px;
+}
+div.content {
+    padding: 50px 15px 0 20px;
+}
+div.content div.flyoutcontentinner {
+    position: relative; z-index: 2;   /* for helping the flyout panel positioning */
+}
+div.content div.contentinner {
+    height: 530px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative; z-index: 1;   /* for the scroller script */
+}
+div.content div.quickguide {
+    position: absolute; z-index: 1; top: 100px; left: 0;
+    width: 100%;
+    color: #A0A0A0;
+    font-size: 17px;
+    text-align: center;
+    padding: 40px 0;
+}
+div.content div.quickguide img {
+    opacity: .3
+}
+div.content div.quickguide p.or {
+    margin: 30px 0
+}
+div.policieswrap div.content div.quickguide {
+     position: static;
+     margin: 150px auto 50px auto;
+}
+div.policieswrap div.content div.contentinner {
+    overflow-y: scroll;
+}
+div.policieswrap div.content {
+    padding-left: 31%;
+}
+div.policieswrap div.contentpadding {
+    margin-left: 0;
+    -webkit-transition: margin .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+  	-moz-transition: margin .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-ms-transition: margin .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -o-transition: margin .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    transition: margin .35s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+div.policieswrap.slim div.contentpadding {
+    margin-left: 280px;
+}
+
+
+
+
+
+
+ul.items {
+    margin: 0 0 10px 0;
+    border: 0;
+    box-shadow: none;
+    background-color: #F2F2F2;
+}
+ul.items li.group {
+    font-weight: bold;
+    color: #282828 !important;
+    font-size: 13px;
+}
+
+ul.items li.draghover div.itemrow {
+    background-color: #FFCD46 !important;
+}
+
+
+div.peoplewrap div.sectionheader table {
+    width: 100%
+}
+div.peoplewrap div.sectionheader table td:first-child {
+    width: 10%
+}
+div.peoplewrap div.contentinner {
+    background-color: #F2F2F2
+}
+div.peoplewrap ul.items li {
+    position: absolute; z-index: 1;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+    
+}
+div.peoplewrap ul.items li div.itemrow {
+    background: white url('/img/blank.png') no-repeat 30px 0;
+}
+div.peoplewrap ul.items li.group div.itemrow {
+    background-image: url('/img/grblank.png');
+}
+div.peoplewrap ul.items li.selected div.itemrow {
+    background-image: url('/img/blank-selected.png');
+}
+div.peoplewrap ul.items li.group.selected div.itemrow {
+    background-image: url('/img/grblank-selected.png');
+}
+div.itemrow {
+    position: relative; z-index: 1;
+    line-height: 40px; height: 40px;
+    overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px 0 85px;
+    cursor: move;
+}
+div.itemrow.twoliner {
+    line-height: 25px
+}
+div.itemrow.twoliner div.line2 {
+    font-size: 11px; margin-top: -9px
+}
+ul.items li.group div.itemrow {
+    padding-right: 50px
+}
+div.policypanel div.people div.itemrow {
+    padding: 0
+}
+div.peoplewrap ul.items li div.itemrow span.hi {
+    background-color: #FFCD46
+}
+div.peoplewrap ul.items li div.itemrow span.counter {
+    position: absolute; z-index: 1; right: 20px;
+    color: #606060;
+    font-weight: normal;
+    font-size: 12px;
+}
+div.peoplewrap ul.items li div.itemrow span.outlier {
+    position: absolute; z-index: 1; left: 9px;
+    padding: 0 5px;
+    color: #C88536;
+    font-weight: bold;
+    font-size: 12px;
+}
+ul.items li img,
+div.itemrow img {
+    position: absolute; z-index: 1; left: 30px; top: 0;
+    width: 40px; height: 40px;
+    background-color: #F9F9F9;
+}
+div.peoplewrap ul.items li div.itemrow:hover {
+    background-color: #FFF3D3;
+}
+
+
+ul.items li.cantfly {
+    cursor: auto;
+}
+ul.items li.cantfly:hover {
+    background-color: inherit;
+}
+ul.items li.selected div.itemrow {
+    background-color: #FFF3D3 !important;
+    color: #C88536;
+}
+ul.items li div.arrowouter {
+    width: 30px; height: 40px;
+    cursor: pointer;
+    position: absolute; z-index: 1; top: 0; left: 0;
+}
+ul.items li div.arrowouter:hover {
+    background-color: #FFCD46;
+}
+ul.items li.exp span.arrow {
+    position: absolute; z-index: 1; left: 10px; top: 18px;
+}
+ul.items li.coll span.arrow {
+    position: absolute; z-index: 1; left: 14px; top: 13px;
+}
+ul.items li div.borg {
+    position: absolute; z-index: 1; right: 21px; top: 10px;
+    cursor: pointer;
+    width: 12px; height: 12px;
+    border: 3px solid white;
+    background: #FFCD46;
+}
+div.peoplewrap ul.items div.itemrow {
+    margin-left: 500px;
+}
+ul.items li.i0 div.itemrow { margin-left: 0}
+ul.items li.i1 div.itemrow { margin-left: 20px}
+ul.items li.i2 div.itemrow { margin-left: 40px}
+ul.items li.i3 div.itemrow { margin-left: 60px}
+ul.items li.i4 div.itemrow { margin-left: 80px}
+ul.items li.i5 div.itemrow { margin-left: 100px}
+ul.items li.i6 div.itemrow { margin-left: 120px}
+ul.items li.i7 div.itemrow { margin-left: 140px}
+ul.items li.i8 div.itemrow { margin-left: 160px}
+ul.items li.i9 div.itemrow { margin-left: 180px}
+ul.items li.i10 div.itemrow { margin-left: 200px}
+ul.items li.i11 div.itemrow { margin-left: 220px}
+ul.items li.i12 div.itemrow { margin-left: 240px}
+ul.items li.i13 div.itemrow { margin-left: 260px}
+ul.items li.i14 div.itemrow { margin-left: 280px}
+ul.items li.i15 div.itemrow { margin-left: 300px}
+ul.items li.i16 div.itemrow { margin-left: 320px}
+ul.items li.i17 div.itemrow { margin-left: 340px}
+ul.items li.i18 div.itemrow { margin-left: 360px}
+ul.items li.i19 div.itemrow { margin-left: 380px}
+ul.items li.i20 div.itemrow { margin-left: 400px}
+
+div.content div.contentinner div.policy:last-child {
+    margin-bottom: 0
+}
+
+
+div.draghere {
+    border: 1px dashed white !important;
+    opacity: 0.7;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 50px;
+    cursor: default;
+    background: url("/img/dropw.png") no-repeat 8px 3px;
+}
+
+
+div.flyout {
+    width: 275px;
+    position: absolute; z-index: 0; top: 0; right: 0;
+    overflow: hidden;
+    -webkit-transition: right .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+  	-moz-transition: right .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-ms-transition: right .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -o-transition: right .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    transition: right .35s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+div.flyout.fly {
+    right: -280px;
+}
+div.flyoutbody {
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: white;
+    background-color: #555;
+    width: 100%;
+    height: 100%; min-height: 100%;
+    position: absolute; z-index: 1; top: 0; right: 0;
+}
+div.flyout div.pointer {
+    font-size: 0; overflow: hidden; width: 0; height: 0;
+    border: 10px solid transparent;
+    border-left: 0;
+    border-right-color: #AAAAAA;
+    position: absolute; z-index: 2; top: 115px; left: 0;
+    display: none !important;
+}
+div.flyout div.inner {
+    padding: 20px 20px 10px 20px;
+}
+div.flyout div.photo {
+    width: 275px;
+    height: 275px;
+    background-color: white;
+    position: relative; z-index: 1; top: -20px; left: -20px;
+}
+div.flyout div.photo img.prpic {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: absolute; z-index: 1; top: 0; left: 0;
+}
+div.flyout div.photo form {
+    position: absolute; z-index: 2; top: 40px; left: 20px;
+}
+div.flyout div.photo form input#imageUpload {
+    width: 190px;
+}
+
+
+
+
+
+div.flyout div.overlay1 {
+    position: absolute; z-index: 2; bottom: 0; left: 0;
+    width: 235px;
+    padding: 0 20px 15px 20px;
+    background-color: transparent;  /* for the IE filters below */ 
+    background-color: rgba(0, 0, 0, 0.5);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);       /* IE6 & 7 */
+}
+div.flyout div.overlay2,
+div.flyout div.overlay3 {
+    position: absolute; z-index: 2; top: 0; left: 0;
+    width: 235px; height: 215px;
+    padding: 40px 20px 20px 20px;
+    background-color: transparent;  /* for the IE filters below */ 
+    background-color: rgba(0, 0, 0, 0.5);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);       /* IE6 & 7 */
+}
+div.flyout div.initin {
+    left: 0;
+}
+div.flyout div.initout {
+    left: -275px;
+}
+div.flyout div.in {
+    left: 0;
+    opacity: 1;
+    animation: slidein ease-out 0.15s;
+    -moz-animation: slidein ease-out 0.15s;
+    -webkit-animation: slidein ease-out 0.15s;
+    -o-animation: slidein ease-out 0.15s;
+}
+@keyframes slidein {
+    from {left: 275px; opacity: 0}
+    to {left: 0; opacity: 1;}
+}
+@-moz-keyframes slidein {
+    from {left: 275px; opacity: 0}
+    to {left: 0; opacity: 1;}
+}
+@-webkit-keyframes slidein {
+    from {left: 275px; opacity: 0}
+    to {left: 0; opacity: 1;}
+}
+@-o-keyframes slidein {
+    from {left: 275px; opacity: 0}
+    to {left: 0; opacity: 1;}
+}
+div.flyout div.out {
+    left: -275px;
+    opacity: 0;
+    animation: slideout ease-out 0.15s;
+    -moz-animation: slideout ease-out 0.15s;
+    -webkit-animation: slideout ease-out 0.15s;
+    -o-animation: slideout ease-out 0.15s;
+}
+@keyframes slideout {
+    from {left: 0; opacity: 1}
+    to {left: -275px; opacity: 0;}
+}
+@-moz-keyframes slideout {
+    from {left: 0; opacity: 1}
+    to {left: -275px; opacity: 0;}
+}
+@-webkit-keyframes slideout {
+    from {left: 0; opacity: 1}
+    to {left: -275px; opacity: 0;}
+}
+@-o-keyframes slideout {
+    from {left: 0; opacity: 1}
+    to {left: -275px; opacity: 0;}
+}
+
+
+
+
+div.flyout div.fullname,
+div.flyout div.fileinput {
+    margin-top: 15px
+}
+div.flyout div {
+    font-size: 12px;
+    line-height: 20px;
+}
+div.flyout div.policies {
+    width: 232px;
+    margin: 0 auto 20px auto;
+}
+div.flyout div.buttons {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+div.flyout #addAnother {
+    text-align: left;
+    margin: 0 0 10px 3px;
+}
+div.flyout div.fullname,
+div.flyout div.path {
+    word-wrap: break-word;
+}
+div.flyout span.rsaquo {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 3px;
+}
+div.flyout div.attributeTemplate {
+    margin-bottom: 3px;
+}
+div.flyout div.attributeValue {
+    margin-top: -3px;
+}
+
+
+
+
+
+div.policy {
+    font-size: 12px;
+    text-align: center;
+    width: 120px; height: 120px;
+    float: left;
+    color: white;
+    position: relative; z-index: 1;
+    border: 5px solid white;
+    cursor: pointer;
+}
+div.policieswrap div.policy,
+div.appcatalog div.app {
+    position: absolute !important;
+    left: 45%; top: 20%;
+}
+
+
+div.app {
+    font-size: 12px;
+    text-align: center;
+    width: 130px; height: 130px;
+    display: inline-block;
+    color: #606060;
+    position: relative; z-index: 1;
+    border: 1px solid white;
+}
+
+
+iframe.suggestAppIframe {
+    width: 690px;
+    height: 460px;
+    margin: -35px -35px -48px -35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+
+
+
+div.flyout div.policy {
+    width: 90px; height: 90px;
+    margin: 0 7px 14px 7px;
+}
+div.flyout div.policy.draghere {
+    width: 98px; height: 98px;
+    margin-bottom: 7px;
+    line-height: normal;
+    padding: 0;
+    border-color: white;
+    background-color: transparent;
+    background-image: url("/img/dropw.png");
+    background-position: 34px 20px;
+}
+div.flyout div.policy.draghere div.policyname {
+    color: #EEE;
+    background: 0;
+    font-size: 11px;
+    padding: 0 15px 5px 15px;
+    width: auto;
+}
+
+
+div.policy h2,
+div.app h2 {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0; padding: 0;
+    height: 130px;
+}
+div.app h2 {
+    height: auto;
+    position: absolute; z-index: 1; bottom: 30px;
+    font-size: 15px;
+    width: 100%;
+}
+div.app span.policyname {
+    display: none;
+}
+div.policy .policyname {
+    font-size: 12px;
+    line-height: normal;
+    width: 110px;
+    margin: 0 5px;
+    word-wrap: break-word;
+    position: absolute; z-index: 1; left: 0; bottom: 0
+}
+div.flyout div.policy .policyname {
+    width: 80px;
+    margin-bottom: 5px;
+}
+div.policy span.washed {
+    position: absolute; z-index: 1; top: 7px; right: 11px;
+    font-size: 13px;
+    line-height: normal;
+    padding-left: 15px;
+    background: url('/img/small-user.png?v=2') no-repeat 0 2px;
+}
+
+
+
+div.dialog div.policy,
+div.appListContainer div.app {
+    width: 130px; height: 130px;
+    margin: 0 15px 15px 0;
+    border: 0;
+    cursor: pointer;
+}
+div.appListContainer {
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+div.appListContainer div.app:last-child {
+    margin-right: 0
+}
+div.addPolicyPanel div.appListContainer div.app {
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+}
+div.addPolicyPanel div.appListContainer div.app:hover {
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+div.dialog div.app {
+    width: 120px; height: 120px;
+    border: 5px solid white;
+}
+div.dialog div.policies {
+    width: 480px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+div.dialog div.policy,
+div.appcatalog div.app {
+    border: 1px solid #EAEAEA;
+}
+div.appcatalog div#apps {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    overflow-y: scroll;
+    min-height: 170px;
+}
+div.appcatalog div.app {
+    border: 5px solid white;
+    width: 160px; height: 160px;
+    cursor: pointer
+}
+div.appcatalog div.app.suggest {
+    background-image: url("/img/suggestapp.png");
+    background-color: white;
+}
+div.policieswrap div.policy.blank {
+    background: #F0F0F0;
+    cursor: default;
+}
+div.policieswrap div.policy.blank.plus {
+    background-image: url("/img/pluspolicy.png");
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+    cursor: pointer;
+}
+div.policieswrap div.policy .policyname, 
+div.dialog div.policy .policyname {
+    bottom: 15px;
+    background: 0;
+}
+div.opaque {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+}
+div.grayed {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+div.opaque.grayed {
+    filter: alpha(opacity=40) gray;
+}
+div.tile,
+div.policy {
+    overflow: hidden;
+}
+div.policieswrap div.tile,
+div.app {
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+div.tile.activetile,
+div.draghere.activetile,
+div.draghere.active {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+div.activetile.ui-draggable-dragging {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+div.tile.ui-draggable-dragging {
+    -moz-transition: -moz-transform .3s;
+    -webkit-transition: -webkit-transform .3s;
+    -ms-transition: -ms-transform .3s;
+    -o-transition: -o-transform .3s;
+    transition: transform .3s;
+}
+div.tile.hovering {
+    -moz-transform: scale(.77);
+    -webkit-transform: scale(.77);
+    -ms-transform: scale(.77);
+    -o-transform: scale(.77);
+    transform: scale(.77);
+}
+
+div.tile.activetile,
+div.tile.opaque:hover,
+div.tile.grayed:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+}
+div.appdetails {
+    margin: 0 -30px;
+    padding: 40px 60px 30px;
+}
+div.appdetails div.tags,
+div.appdetails div.description {
+    margin-bottom: 30px;
+    width: 450px;
+}
+div.appdetails h2 {
+    margin-bottom: 20px;
+    font-size: 24px
+}
+div.appdetails div.inliner {
+    width: 49%
+}
+div.appcatalog div.appdetails {
+    margin: 0
+}
+div.appcatalog div.appdetails div.subscriptions {
+    padding-right: 10%;
+    min-width: 270px;
+}
+div.appcatalog div.appdetails div.buttons {
+    margin-bottom: 40px
+}
+
+
+div#panelOuter {
+    position: absolute; z-index: 2; top: 0; left: 0;
+    width: 100%; height: 0;
+}
+div#panelOuter div#panelSlider {
+    margin-right: 15px;
+    height: 0;
+    overflow: hidden;
+    opacity: .1;
+    position: relative; z-index: 1;                       /* it's not needed with the other sliding method */
+}
+div#panelOuter div#panelSlider.on {
+    opacity: 1;
+}
+div#panelOuter div#panelSlider div#panelInner {
+    position: absolute; z-index: 2; left: 0; bottom: 0;   /* it's relative with the other sliding method */
+    width: 100%;                                          /* it's not needed with the other sliding method */
+    color: white;
+    background-color: #555;
+    margin: 15px 0 0 0;
+    min-height: 410px;
+}
+div#panelOuter div#panelSlider.overflowvisible div#panelInner {
+    position: relative;                                   /* it's not needed with the other sliding method */
+}
+div#panelOuter.animate,
+div#panelOuter div#panelSlider div.arrow,
+div#panelOuter div#panelSlider,
+div.tile {
+    -webkit-transition: all .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: all .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -ms-transition: all .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -o-transition: all .35s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    transition: all .35s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+div#panelOuter div#panelSlider div.arrow {
+    width: 0; height: 0; overflow: hidden;
+    border: 10px solid transparent; border-top: 0; border-bottom-color: #555;
+    position: absolute; z-index: 1; top: -10px;
+}
+
+
+
+
+div.policypanel h2.policypanelname {
+    padding: 20px 0 20px 25px;
+    margin: 0;
+    font-size: 20px;
+    width: 85%;
+    overflow: hidden;
+}
+div.policypanel h2.policypanelname span.editable {
+    min-width: 19px;
+    min-height: 19px;
+    display: inline-block;
+    white-space: nowrap;
+}
+div.policypanel div.buttons {
+    padding-top: 20px;
+}
+div.policypanel div.peopleandpermissions {
+    padding: 0 15px 15px 15px;
+    overflow: auto;
+}
+div.policypanel h3,
+div.appdetails h3 {
+    font-size: 15px;
+    padding: 15px 15px 15px 0;
+    background-color: white;
+    font-weight: bold;
+}
+div.appdetails h3 {
+    background: none;
+    font-size: 14px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+div.policypanel div.permissions h3 {
+    padding-left: 15px;
+}
+div.policypanel div.permissions {
+    width: 35%;
+    height: 100%;
+    border-left: 1px solid #888; margin-left: -2px;
+    margin-bottom: 50px;
+}
+div.policypanel div.permissions div.settingsFrame {
+    padding-left: 20px;
+    min-height: 100%;
+    position: relative; z-index: 1;
+}
+div.policypanel div.permissions div.settingsFrame p.description {
+    padding: 5px 0 0 20px;
+}
+div.policypanel div.settingGroup {
+    position: relative; z-index: 1;
+    border-top: 1px solid #A0A0A0;
+    padding-top: 15px;
+}
+div.policypanel div.settingGroup:first-child {
+    border: 0;
+}
+div.policypanel div.settingGroup h2 {
+    padding-left: 18px;
+    cursor: pointer;
+    position: relative; z-index: 1;
+}
+div.policypanel div.settingGroup span.arrow {
+    position: absolute; z-index: -1; top: 8px; left: 0;
+    border-top-color: #F0F0F0;
+}
+div.policypanel div.settingGroup.closed span.arrow {
+    top: 4px; left: 3px;
+    border-top-color: transparent;
+    border-left-color: #F0F0F0;
+}
+div.policypanel div.settingGroup div.settingListContainer {
+    margin: 0 0 15px 5px;
+}
+div.policypanel div.settingGroup.closed div.settingListContainer,
+div.policypanel div.settingGroup.closed p.settingGroupDescription {
+    display: none
+}
+div.policypanel p.settingGroupDescription {
+    margin: -5px 0 15px 19px;
+}
+div.policypanel span.controlGroup {
+    display: block;
+    margin-bottom: 10px
+}
+div.policypanel div.permissions input {
+    background: #555 !important;
+    color: white;
+}
+div.policypanel div.permissions input.settingEditableText {
+    width: 82%;
+    margin-bottom: 5px;
+}
+div.policypanel div.permissions input[disabled],
+div.policypanel div.permissions select[disabled],
+div.policypanel div.permissions textarea[disabled] {
+    border-color: #808080 !important
+}
+div.policypanel div.permissions select {
+    background: #555 !important;
+    color: white;
+    width: 90%;
+    max-width: none;
+}
+div.policypanel div.innerSettingListContainer div.settingrow {
+    padding: 0;
+    margin: 10px 0 0 20px;
+}
+
+div.policypanel div.people {
+    width: 100%;
+    margin-right: -35%;
+}
+div.policypanel div.people div.inner {
+    margin-right: 35%;
+    position: relative; z-index: 1;
+}
+div.policypanel div.people div.filtercheck {
+    padding: 5px 15px;
+}
+div.policypanel div.people div.filtercheck input {
+    margin-right: 5px;
+    position: relative; z-index: 1; top: 2px;
+}
+div.policypanel div.people div.inner div.list {
+    padding: 10px;
+    border-right: 1px solid #888;
+}
+div.policypanel div.people div.draghere {
+    height: 38px; line-height: 37px;
+    white-space: normal;
+    border: 1px dashed #A0A0A0 !important;
+    background-position: 3px 2px;
+    padding-left: 38px;
+}
+div.policypanel div.people ul.items {
+    background: none;
+}
+div.policypanel div.people ul.items li {
+    width: 21%;
+    max-width: 190px;
+    min-width: 135px;
+    margin: 0 1% 5px 1%;
+    padding: 0;
+    border: 0;
+    color: #606060;
+    background-color: white;
+    float: left;
+    overflow: hidden; text-overflow: ellipsis;
+    position: relative; z-index: 1;
+}
+div.policieswrap.slim div.policypanel div.people ul.items li {
+    width: 30%;
+}
+div.policypanel div.people ul.items li.draghereContainer {
+    background: none;
+    color: #B0B0B0;
+}
+div.policypanel div.people ul.items li img {
+    left: 0;
+}
+div.policypanel div.people ul.items li span {
+    padding: 0 10px 0 52px;
+}
+div.policypanel div.people ul.items li div.draghere span.inner {
+    padding: 0;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 11px;
+    font-weight: bold;
+}
+div.policypanel div.settingrow {
+    padding: 0 15px 10px 15px;
+}
+div.policypanel div.settingsFrame label {
+    display: block;
+    padding-left: 20px;
+    position: relative; z-index: 1;
+}
+div.policypanel div.settingsFrame label input[type="checkbox"],
+div.policypanel div.settingsFrame label input[type="radio"] {
+    position: absolute; z-index: 1; top: 1px; left: 0;
+}
+div.policypanel div.settingsFrame div.radioButtonOption {
+    margin-bottom: 5px
+}
+div.pager {
+    text-align: left;
+    white-space: nowrap;
+    padding-top: 20px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+div.pager ul li {
+    font-size: 30px;
+    line-height: 22px;
+    overflow: hidden;
+    float: left;
+    padding: 2px 0 0 0;
+    margin: 0 2px;
+    color: #E0E0E0;
+    cursor: pointer;
+}
+div.pager ul li.prev,
+div.pager ul li.next {
+    background-color: white;
+    padding: 0 10px 5px 10px;
+    margin: 0 0 0 6px;
+}
+div.pager ul li.next {
+    margin: 0 12px 0 2px;
+}
+div.pager ul li.active {
+    color: #E4B83F !important;
+}
+div.flyout div.pager {
+    padding: 0;
+    position: absolute; z-index: 9; top: 10px; left: 20px;
+    background: #A0A0A0;
+    background: rgba(0, 0, 0, .1);
+    padding: 0 2px;
+}
+div.flyout div.pager:hover {
+    background-color: rgba(0, 0, 0, .3)
+}
+div.flyout div.pager ul li {
+    background: none;
+    padding: 2px 2px;
+    margin: 0 3px;
+    color: white;
+}
+div.policypanel div.pager {
+    position: absolute; z-index: 1; top: 1px; right: 10px;
+    padding: 0;
+    max-width: 150px;
+    overflow: hidden;
+}
+div.policypanel div.pager ul li {
+    cursor: default;
+}
+div.policypanel div.pager ul li.active {
+    cursor: pointer;
+}
+div.policypanel div.pager ul li#numbers {
+    color: white;
+    font-size: 12px;
+    padding-right: 10px;
+    cursor: default;
+}
+
+
+
+
+div.appcatalog {
+    min-width: 965px;
+    margin: 0 auto;
+    padding-right: 15px;
+}
+div.tags div.tag {
+    float: left;
+    border: 2px solid #A8A8A8;
+    color: white;
+    margin: 0 5px 5px 0;
+    padding: 3px 6px 4px 6px;
+    border-radius: 2px;
+}
+div.subscriptions div.haspie {
+    padding: 10px 40px 0 0;
+    min-width: 100px;
+    min-height: 110px;
+    margin-bottom: 40px;
+    border-right: 1px solid #777;
+    background: url('/img/pie-icon-dark.png') no-repeat 42px 52px;
+}
+div.dialog div.subscriptions div.haspie,
+div.dialog div.subscriptions div.numbers {
+    margin-bottom: 0
+}
+div.dialog div.subscriptions div.haspie {
+    border-right-color: #EEE;
+    background: url('/img/pie-icon-light.png') no-repeat 32px 44px;
+}
+div.subscriptions div.numbers {
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+div.subscriptions div.numbers div.inuse,
+div.subscriptions div.numbers div.avail {
+    color: #FAC225;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+}
+div.subscriptions div.numbers div.avail {
+    color: #85C300;
+}
+div.subscriptions div.numbers .smaller {
+    margin: -5px 0 5px 0
+}
+
+
+
+div.loading {
+    position: absolute; z-index: 13; left: 50%; top: -1000px;
+    white-space: nowrap;
+}
+div.loading.on {
+    top: 165px;
+}
+div.loading div.inner {
+    background: #222 url("/img/spinner.gif") no-repeat 18px 16px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    *zoom: 1; *display: inline;
+    cursor: wait;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 25px 0 45px;
+    line-height: 50px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    position: relative; z-index: 1; left: -50%; top: 0;
+}
+div.loading.longrunning div.inner {
+    padding: 0 55px 4px 45px;
+}
+div.loading div.progressText {
+    position: absolute; z-index: 1; right: 17px; top: 0;
+    font-weight: normal;
+}
+div.loading div.progressBar {
+    position: absolute; z-index: 1; left: 0; bottom: 2px;
+    width: 100%;
+    height: 4px;
+    overflow: hidden;
+    background-color: #111;
+}
+div.loading div.progressIndicator {
+    background-color: #FFCD46;
+    height: 100%;
+}
+
+
+/* LMI.Appmatic.Index.App.createNotification('text')  */
+div.note {
+    position: fixed; z-index: 5; right: 20px; top: -1000px;
+}
+div.note.on {
+    top: auto; bottom: 10px;
+}
+div.note div.inner {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *zoom: 1; *display: inline;
+    color: white;
+    background-color: #404040;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 30px;
+    min-height: 34px;
+    min-width: 100px;
+    max-width: 500px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+ul#noty_center_layout_container {
+    top: 100px !important;
+}
+ul#noty_center_layout_container .noty_buttons {
+    border-top-style: none !important;
+}
+ul#noty_center_layout_container li {
+    padding: 20px 20px 30px 20px;
+    text-align: center;
+}
+ul#noty_topCenter_layout_container li {
+    background: #333;
+    background: rgba(32,32,32,.8);
+    text-align: center;
+}
+ul#noty_topCenter_layout_container li.maintenance {
+    text-align: left;
+    color: white;
+}
+ul#noty_topCenter_layout_container li.maintenance h1 {
+    line-height: 30px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+}
+ul#noty_topCenter_layout_container li.maintenance p {
+    margin: 0 0 5px 0
+}
+
+div.dialog {
+    width: 100%; height: 0;    
+    position: absolute; z-index: 12; top: -2000px; left: 0;
+    text-align: center;
+    *position: fixed;
+}
+div.dialog.on {
+    top: 0; height: 100%;
+}
+div.dimmer {
+    display: none;
+    position: fixed; z-index: 1; top: 0; left: 0;
+    *position: absolute;
+    width: 100%; height: 100%;
+    background-color: black;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+div.dimmer.trans {
+    background-color: transparent;
+}
+div.dimmer.white {
+    background-color: white;
+}
+div.on div.dimmer {
+    display: block;
+}
+div.dialog div.box {
+    position: relative; z-index: 1; 
+    min-width: 450px; max-width: 600px;
+    min-height: 100px; max-height: 80%; overflow-x: hidden; overflow-y: auto;
+    text-align: left;
+    display: -moz-inline-stack;
+    display: inline-block;
+    *zoom: 1; *display: inline;
+    margin: 100px 40px 0 40px;
+    background-color: white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+div.dialog div.box div.inner {
+    margin: 30px 20px 40px 20px;
+    padding: 0 10px;
+}
+div.dialog div.box h1 {
+    font-size: 28px;
+    text-align: center;
+    height: auto; line-height: normal;
+    margin: 0 0 20px 0;
+    color: inherit;
+}
+div.dialog div.box div.buttons {
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+div.dialog div.resultBlock {
+    border-bottom: 1px solid #E0E0E0;
+    margin-bottom: 20px;
+}
+div.dialog div.resultBlock h2 {
+    cursor: pointer; 
+    position: relative; z-index: 1;
+    padding-left: 20px;
+}
+div.dialog div.resultBlock ul {
+    margin: 0 0 20px 0;
+    font-size: 12px;
+    background-color: #F5F5F5;
+    padding: 20px 10px 20px 30px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+div.dialog div.resultBlock.open {
+    border: 0;
+}
+div.dialog div.resultBlock.closed ul {
+    display: none;
+}
+div.dialog div.resultBlock h2 .arrow {
+    position: absolute; z-index: 1;
+}
+div.dialog div.resultBlock.open h2 .arrow {
+    top: 8px; left: -4px;
+}
+div.dialog div.resultBlock.closed h2 .arrow {
+    top: 4px; left: 0;
+}
+div.dialog label.fileinput {
+    min-width: 50px;
+    padding: 0 20px;
+    height: 38px; line-height: 38px;
+    color: #606060;
+    background: white;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 2px solid #DDDDDD;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    position: relative; z-index: 1;
+}
+div.dialog label.fielinput:focus {
+    box-shadow: inset 0 1px 4px  rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 1px 4px rgba(0,0,0,0.5);
+}
+div.dialog input.fileinput {
+    line-height: 0;
+    margin: 0; padding: 0;
+    font-size: 50px;
+    position: absolute; z-index: 90; top: -2px; right: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    cursor: pointer; *cursor: hand;
+}
+div.dialog #filename {
+    margin-right: 10px;
+    height: 42px; line-height: 42px;
+    padding: 0 15px;
+    background-color: #F0F0F0;
+    min-width: 270px;
+}
+div.dialog form#csvUploadForm {
+    margin-top: 25px;
+}
+div.dialog.carocontent div.box {
+    min-height: 500px;
+    overflow: visible;
+}
+div.dialog.suggestApp div.box {
+    overflow: hidden;
+    max-width: 680px;
+}
+div.dialog.attibutesEditorTemplate div.box {
+    width: 550px;
+    text-align: center;
+}
+div.dialog.attibutesEditorTemplate ul#personAttributesList {
+    width: 290px;
+    margin: 0 auto
+}
+div.dialog.attibutesEditorTemplate ul li {
+    margin-bottom: 5px;
+}
+div.dialog.attibutesEditorTemplate ul li:first-child {
+    margin-bottom: 15px;
+}
+div.dialog.attibutesEditorTemplate ul li input[type="text"] {
+    width: 220px
+}
+div.dialog.attibutesEditorTemplate ul li input.hiddenattr {
+    color: #999
+}
+div.dialog.attibutesEditorTemplate ul li a.showhide {
+    position: absolute; z-index: 1; top: 3px; right: 50px;
+    height: 26px; line-height: 26px;
+    background-color: white;
+    padding: 0 10px 0 5px;
+}
+
+div.regmessage {
+    padding-top: 140px;
+}
+
+
+
+
+div.itemrow.ui-draggable-dragging {
+    color: #E4A33B;
+    background: #FFF3D3 url('/img/blank.png') no-repeat 0 0;
+    padding: 0 10px 0 50px;
+    border: 1px solid #CADADA;
+    min-width: 120px;
+    max-width: 400px;
+    white-space: nowrap;
+}
+div.itemrow.ui-draggable-dragging span.counter,
+div.itemrow.ui-draggable-dragging span.outlier,
+div.itemrow.ui-draggable-dragging div.line2 {
+    display: none
+}
+div.itemrow.ui-draggable-dragging img {
+    width: 40px; height: 40px;
+    position: absolute; z-index: 1; top: 0; left: 0;
+}
+div.itemrow.multiuserdrag.ui-draggable-dragging {
+    overflow: visible !important;
+    cursor: move;
+    height: 40px; line-height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    -moz-box-shadow: 1px 1px #FFF3D3, 2px 2px #CADADA, 3px 3px #FFF3D3, 4px 4px #CADADA;
+    -webkit-box-shadow: 1px 1px #FFF3D3, 2px 2px #CADADA, 3px 3px #FFF3D3, 4px 4px #CADADA;
+    box-shadow: 1px 1px #FFF3D3, 2px 2px #CADADA, 3px 3px #FFF3D3, 4px 4px #CADADA;
+    filter: none !important;
+}
+div.multiuserdrag div.sum {
+    position: absolute; z-index: 10; left: 30px; top: -12px;
+    color: #333;
+    background-color: #FFCD46;
+    padding: 3px 5px;
+    min-width: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px
+}
+
+
+/* everything that pops in by animation, zooming and fading in */
+div.zooom {
+    -moz-transform: scale(.8);
+    -webkit-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+    opacity: 0;
+
+    -moz-transition: -moz-transform .1s, opacity .1s;
+    -webkit-transition: -webkit-transform .1s, opacity .1s;
+    -ms-transition: -ms-transform .1s, opacity .1s;
+    -o-transition: -o-transform .1s, opacity .1s;
+    transition: transform .1s, opacity .1s;
+}
+div.on div.zooom {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+li.disabled {
+    opacity: .2;
+}

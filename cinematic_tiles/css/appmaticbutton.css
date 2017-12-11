@@ -1,0 +1,440 @@
+﻿input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea,
+button,
+a.button,
+.circlebutton {
+    -moz-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0;
+    padding: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    font-family: "Helvetica neue", Helvetica, arial, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid #CDCDCD;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    outline: 0;
+    margin: 0;
+    padding: 7px 10px;
+    color: #282828;
+    background-color: transparent;
+
+    -moz-box-shadow: 0 0 0 1px rgba(255,255,255,0.01);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.01);      /* required for a smooth transition in Chrome */
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 0 10px;
+    height: 30px;
+}
+input[type="text"][disabled],
+input[type="email"][disabled],
+input[type="password"][disabled],
+select[disabled],
+textarea[disabled] {
+    color: #A0A0A0 !important;
+    background: #F6F6F6;
+    border-color: rgba(0, 0, 0, .1);
+    text-shadow: 1px 1px rgba(255, 255, 255, .9) !important;
+    cursor: default
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    min-width: 120px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #F5B019
+}
+input[type="text"].error,
+input[type="email"].error,
+input[type="password"].error {
+    border-color: red !important
+}
+div.policypanel div.permissions input.settingEditableText[type="text"]:focus,
+div.policypanel div.permissions input.settingEditableText[type="email"]:focus
+div.policypanel div.permissions input.settingEditableText[type="password"]:focus {
+    border-color: #EEE;
+}
+
+div.flyoutcontentinner span.textbox {
+    display: block !important;
+    padding-right: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #E0E0E0;
+    -moz-box-shadow: 0 1px rgba(0,0,0,0.06);
+    -webkit-box-shadow: 0 1px rgba(0,0,0,0.06);
+    box-shadow: 0 1px rgba(0,0,0,0.06);
+    position: relative; z-index: 2;
+}
+input#searchTextBox {
+    padding: 0 20px 0 40px;
+    width: 95%;
+    height: 40px;
+    background-color: white;
+    border: 0;
+    border-radius: 0;
+    position: relative; z-index: 2;
+    background: white url('/img/search-normal.png') 15px center no-repeat;
+}
+input#searchTextBox:focus {
+    background: #FFF3D3 url('/img/search-active.png') 15px center no-repeat;
+    color: #c88536;
+    -webkit-box-shadow: 0 1px 1px rgba(200,133,54,0.5);
+    -moz-box-shadow: 0 1px 1px rgba(200,133,54,0.5);
+    box-shadow: 0 1px 1px rgba(200,133,54,0.5);
+}
+
+select {
+    max-width: 200px;
+    padding: 6px 5px;
+    background: #FAFAFA !important;
+}
+
+button,
+a.button {
+    font-family: "Helvetica neue", Helvetica, arial, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    margin: 0 8px 0 0;
+    font-size: 12px;
+    border: 2px solid #FFCD46;
+    height: 38px; line-height: 35px; *line-height: normal;
+    color: #606060;
+    background: #FFCD46;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 15px;
+    min-width: 80px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(138,104,24,.5);
+    -moz-box-shadow: 0 1px 1px rgba(138,104,24,.5);
+}
+button:hover,
+a.button:hover {
+    background-color: #F5B019;
+    border-color: #F5B019;
+}
+
+button:active, 
+a.button:active {
+    border-color: #BBB;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+button[disabled],
+a.button[disabled],
+button[disabled]:hover,
+a.button[disabled]:hover,
+button[disabled]:active,
+a.button[disabled]:active {
+    cursor: default !important;
+    color: #A8A8A8 !important;
+    text-shadow: 1px 1px white !important;
+    border-color: #E8E8E8 !important;
+    background-color: #E8E8E8 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+button.cancelButton,
+button.cancel,
+button.closeAddPolicyPanelButton,
+button#cancelEditButton,
+button#cancelButton,
+a.button.cancel {
+    background: white;
+    border-color: #DDD;
+    box-shadow: none;
+    -moz-box-shadow:none;
+}
+button.cancelButton:hover,
+button.cancel:hover,
+button.closeAddPolicyPanelButton:hover,
+button#cancelEditButton:hover,
+button#cancelButton:hover,
+a.button.cancel:hover {
+    background: white;
+    border-color: #999;
+}
+button.cancelButton:active,
+button.cancel:active,
+button.closeAddPolicyPanelButton:active,
+button#cancelEditButton:active,
+button#cancelButton:active,
+a.button.cancel:active {
+    border-color: #888;
+}
+button { /* IE7 properties */
+    *padding: 7px 5px 6px 5px;
+    *position: relative; *z-index: 1; *top: -1px;
+    *overflow: visible;
+    *width: auto;
+}
+a.button { /* IE7 properties */
+    *position: relative;
+    *z-index: 1;
+    *top: -12px;
+}
+button.small {
+    height: 28px; line-height: 22px; *line-height: normal;
+}
+div.attibutesEditorTemplate a.button {
+    height: 27px; line-height: 27px; *line-height: normal;
+    min-width: 0;
+    margin-left: 5px; margin-right: 0;
+    padding: 0 10px;
+    font-size: 22px;
+}
+div.attibutesEditorTemplate a.button.cancel {
+    height: 28px; line-height: 28px;
+}
+div.buttons button:last-child,
+div.buttons a.button:last-child {
+    margin-right: 0
+}
+div.noty_bar button {
+    margin-bottom: 15px
+}
+div.noty_bar div.noty_buttons {
+    margin-bottom: -15px;
+}
+
+button::-moz-focus-inner {   
+    border: 0;
+    padding: 0;
+    margin-top: -1px;
+}
+
+.circlebutton {
+    width: 40px; height: 30px;
+    margin-right: 4px;
+    cursor: pointer;
+    position: relative; z-index: 5;
+}
+.floright .circlebutton:last-child {
+    margin: 0
+}
+.circlebutton.b1 {
+    background-image: url("/img/btn1.png")
+}
+.circlebutton.b2 {
+    background-image: url("/img/btn2.png")
+}
+.circlebutton.b3 {
+    background-image: url("/img/btn3.png")
+}
+.circlebutton.b4 {
+    background-image: url("/img/btn41.png")
+}
+.circlebutton.b5 {
+    background-image: url("/img/btn5.png")
+}
+.circlebutton.b6 {
+    background-image: url("/img/btn6.png")
+}
+.circlebutton.disabled {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: .3
+}
+.circlebutton:hover, 
+.circlebutton.on {
+    background-color: #D0D0D0;
+}
+.circlebutton.disabled:hover {
+    background-color: transparent;
+    cursor: default
+}
+.circlebutton ul {
+    position: absolute; z-index: 1; top: 30px; left: 0;
+    color: white;
+    font-size: 12px; line-height: normal;
+    background-color: #AAAAAA;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    display: none;
+}
+.circlebutton.on ul {
+    display: block;
+}
+.circlebutton ul li {
+    padding: 5px 20px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.circlebutton ul li:first-child {
+    padding-top: 12px;
+}
+.circlebutton ul li:last-child {
+    padding-bottom: 12px;
+}
+.circlebutton ul li:hover {
+    color: black;
+}
+.circlebutton ul li.disabled {
+    color: #C0C0C0;
+    cursor: default
+}
+.circlebutton ul li.disabled:hover {
+    color: #C0C0C0;
+}
+
+
+span.watermark {
+    display: none
+}
+
+
+div.accountbutton {
+    position: relative; z-index: 1;
+    cursor: pointer;
+    font-size: 12px;
+    background: #EFEFEF url('/img/in.png') no-repeat 8px 6px;
+    height: 22px; line-height: 22px;
+    padding: 4px 14px 4px 34px;
+
+    text-shadow: 0em 1px 0.04em rgba(255, 255, 255, .8);
+
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    border: none;
+    outline: none;
+    color: #E4A33B;
+}
+div.accountbutton:hover,
+div.account.on div.accountbutton {
+    background-color: #F5F5F5;
+}
+div.account div.actionmenu {
+    display: none;
+    cursor: default;
+    text-shadow: none;
+    position: absolute; z-index: 10; top: 40px; right: 0;
+    border: 1px solid #B0B0B0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #333333;
+    background-color: white;
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+}
+div.account.on div.actionmenu {
+    display: block
+}
+div.account div.actionmenu div.inner {
+    margin: 10px 0;
+    min-width: 150px;
+}
+div.account div.actionmenu div.pointer1, 
+div.account div.actionmenu div.pointer2 {
+    position: absolute;
+    z-index: 3;
+    top: -21px;
+    right: 10px;
+    bottom: auto;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border: 10px solid transparent;
+    _border: 10px solid #F3F3F3;
+    _filter: chroma(color=#F3F3F3);
+    border-top: 0;
+    border-bottom-color: #808080;
+}
+div.account div.actionmenu div.pointer2 {
+    top: -20px;
+    border-bottom-color: white;
+}
+div.account div.actionmenu div.separator {
+    background-color: #D8D8D8;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+div.account div.actionmenu a {
+    display: block;
+    padding: 5px 35px 5px 15px;
+    font-weight: normal;
+}
+div.account div.actionmenu a:hover {
+    background-color: #FFCD46
+}
+
+div.autocomplete ul 
+{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 32px;
+    border: 1px solid gray;
+    background: #eeeeee;
+    text-align: left;
+    width: 99%;
+}
+
+div.autocomplete ul li
+{
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+div.autocomplete ul li:hover,
+div.autocomplete ul li.sel
+{
+    background:#bbbbbb;
+}
+
+/* custom stuff */
+div.policy button {
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+}
+div.header div.buttons button {
+    border: 1px solid #606060; height: 32px; line-height: 28px; *line-height: normal;
+    color: #606060;
+    background-color: transparent;
+    margin: 0;
+}
+div.flyout button {
+    width: 85px;
+    margin: 0 3px;
+    padding: 0 10px;
+}

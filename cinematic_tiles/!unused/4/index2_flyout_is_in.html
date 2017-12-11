@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Follow the white rabbit.</title>
+<link rel="stylesheet" href="appmatic.css">
+<link rel="stylesheet" href="appmaticbutton.css">
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<div class="mainwrap clearfixy">
+
+    <div class="peoplewrap floleft">
+        <div class="content">
+            <h1>People</h1>
+            <div class="buttons">
+                <button type="button">Add Group</button>
+                <button type="button">Add People</button>
+            </div>
+            <div class="contentinner" id="ci1">
+                <div class="items">
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item" id="click1">click</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                    <div class="item">&nbsp;</div>
+                </div>
+                <div class="flyout" id="fo1">
+                    <div class="x" id="x1" title="Close">&times;</div>
+                    <div class="pointer" id="p1">&#9664;</div>
+                    <div class="inner">
+                        <img src="dv7.jpg" width="70" height="70" class="prpic">
+                        <div class="fullname bold">Darth Vader</div>
+                        <div class="email">vader@darkside.com</div>
+                        <br>
+                        <div class="group bold">Group</div>
+                        <div class="groupname">Group Two</div>
+                        <div class="draghere bold"><i></i>Drag policy here</div>
+                        <div class="items"></div>
+                        <div class="items"></div>
+                        <div class="buttons">
+                            <button type="button">Save</button>
+                            <button type="button">Cancel</button>
+                            <button type="button" class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="policieswrap floleft">
+        <div class="content">
+            <h1>Policies</h1>
+            <div class="buttons">
+                <button type="button">Add Policy</button>
+            </div>
+            <div class="contentinner" id="ci2">
+                <div class="items">
+                </div>
+                <div class="items">
+                    <div style="height: 426px">&nbsp;</div>
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                    <div style="height: 376px">&nbsp;</div>
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+window.onload = function() { updateDOM() };
+window.onresize = function() { updateDOM() };
+function updateDOM() {
+    document.getElementById('ci1').style.height = document.getElementById('ci2').style.height = (document.body.clientHeight - 280) + "px"
+};
+document.getElementById("click1").onclick = function () {
+    pointertop = document.getElementById("click1").offsetTop - document.getElementById("ci1").scrollTop + 15;
+    if (pointertop < 10) pointertop = -100;
+    document.getElementById("p1").style.top = pointertop + "px";
+    document.getElementById("fo1").style.top = (document.getElementById("ci1").scrollTop) + "px";
+    document.getElementById("fo1").className = "flyout fly"; document.getElementById("click1").className = "item selected";
+};
+document.getElementById("x1").onclick = function () {
+    document.getElementById("fo1").className = "flyout"; document.getElementById("click1").className = "item"
+};
+document.getElementById("ci1").onscroll = function () {
+};
+</script>
+
+</body>
+</html>

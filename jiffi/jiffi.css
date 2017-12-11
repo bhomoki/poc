@@ -1,0 +1,365 @@
+.tile.a-jira .inner {
+    background-color: #003366
+}
+.tile.a-twitter .inner {
+    background-color: #1AB2E8
+}
+.tile.a-zendesk .inner {
+    background-color: #78A300
+}
+.tile.a-office365 .inner {
+    background-color: #E63C18
+}
+.tile.a-box .inner {
+    background-color: #2881BD
+}
+.tile.a-facebook .inner {
+    background-color: #3B5998
+}
+.tile.a-gmail .inner {
+    background-color: #D6C69A
+}
+.tile.a-wordpress .inner {
+    background-color: #1E8CBE
+}
+.tile.a-github .inner {
+    background-color: #2E2E2E
+}
+.tile.a-evernote .inner {
+    background-color: #3F9B2B
+}
+.tile.a-salesforce .inner {
+    background-color: #00AEE3
+}
+
+
+
+div.jumbo {
+    padding: 50px 8%;
+    background: white;
+    height: 170px;
+    white-space: nowrap;
+}
+div.jumbo h1 {
+    margin: 45px 0 0 0;
+    height: 60px;
+    letter-spacing: -2px;
+}
+div.jumbo input {
+    width: 50%; min-width: 400px;
+    height: 60px;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    border: 0 !important;
+    color: #444444;
+    padding: 0;
+}
+div.jumbo input:focus {
+    box-shadow: none !important
+}
+div.jumbo .off {
+    visibility: hidden;
+    opacity: 0;
+}
+.pageAdd div.jumbo #back.off,
+.pageApp div.jumbo #back.off,
+.pageNot div.jumbo #back.off,
+.pageDown div.jumbo #back.off {
+    visibility: visible;
+    opacity: 1;
+}
+.pageDown div.jumbo input,
+.pageApp div.jumbo input {
+    display: none
+}
+div.jumbo input::-ms-clear {
+    display: none;
+}
+div.jumbo span.pageAdd,
+div.jumbo span.pageDown,
+div.jumbo span.pageApp {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 3px;
+}
+.pageAdd div.jumbo span.pageAdd,
+.pageNot div.jumbo span.pageAdd {
+    width: 203px;
+    opacity: 1;
+}
+.pageDown div.jumbo span.pageDown {
+    width: 370px;
+    opacity: 1;
+}
+.pageApp div.jumbo span.pageApp {
+    width: 550px;
+    opacity: 1;
+}
+div.jumbo img#x,
+div.jumbo img#back {
+    position: absolute; z-index: 1; right: 0; top: 5px;
+    cursor: pointer;
+}
+div.jumbo img#back {
+    right: auto; left: -60px;
+}
+div.jumbo img:hover {
+
+}
+.jumbo ::-webkit-input-placeholder            {  color: black !important; text-transform: none; opacity: .1  }
+.jumbo :-moz-placeholder   /* Firefox 18- */  {  color: black !important; text-transform: none; opacity: .1  }
+.jumbo ::-moz-placeholder  /* Firefox 19+ */  {  color: black !important; text-transform: none; opacity: .1  }
+.jumbo :-ms-input-placeholder                 {  color: black !important; text-transform: none; opacity: .1  }
+
+.jumbo label {
+    color: #E6E6E6;
+    height: 60px;
+}
+
+div.content {
+    position: absolute; z-index: 1;
+    width: 100%;
+    padding: 50px 8% 50px 8%;
+    transform: translate3d(100%, 0, 0);
+    transition: transform .45s cubic-bezier(.19, 1, .22, 1);
+}
+div.content.out {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+div.content.in {
+    transform: translate3d(0, 0, 0);
+    height: auto;
+}
+body.pageApp {
+    background-color: white;
+}
+div.content.pageApp.one {
+    padding-top: 20px;
+    padding-bottom: 0;
+    background: #F5F5F5;
+}
+div.content.pageApp.two {
+    top: 300px
+}
+div.tiles {
+    margin-right: -30px;
+    margin-bottom: 20px;
+}
+div.tile {
+    float: left;
+    margin: 0 20px 5px -10px;
+    transition: all .45s cubic-bezier(.19, 1, .22, 1);
+    border: 10px solid #F5F5F5;
+    border-bottom-width: 3px;
+    width: 19%; min-width: 150px; max-width: 200px;
+}
+.pageApp div.tile {
+    border: 0
+}
+div.tile .inner {
+    background: #C0C0C0;
+    height: 90px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+div.tile .outer {
+    font-size: 13px;
+    padding: 5px 0;
+    line-height: 150%;
+}
+
+div.tile .outer a {
+    color: #F5F5F5;
+}
+
+div.tile .inner .logo {
+    float: left;
+    font-size: 130px;
+    position: relative; z-index: 1; bottom: 68px; left: -11px;
+    opacity: .1;
+    color: white;
+}
+div.tile .inner .appname {
+    position: absolute; z-index: 2; top: 0; left: 0;
+    width: 100%;
+    line-height: 90px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+div.tile:hover {
+    border-color: white;
+}
+
+div.tile:hover .outer {
+    background-color: white;
+}
+div.tile:hover .outer a {
+    color: #FF4833
+}
+div.tile div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+div.tile.add .inner {
+    cursor: pointer;
+}
+div.tile.add div.appname {
+    font-size: 80px;
+    font-weight: normal;
+}
+
+div.tile div.appuser {
+    color: gray;
+}
+
+div.tile div.addnow {
+    color: #0088CE;
+    cursor: pointer;
+}
+
+div.content.pageDown ol {
+    margin: 20px 0 30px 20px;
+    line-height: 150%;
+}
+
+.pageApp div.form label,
+.pageApp div.form input {
+    display: block;
+    margin-bottom: 15px; 
+    font-size: 12px;
+}
+.pageApp div.form label {
+    font-weight: bold;
+}
+.pageApp div.form input {
+    margin-bottom: 25px;
+    width: 300px;
+}
+.pageApp div.form button {
+    margin-top: 20px;
+}
+.pageApp div.form h2 {
+    margin-bottom: 40px;
+}
+
+div.x {
+    position: absolute; z-index: 9; top: 15px; right: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: .8;
+    width: 22px; height: 22px;
+    background: url(/img/icons-spr.png) -50px -131px no-repeat;
+    -webkit-transition: all .45s ease-out;
+    -moz-transition: all .45s ease-out;
+    -ms-transition: all .45s ease-out;
+    transition: all .45s ease-out;
+}
+div.dialog {
+    width: 100%; height: 0;
+    overflow: hidden;
+    position: fixed; z-index: 12; top: -2000px; left: 0;
+    text-align: center;
+    *position: fixed;
+}
+div.dialog.on {
+    top: 0; height: 100%;
+    overflow: visible;
+}
+div.dimmer {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: fixed; z-index: 1; top: 0; left: 0;
+    *position: absolute;
+    width: 100%; height: 0;
+    background-color: black;
+    -webkit-transition: opacity .15s ease-out;
+    -moz-transition: opacity .15s ease-out;
+    -ms-transition: opacity .15s ease-out;
+    transition: opacity .15s ease-out;
+}
+div.on div.dimmer {
+    height: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+div.on div.dimmer.trans {
+    background-color: rgba(0, 0, 0, 0.01);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=.01)";
+    filter: alpha(opacity=.01);
+    opacity: 0.01;
+}
+div.on div.dimmer.white {
+    background-color: white;
+}
+div.dialog div.box {
+    position: relative; z-index: 1; 
+    min-width: 450px; max-width: 92%;
+    min-height: 100px; max-height: 80%; 
+    overflow-x: hidden; overflow-y: auto;
+    text-align: left;
+    display: -moz-inline-stack;
+    display: inline-block;
+    *zoom: 1; *display: inline;
+    margin: 7% 40px 0 40px;
+    background-color: white;
+    border-radius: 5px
+}
+div.dialog div.box div.inner {
+    margin: 30px 30px 0 30px;
+    padding: 0 10px;
+    max-width: 500px;
+    font-size: 15px;
+}
+div.dialog div.box h1 {
+    font-size: 28px;
+    text-align: center;
+    height: auto; line-height: normal;
+    margin: 0 10px 20px 10px;
+    color: inherit;
+}
+div.dialog div.box p {
+    line-height: 150%;
+}
+div.dialog div.box div.buttons {
+    text-align: center;
+    margin: 40px -40px 0 -40px;
+    background-color: #ECECEC;
+    padding: 15px 0
+}
+
+
+
+
+
+/* everything that pops in by animation, zooming and fading in */
+.zooom {
+    -moz-transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+    opacity: 0;
+    -webkit-transition: -webkit-transform .45s cubic-bezier(.19, 1, .22, 1), opacity .45s cubic-bezier(.19, 1, .22, 1); 
+  	-moz-transition: -moz-transform .45s cubic-bezier(.19, 1, .22, 1), opacity .45s cubic-bezier(.19, 1, .22, 1); 
+	-ms-transition: -ms-transform .45s cubic-bezier(.19, 1, .22, 1), opacity .45s cubic-bezier(.19, 1, .22, 1); 
+    transition: transform .45s cubic-bezier(.19, 1, .22, 1), opacity .45s cubic-bezier(.19, 1, .22, 1);
+}
+div.on .zooom {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}

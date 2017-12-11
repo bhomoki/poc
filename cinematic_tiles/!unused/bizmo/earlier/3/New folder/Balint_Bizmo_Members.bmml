@@ -1,0 +1,1150 @@
+<mockup version="1.0" skin="sketch" measuredW="1131" measuredH="4056" mockupW="1106" mockupH="4041">
+  <controls>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::SearchBox" x="898" y="117" w="183" h="-1" measuredW="120" measuredH="26" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>search</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::PointyButton" x="167" y="222" w="96" h="-1" measuredW="88" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <text>+%20Subgroup</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::PointyButton" x="68" y="222" w="94" h="-1" measuredW="67" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>+%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="113" controlTypeID="com.balsamiq.mockups::DataGrid" x="72" y="380" w="1013" h="256" measuredW="564" measuredH="145" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>none</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09Email%09Name%09join.me%09Cubby%09Status%09Last%20login%0A%5B%5D%09john.travolta@logmein.com%09John%20Travolta%09Pro%09no%20access%09%20%092/29/2012%0A%5B%5D%09lou.reed@logmein.com%09Lou%20Reed%09Free%09no%20access%09%20%093/1/2012%0A%5B%5D%09eric.clapton@logmein.com%09Eric%20Clapton%09Free%09Member%09%20%093/23/2012%0A%5B%5D%09lee.cooper@logmein.com%09Lee%20Cooper%09Pro%09Member%09pending%096/27/2011</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::DataGrid" x="68" y="269" w="1013" h="96" measuredW="405" measuredH="97" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>square</borderStyle>
+        <hasHeader>false</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09*Subgroup%5C%2C%20AB*%20%20%20%20-%20%20%20%5BMembers%20%2823%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Another%20subgroup*%20%20%20%20-%20%20%20%5BMembers%20%285%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Groupname*%20%20%20%20-%20%20%20%5BMembers%20%280%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="142" controlTypeID="com.balsamiq.mockups::ComboBox" x="66" y="117" w="-1" h="-1" measuredW="113" measuredH="26" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <size>16</size>
+        <text>ACME%20corp</text>
+      </controlProperties>
+    </control>
+    <control controlID="143" controlTypeID="com.balsamiq.mockups::ComboBox" x="202" y="117" w="-1" h="-1" measuredW="71" measuredH="26" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Sales</text>
+      </controlProperties>
+    </control>
+    <control controlID="144" controlTypeID="com.balsamiq.mockups::ComboBox" x="298" y="118" w="-1" h="-1" measuredW="76" measuredH="26" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>SOHO</text>
+      </controlProperties>
+    </control>
+    <control controlID="145" controlTypeID="com.balsamiq.mockups::ComboBox" x="399" y="117" w="-1" h="-1" measuredW="73" measuredH="26" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>0</color>
+        <size>16</size>
+        <text>%7Bcolor%3A%23000000%7DBerlin%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="146" controlTypeID="com.balsamiq.mockups::Label" x="182" y="116" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="148" controlTypeID="com.balsamiq.mockups::Label" x="277" y="116" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="149" controlTypeID="com.balsamiq.mockups::Label" x="377" y="116" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="150" controlTypeID="com.balsamiq.mockups::LinkBar" x="68" y="162" w="-1" h="-1" measuredW="275" measuredH="24" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <size>16</size>
+        <text>*Members*%20%287%29%2C%20Properties%2C%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="151" controlTypeID="com.balsamiq.mockups::Label" x="934" y="225" w="-1" h="-1" measuredW="147" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3%20subgroups%20and%204%20users</text>
+      </controlProperties>
+    </control>
+    <control controlID="152" controlTypeID="com.balsamiq.mockups::HRule" x="68" y="200" w="1009" h="-1" measuredW="100" measuredH="5" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+      </controlProperties>
+    </control>
+    <control controlID="153" controlTypeID="com.balsamiq.mockups::SearchBox" x="899" y="1488" w="183" h="-1" measuredW="120" measuredH="26" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>search</text>
+      </controlProperties>
+    </control>
+    <control controlID="154" controlTypeID="com.balsamiq.mockups::PointyButton" x="168" y="1593" w="96" h="-1" measuredW="88" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <text>+%20Subgroup</text>
+      </controlProperties>
+    </control>
+    <control controlID="155" controlTypeID="com.balsamiq.mockups::PointyButton" x="69" y="1593" w="94" h="-1" measuredW="67" measuredH="27" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>+%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="156" controlTypeID="com.balsamiq.mockups::DataGrid" x="69" y="1751" w="1013" h="256" measuredW="565" measuredH="145" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>none</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09Email%09Name%09join.me%09Cubby%09Status%09Last%20login%0A%5B%5D%09john.travolta@logmein.com%09John%20Travolta%09Pro%09no%20access%09%20%092/29/2012%0A%5Bx%5D%09*lou.reed@logmein.com*%09*Lou%20Reed*%09*Free*%09*no%20access*%09%20%09*3/1/2012*%0A%5B%5D%09eric.clapton@logmein.com%09Eric%20Clapton%09Free%09Member%09%20%093/23/2012%0A%5B%5D%09lee.cooper@logmein.com%09Lee%20Cooper%09Pro%09Member%09pending%096/27/2011</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="157" controlTypeID="com.balsamiq.mockups::DataGrid" x="69" y="1638" w="1013" h="96" measuredW="405" measuredH="97" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>square</borderStyle>
+        <hasHeader>false</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09*Subgroup%5C%2C%20AB*%20%20%20%20-%20%20%20%5BMembers%20%2823%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Another%20subgroup*%20%20%20%20-%20%20%20%5BMembers%20%285%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Groupname*%20%20%20%20-%20%20%20%5BMembers%20%280%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="158" controlTypeID="com.balsamiq.mockups::ComboBox" x="67" y="1488" w="-1" h="-1" measuredW="113" measuredH="26" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <size>16</size>
+        <text>ACME%20corp</text>
+      </controlProperties>
+    </control>
+    <control controlID="159" controlTypeID="com.balsamiq.mockups::ComboBox" x="203" y="1488" w="-1" h="-1" measuredW="71" measuredH="26" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Sales</text>
+      </controlProperties>
+    </control>
+    <control controlID="160" controlTypeID="com.balsamiq.mockups::ComboBox" x="299" y="1489" w="-1" h="-1" measuredW="76" measuredH="26" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>SOHO</text>
+      </controlProperties>
+    </control>
+    <control controlID="161" controlTypeID="com.balsamiq.mockups::ComboBox" x="400" y="1488" w="-1" h="-1" measuredW="73" measuredH="26" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>0</color>
+        <size>16</size>
+        <text>%7Bcolor%3A%23000000%7DBerlin%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="162" controlTypeID="com.balsamiq.mockups::Label" x="183" y="1487" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="163" controlTypeID="com.balsamiq.mockups::Label" x="278" y="1487" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="164" controlTypeID="com.balsamiq.mockups::Label" x="378" y="1487" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="165" controlTypeID="com.balsamiq.mockups::LinkBar" x="69" y="1533" w="-1" h="-1" measuredW="275" measuredH="24" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <size>16</size>
+        <text>*Members*%20%287%29%2C%20Properties%2C%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="166" controlTypeID="com.balsamiq.mockups::Label" x="935" y="1596" w="-1" h="-1" measuredW="147" measuredH="21" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3%20subgroups%20and%204%20users</text>
+      </controlProperties>
+    </control>
+    <control controlID="167" controlTypeID="com.balsamiq.mockups::HRule" x="69" y="1571" w="1009" h="-1" measuredW="100" measuredH="5" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+      </controlProperties>
+    </control>
+    <control controlID="169" controlTypeID="com.balsamiq.mockups::FieldSet" x="658" y="1565" w="425" h="420" measuredW="200" measuredH="170" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <text>*Lou%20Reed%20%3Clou.reed@logmein.com%3E*</text>
+      </controlProperties>
+    </control>
+    <control controlID="187" controlTypeID="com.balsamiq.mockups::PointyButton" x="792" y="1939" w="71" h="-1" measuredW="70" measuredH="27" zOrder="48" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>14540253</color>
+        <direction>center</direction>
+        <icon>SaveIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <state>up</state>
+        <text>Save</text>
+      </controlProperties>
+    </control>
+    <control controlID="188" controlTypeID="com.balsamiq.mockups::PointyButton" x="867" y="1939" w="64" h="-1" measuredW="61" measuredH="27" zOrder="49" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <state>up</state>
+        <text>Cancel</text>
+      </controlProperties>
+    </control>
+    <control controlID="189" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1066" y="1638" w="-1" h="348" measuredW="16" measuredH="100" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <value>100</value>
+      </controlProperties>
+    </control>
+    <control controlID="192" controlTypeID="com.balsamiq.mockups::HRule" x="665" y="1635" w="415" h="-1" measuredW="100" measuredH="5" zOrder="51" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+      </controlProperties>
+    </control>
+    <control controlID="193" controlTypeID="com.balsamiq.mockups::PointyButton" x="680" y="1593" w="79" h="-1" measuredW="71" measuredH="27" zOrder="52" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <icon>JumpBackIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <text>Move</text>
+      </controlProperties>
+    </control>
+    <control controlID="194" controlTypeID="com.balsamiq.mockups::PointyButton" x="764" y="1593" w="87" h="-1" measuredW="78" measuredH="27" zOrder="53" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <icon>Trash2Icon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <text>Delete</text>
+      </controlProperties>
+    </control>
+    <control controlID="207" controlTypeID="com.balsamiq.mockups::SearchBox" x="900" y="2179" w="183" h="-1" measuredW="120" measuredH="26" zOrder="54" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>search</text>
+      </controlProperties>
+    </control>
+    <control controlID="208" controlTypeID="com.balsamiq.mockups::PointyButton" x="169" y="2284" w="96" h="-1" measuredW="88" measuredH="27" zOrder="55" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <text>+%20Subgroup</text>
+      </controlProperties>
+    </control>
+    <control controlID="209" controlTypeID="com.balsamiq.mockups::PointyButton" x="70" y="2284" w="94" h="-1" measuredW="67" measuredH="27" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>+%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="210" controlTypeID="com.balsamiq.mockups::DataGrid" x="70" y="2442" w="1013" h="256" measuredW="565" measuredH="145" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>none</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09Email%09Name%09join.me%09Cubby%09Status%09Last%20login%0A%5B%5D%09john.travolta@logmein.com%09John%20Travolta%09Pro%09no%20access%09%20%092/29/2012%0A%5Bx%5D%09*lou.reed@logmein.com*%09*Lou%20Reed*%09*Free*%09*no%20access*%09%20%09*3/1/2012*%0A%5B%5D%09eric.clapton@logmein.com%09Eric%20Clapton%09Free%09Member%09%20%093/23/2012%0A%5B%5D%09lee.cooper@logmein.com%09Lee%20Cooper%09Pro%09Member%09pending%096/27/2011</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="211" controlTypeID="com.balsamiq.mockups::DataGrid" x="70" y="2329" w="1013" h="96" measuredW="405" measuredH="97" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>square</borderStyle>
+        <hasHeader>false</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09*Subgroup%5C%2C%20AB*%20%20%20%20-%20%20%20%5BMembers%20%2823%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Another%20subgroup*%20%20%20%20-%20%20%20%5BMembers%20%285%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Groupname*%20%20%20%20-%20%20%20%5BMembers%20%280%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="212" controlTypeID="com.balsamiq.mockups::ComboBox" x="68" y="2179" w="-1" h="-1" measuredW="113" measuredH="26" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <size>16</size>
+        <text>ACME%20corp</text>
+      </controlProperties>
+    </control>
+    <control controlID="213" controlTypeID="com.balsamiq.mockups::ComboBox" x="204" y="2179" w="-1" h="-1" measuredW="71" measuredH="26" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Sales</text>
+      </controlProperties>
+    </control>
+    <control controlID="214" controlTypeID="com.balsamiq.mockups::ComboBox" x="300" y="2180" w="-1" h="-1" measuredW="76" measuredH="26" zOrder="61" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>SOHO</text>
+      </controlProperties>
+    </control>
+    <control controlID="215" controlTypeID="com.balsamiq.mockups::ComboBox" x="401" y="2179" w="-1" h="-1" measuredW="73" measuredH="26" zOrder="62" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>0</color>
+        <size>16</size>
+        <text>%7Bcolor%3A%23000000%7DBerlin%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="216" controlTypeID="com.balsamiq.mockups::Label" x="184" y="2178" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="63" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="217" controlTypeID="com.balsamiq.mockups::Label" x="279" y="2178" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="64" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="218" controlTypeID="com.balsamiq.mockups::Label" x="379" y="2178" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="65" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="219" controlTypeID="com.balsamiq.mockups::LinkBar" x="70" y="2224" w="-1" h="-1" measuredW="275" measuredH="24" zOrder="66" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <size>16</size>
+        <text>*Members*%20%287%29%2C%20Properties%2C%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="220" controlTypeID="com.balsamiq.mockups::Label" x="936" y="2287" w="-1" h="-1" measuredW="147" measuredH="21" zOrder="67" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3%20subgroups%20and%204%20users</text>
+      </controlProperties>
+    </control>
+    <control controlID="221" controlTypeID="com.balsamiq.mockups::HRule" x="70" y="2262" w="1009" h="-1" measuredW="100" measuredH="5" zOrder="68" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+      </controlProperties>
+    </control>
+    <control controlID="222" controlTypeID="com.balsamiq.mockups::FieldSet" x="659" y="2256" w="425" h="420" measuredW="200" measuredH="170" zOrder="69" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <text>*Lou%20Reed%20%3Clou.reed@logmein.com%3E*</text>
+      </controlProperties>
+    </control>
+    <control controlID="226" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1067" y="2331" w="-1" h="345" measuredW="16" measuredH="100" zOrder="70" locked="false" isInGroup="-1">
+      <controlProperties>
+        <value>0</value>
+      </controlProperties>
+    </control>
+    <control controlID="227" controlTypeID="com.balsamiq.mockups::HRule" x="666" y="2326" w="415" h="-1" measuredW="100" measuredH="5" zOrder="71" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+      </controlProperties>
+    </control>
+    <control controlID="228" controlTypeID="com.balsamiq.mockups::PointyButton" x="681" y="2284" w="79" h="-1" measuredW="71" measuredH="27" zOrder="72" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>14540253</color>
+        <direction>center</direction>
+        <icon>JumpBackIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <state>disabled</state>
+        <text>Move</text>
+      </controlProperties>
+    </control>
+    <control controlID="229" controlTypeID="com.balsamiq.mockups::PointyButton" x="765" y="2284" w="87" h="-1" measuredW="61" measuredH="27" zOrder="73" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>Cancel</text>
+      </controlProperties>
+    </control>
+    <control controlID="230" controlTypeID="com.balsamiq.mockups::Tree" x="683" y="2336" w="178" h="340" measuredW="300" measuredH="454" zOrder="74" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0</backgroundAlpha>
+        <borderStyle>none</borderStyle>
+        <color>16777215</color>
+        <size>14</size>
+        <state>up</state>
+        <text>vACME%20corp%0A%20%3EMarketing%0A%20vSales%0A%20%20_%5C%5BNew%20group%5C%5D%0A%20%20_Consumer%0A%20%20_Corporate%0A%20%20vSOHO%0A%20%20%20_%5C%5BNew%20group%5C%5D%0A%20%20%20%3EBerlin%0A%20%20%20_London%0A%20%20%20_New%20York%0A%20%20%20_Paris%0A%20%3ESupport%0A%20%20%3ELevel%201%0A%20%20vLevel%202%0A%20%20%20_Android%0A%20%20%20_iOS%0A%20%20%20_Macintosh%0A%20%20%20_Windows</text>
+      </controlProperties>
+    </control>
+    <control controlID="232" controlTypeID="com.balsamiq.mockups::SearchBox" x="912" y="3491" w="183" h="-1" measuredW="120" measuredH="26" zOrder="75" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>search</text>
+      </controlProperties>
+    </control>
+    <control controlID="233" controlTypeID="com.balsamiq.mockups::PointyButton" x="181" y="3596" w="96" h="-1" measuredW="88" measuredH="27" zOrder="76" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <text>+%20Subgroup</text>
+      </controlProperties>
+    </control>
+    <control controlID="234" controlTypeID="com.balsamiq.mockups::PointyButton" x="82" y="3596" w="94" h="-1" measuredW="67" measuredH="27" zOrder="77" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>+%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="235" controlTypeID="com.balsamiq.mockups::DataGrid" x="82" y="3754" w="1013" h="256" measuredW="565" measuredH="145" zOrder="78" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>none</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09Email%09Name%09join.me%09Cubby%09Status%09Last%20login%0A%5B%5D%09john.travolta@logmein.com%09John%20Travolta%09Pro%09no%20access%09%20%092/29/2012%0A%5Bx%5D%09*lou.reed@logmein.com*%09*Lou%20Reed*%09*Free*%09*no%20access*%09%20%09*3/1/2012*%0A%5B%5D%09eric.clapton@logmein.com%09Eric%20Clapton%09Free%09Member%09%20%093/23/2012%0A%5B%5D%09lee.cooper@logmein.com%09Lee%20Cooper%09Pro%09Member%09pending%096/27/2011</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="236" controlTypeID="com.balsamiq.mockups::DataGrid" x="82" y="3641" w="1013" h="96" measuredW="405" measuredH="97" zOrder="79" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>square</borderStyle>
+        <hasHeader>false</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09*Subgroup%5C%2C%20AB*%20%20%20%20-%20%20%20%5BMembers%20%2823%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Another%20subgroup*%20%20%20%20-%20%20%20%5BMembers%20%285%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Groupname*%20%20%20%20-%20%20%20%5BMembers%20%280%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="237" controlTypeID="com.balsamiq.mockups::ComboBox" x="80" y="3491" w="-1" h="-1" measuredW="113" measuredH="26" zOrder="80" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <size>16</size>
+        <text>ACME%20corp</text>
+      </controlProperties>
+    </control>
+    <control controlID="238" controlTypeID="com.balsamiq.mockups::ComboBox" x="216" y="3491" w="-1" h="-1" measuredW="71" measuredH="26" zOrder="81" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Sales</text>
+      </controlProperties>
+    </control>
+    <control controlID="239" controlTypeID="com.balsamiq.mockups::ComboBox" x="312" y="3492" w="-1" h="-1" measuredW="76" measuredH="26" zOrder="82" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>SOHO</text>
+      </controlProperties>
+    </control>
+    <control controlID="240" controlTypeID="com.balsamiq.mockups::ComboBox" x="413" y="3491" w="-1" h="-1" measuredW="73" measuredH="26" zOrder="83" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>0</color>
+        <size>16</size>
+        <text>%7Bcolor%3A%23000000%7DBerlin%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="241" controlTypeID="com.balsamiq.mockups::Label" x="196" y="3490" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="84" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="242" controlTypeID="com.balsamiq.mockups::Label" x="291" y="3490" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="85" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="243" controlTypeID="com.balsamiq.mockups::Label" x="391" y="3490" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="86" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="244" controlTypeID="com.balsamiq.mockups::LinkBar" x="82" y="3536" w="-1" h="-1" measuredW="275" measuredH="24" zOrder="87" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <size>16</size>
+        <text>*Members*%20%287%29%2C%20Properties%2C%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="245" controlTypeID="com.balsamiq.mockups::Label" x="948" y="3599" w="-1" h="-1" measuredW="147" measuredH="21" zOrder="88" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3%20subgroups%20and%204%20users</text>
+      </controlProperties>
+    </control>
+    <control controlID="246" controlTypeID="com.balsamiq.mockups::HRule" x="82" y="3574" w="1009" h="-1" measuredW="100" measuredH="5" zOrder="89" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+      </controlProperties>
+    </control>
+    <control controlID="247" controlTypeID="com.balsamiq.mockups::FieldSet" x="671" y="3568" w="425" h="420" measuredW="200" measuredH="170" zOrder="90" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <text>*Lou%20Reed%20%3Clou.reed@logmein.com%3E*</text>
+      </controlProperties>
+    </control>
+    <control controlID="249" controlTypeID="com.balsamiq.mockups::HRule" x="678" y="3638" w="415" h="-1" measuredW="100" measuredH="5" zOrder="91" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+      </controlProperties>
+    </control>
+    <control controlID="253" controlTypeID="com.balsamiq.mockups::PointyButton" x="695" y="3596" w="79" h="-1" measuredW="71" measuredH="27" zOrder="92" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>14540253</color>
+        <direction>center</direction>
+        <icon>JumpBackIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <state>disabled</state>
+        <text>Move</text>
+      </controlProperties>
+    </control>
+    <control controlID="254" controlTypeID="com.balsamiq.mockups::PointyButton" x="779" y="3596" w="87" h="-1" measuredW="78" measuredH="27" zOrder="93" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>14540253</color>
+        <direction>center</direction>
+        <icon>Trash2Icon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <state>disabled</state>
+        <text>Delete</text>
+      </controlProperties>
+    </control>
+    <control controlID="255" controlTypeID="com.balsamiq.mockups::Paragraph" x="746" y="3674" w="262" h="48" measuredW="200" measuredH="80" zOrder="94" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>Are%20you%20sure%20you%20want%20to%20delete%0A*Lou%20Reed%20%3Clou.reed@logmein.com%3E*%20%20%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="257" controlTypeID="com.balsamiq.mockups::PointyButton" x="878" y="3737" w="79" h="-1" measuredW="56" measuredH="27" zOrder="95" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <icon>XIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <state>up</state>
+        <text>No</text>
+      </controlProperties>
+    </control>
+    <control controlID="258" controlTypeID="com.balsamiq.mockups::PointyButton" x="897" y="1593" w="87" h="-1" measuredW="78" measuredH="27" zOrder="96" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <icon>ExportIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <text>Export</text>
+      </controlProperties>
+    </control>
+    <control controlID="259" controlTypeID="com.balsamiq.mockups::SearchBox" x="904" y="2865" w="183" h="-1" measuredW="120" measuredH="26" zOrder="97" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>search</text>
+      </controlProperties>
+    </control>
+    <control controlID="260" controlTypeID="com.balsamiq.mockups::PointyButton" x="173" y="2970" w="96" h="-1" measuredW="88" measuredH="27" zOrder="98" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <text>+%20Subgroup</text>
+      </controlProperties>
+    </control>
+    <control controlID="261" controlTypeID="com.balsamiq.mockups::PointyButton" x="74" y="2970" w="94" h="-1" measuredW="67" measuredH="27" zOrder="99" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>+%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="262" controlTypeID="com.balsamiq.mockups::DataGrid" x="74" y="3128" w="1013" h="194" measuredW="564" measuredH="115" zOrder="100" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>none</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09Email%09Name%09join.me%09Cubby%09Status%09Last%20login%0A%5B%5D%09john.travolta@logmein.com%09John%20Travolta%09Pro%09no%20access%09%20%092/29/2012%0A%5B%5D%09eric.clapton@logmein.com%09Eric%20Clapton%09Free%09Member%09%20%093/23/2012%0A%5B%5D%09lee.cooper@logmein.com%09Lee%20Cooper%09Pro%09Member%09pending%096/27/2011</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="263" controlTypeID="com.balsamiq.mockups::DataGrid" x="74" y="3015" w="1013" h="96" measuredW="405" measuredH="97" zOrder="101" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>square</borderStyle>
+        <hasHeader>false</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09*Subgroup%5C%2C%20AB*%20%20%20%20-%20%20%20%5BMembers%20%2823%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Another%20subgroup*%20%20%20%20-%20%20%20%5BMembers%20%285%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Groupname*%20%20%20%20-%20%20%20%5BMembers%20%280%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="264" controlTypeID="com.balsamiq.mockups::ComboBox" x="72" y="2865" w="-1" h="-1" measuredW="113" measuredH="26" zOrder="102" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <size>16</size>
+        <text>ACME%20corp</text>
+      </controlProperties>
+    </control>
+    <control controlID="265" controlTypeID="com.balsamiq.mockups::ComboBox" x="208" y="2865" w="-1" h="-1" measuredW="71" measuredH="26" zOrder="103" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Sales</text>
+      </controlProperties>
+    </control>
+    <control controlID="266" controlTypeID="com.balsamiq.mockups::ComboBox" x="304" y="2866" w="-1" h="-1" measuredW="76" measuredH="26" zOrder="104" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>SOHO</text>
+      </controlProperties>
+    </control>
+    <control controlID="267" controlTypeID="com.balsamiq.mockups::ComboBox" x="405" y="2865" w="-1" h="-1" measuredW="73" measuredH="26" zOrder="105" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>0</color>
+        <size>16</size>
+        <text>%7Bcolor%3A%23000000%7DBerlin%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="268" controlTypeID="com.balsamiq.mockups::Label" x="188" y="2864" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="106" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="269" controlTypeID="com.balsamiq.mockups::Label" x="283" y="2864" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="107" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="270" controlTypeID="com.balsamiq.mockups::Label" x="383" y="2864" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="108" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="271" controlTypeID="com.balsamiq.mockups::LinkBar" x="74" y="2910" w="-1" h="-1" measuredW="275" measuredH="24" zOrder="109" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <size>16</size>
+        <text>*Members*%20%286%29%2C%20Properties%2C%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="272" controlTypeID="com.balsamiq.mockups::Label" x="940" y="2973" w="-1" h="-1" measuredW="146" measuredH="21" zOrder="110" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3%20subgroups%20and%203%20users</text>
+      </controlProperties>
+    </control>
+    <control controlID="273" controlTypeID="com.balsamiq.mockups::HRule" x="74" y="2948" w="1009" h="-1" measuredW="100" measuredH="5" zOrder="111" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+      </controlProperties>
+    </control>
+    <control controlID="274" controlTypeID="com.balsamiq.mockups::FieldSet" x="662" y="2942" w="425" h="360" measuredW="200" measuredH="170" zOrder="112" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <text>*Lou%20Reed%20%3Clou.reed@logmein.com%3E*</text>
+      </controlProperties>
+    </control>
+    <control controlID="276" controlTypeID="com.balsamiq.mockups::HRule" x="670" y="3015" w="415" h="-1" measuredW="100" measuredH="5" zOrder="115" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+      </controlProperties>
+    </control>
+    <control controlID="280" controlTypeID="com.balsamiq.mockups::Paragraph" x="744" y="3054" w="262" h="65" measuredW="200" measuredH="80" zOrder="113" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>*Lou%20Reed%20%3Clou.reed@logmein.com%3E*%0Amoved%20to%0AACME%20Corp%20%3E%20Sales%20%3E%20Corporate</text>
+      </controlProperties>
+    </control>
+    <control controlID="281" controlTypeID="com.balsamiq.mockups::PointyButton" x="840" y="3136" w="79" h="-1" measuredW="59" measuredH="27" zOrder="114" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <icon>CheckMarkIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <state>up</state>
+        <text>OK</text>
+      </controlProperties>
+    </control>
+    <control controlID="282" controlTypeID="com.balsamiq.mockups::PointyButton" x="681" y="2970" w="79" h="-1" measuredW="71" measuredH="27" zOrder="116" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>14540253</color>
+        <direction>center</direction>
+        <icon>JumpBackIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <state>disabled</state>
+        <text>Move</text>
+      </controlProperties>
+    </control>
+    <control controlID="283" controlTypeID="com.balsamiq.mockups::PointyButton" x="765" y="2970" w="87" h="-1" measuredW="61" measuredH="27" zOrder="117" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <color>14540253</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <state>disabled</state>
+        <text>Cancel</text>
+      </controlProperties>
+    </control>
+    <control controlID="284" controlTypeID="__group__" x="741" y="2296" w="24" h="31" measuredW="24" measuredH="31" zOrder="118" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="7" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="0" locked="false" isInGroup="284">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>0</color>
+            <icon>CursorIcon%7Csmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="1" locked="false" isInGroup="284">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>0</color>
+            <icon>SpinningIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="285" controlTypeID="__group__" x="846" y="3606" w="24" h="31" measuredW="24" measuredH="31" zOrder="119" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="7" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="0" locked="false" isInGroup="285">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>0</color>
+            <icon>CursorIcon%7Csmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="1" locked="false" isInGroup="285">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>0</color>
+            <icon>SpinningIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="286" controlTypeID="com.balsamiq.mockups::CallOut" x="35" y="1800" w="-1" h="-1" measuredW="36" measuredH="39" zOrder="120" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1</text>
+      </controlProperties>
+    </control>
+    <control controlID="287" controlTypeID="com.balsamiq.mockups::CallOut" x="1022" y="1552" w="-1" h="-1" measuredW="38" measuredH="37" zOrder="121" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <text>2</text>
+      </controlProperties>
+    </control>
+    <control controlID="288" controlTypeID="com.balsamiq.mockups::CallOut" x="144" y="2874" w="-1" h="-1" measuredW="130" measuredH="40" zOrder="122" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>16776960</color>
+        <text>counters%20updated</text>
+      </controlProperties>
+    </control>
+    <control controlID="289" controlTypeID="com.balsamiq.mockups::CallOut" x="25" y="3163" w="121" h="51" measuredW="175" measuredH="39" zOrder="123" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <text>removed%20from%20current%20list</text>
+      </controlProperties>
+    </control>
+    <control controlID="318" controlTypeID="com.balsamiq.mockups::SearchBox" x="900" y="798" w="183" h="-1" measuredW="120" measuredH="26" zOrder="124" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>search</text>
+      </controlProperties>
+    </control>
+    <control controlID="319" controlTypeID="com.balsamiq.mockups::PointyButton" x="169" y="903" w="96" h="-1" measuredW="88" measuredH="27" zOrder="125" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <text>+%20Subgroup</text>
+      </controlProperties>
+    </control>
+    <control controlID="320" controlTypeID="com.balsamiq.mockups::PointyButton" x="70" y="903" w="94" h="-1" measuredW="67" measuredH="27" zOrder="126" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>+%20Users</text>
+      </controlProperties>
+    </control>
+    <control controlID="321" controlTypeID="com.balsamiq.mockups::DataGrid" x="70" y="1061" w="1013" h="256" measuredW="573" measuredH="145" zOrder="127" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>none</borderStyle>
+        <hasHeader>true</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09Email%09Name%09join.me%09Cubby%09Status%09Last%20login%0A%5B%5D%09john.travolta@logmein.com%09John%20Travolta%09Pro%09no%20access%09%20%092/29/2012%0A%5B%5D%09lou.reed@logmein.com%09Lou%20Reed%09Free%09no%20access%093/1/2012%0A%5B%5D%09eric.clapton@logmein.com%09Eric%20Clapton%09Free%09Member%09%20%093/23/2012%0A%5B%5D%09lee.cooper@logmein.com%09Lee%20Cooper%09Pro%09Member%09pending%096/27/2011</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="322" controlTypeID="com.balsamiq.mockups::DataGrid" x="70" y="948" w="1013" h="96" measuredW="405" measuredH="97" zOrder="128" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>square</borderStyle>
+        <hasHeader>false</hasHeader>
+        <hLines>true</hLines>
+        <selectedIndex>-1</selectedIndex>
+        <text>%5B%5D%09*Subgroup%5C%2C%20AB*%20%20%20%20-%20%20%20%5BMembers%20%2823%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Another%20subgroup*%20%20%20%20-%20%20%20%5BMembers%20%285%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D%0A%5B%5D%09*Groupname*%20%20%20%20-%20%20%20%5BMembers%20%280%29%5D%20%20-%20%20%5BProperties%5D%20%20-%20%20%5BReports%5D</text>
+        <verticalScrollbar>false</verticalScrollbar>
+        <vLines>false</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="323" controlTypeID="com.balsamiq.mockups::ComboBox" x="68" y="798" w="-1" h="-1" measuredW="113" measuredH="26" zOrder="129" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <size>16</size>
+        <text>ACME%20corp</text>
+      </controlProperties>
+    </control>
+    <control controlID="324" controlTypeID="com.balsamiq.mockups::ComboBox" x="204" y="798" w="-1" h="-1" measuredW="71" measuredH="26" zOrder="130" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Sales</text>
+      </controlProperties>
+    </control>
+    <control controlID="325" controlTypeID="com.balsamiq.mockups::ComboBox" x="300" y="799" w="-1" h="-1" measuredW="76" measuredH="26" zOrder="131" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>SOHO</text>
+      </controlProperties>
+    </control>
+    <control controlID="326" controlTypeID="com.balsamiq.mockups::ComboBox" x="401" y="798" w="-1" h="-1" measuredW="73" measuredH="26" zOrder="132" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>0</color>
+        <size>16</size>
+        <text>%7Bcolor%3A%23000000%7DBerlin%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="327" controlTypeID="com.balsamiq.mockups::Label" x="184" y="797" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="133" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="328" controlTypeID="com.balsamiq.mockups::Label" x="279" y="797" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="134" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="329" controlTypeID="com.balsamiq.mockups::Label" x="379" y="797" w="-1" h="-1" measuredW="20" measuredH="28" zOrder="135" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>20</size>
+        <text>%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="330" controlTypeID="com.balsamiq.mockups::LinkBar" x="70" y="843" w="-1" h="-1" measuredW="275" measuredH="24" zOrder="136" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <size>16</size>
+        <text>*Members*%20%287%29%2C%20Properties%2C%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="331" controlTypeID="com.balsamiq.mockups::Label" x="936" y="906" w="-1" h="-1" measuredW="147" measuredH="21" zOrder="137" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3%20subgroups%20and%204%20users</text>
+      </controlProperties>
+    </control>
+    <control controlID="332" controlTypeID="com.balsamiq.mockups::HRule" x="70" y="881" w="1009" h="-1" measuredW="100" measuredH="5" zOrder="138" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+      </controlProperties>
+    </control>
+    <control controlID="333" controlTypeID="com.balsamiq.mockups::FieldSet" x="659" y="875" w="425" h="420" measuredW="200" measuredH="170" zOrder="139" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="335" controlTypeID="com.balsamiq.mockups::PointyButton" x="797" y="1249" w="71" h="-1" measuredW="54" measuredH="27" zOrder="140" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>Invite</text>
+      </controlProperties>
+    </control>
+    <control controlID="336" controlTypeID="com.balsamiq.mockups::PointyButton" x="872" y="1249" w="64" h="-1" measuredW="61" measuredH="27" zOrder="141" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>5865130</color>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>Cancel</text>
+      </controlProperties>
+    </control>
+    <control controlID="338" controlTypeID="com.balsamiq.mockups::HRule" x="666" y="945" w="415" h="-1" measuredW="100" measuredH="5" zOrder="142" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+      </controlProperties>
+    </control>
+    <control controlID="344" controlTypeID="__group__" x="144" y="913" w="24" h="31" measuredW="24" measuredH="31" zOrder="143" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="7" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="0" locked="false" isInGroup="344">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>0</color>
+            <icon>CursorIcon%7Csmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="1" locked="false" isInGroup="344">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>0</color>
+            <icon>SpinningIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="345" controlTypeID="com.balsamiq.mockups::Paragraph" x="674" y="967" w="277" h="38" measuredW="200" measuredH="80" zOrder="144" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20emails%20manually%20%28use%20%22%2C%22%20to%20add%20more%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="347" controlTypeID="com.balsamiq.mockups::TextArea" x="677" y="993" w="392" h="140" measuredW="200" measuredH="140" zOrder="145" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="348" controlTypeID="com.balsamiq.mockups::Paragraph" x="674" y="1152" w="126" h="38" measuredW="200" measuredH="80" zOrder="146" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>or%20upload%20a%20CSV%20file%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="351" controlTypeID="__group__" x="800" y="1148" w="161" h="27" measuredW="161" measuredH="27" zOrder="147" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextInput" x="0" y="0" w="144" h="-1" measuredW="79" measuredH="27" zOrder="0" locked="false" isInGroup="351">
+          <controlProperties>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="84" y="1" w="77" h="26" measuredW="77" measuredH="27" zOrder="1" locked="false" isInGroup="351">
+          <controlProperties>
+            <text>Browse...</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="352" controlTypeID="com.balsamiq.mockups::Label" x="674" y="904" w="-1" h="-1" measuredW="181" measuredH="22" zOrder="148" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>14</size>
+        <text>*Invite%20Users%20to%20group%3A%20Berlin*</text>
+      </controlProperties>
+    </control>
+    <control controlID="353" controlTypeID="com.balsamiq.mockups::PointyButton" x="792" y="3737" w="79" h="-1" measuredW="62" measuredH="27" zOrder="149" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>5865130</color>
+        <direction>center</direction>
+        <icon>CheckMarkIcon%7Cxsmall</icon>
+        <menuIcon>false</menuIcon>
+        <state>up</state>
+        <text>Yes</text>
+      </controlProperties>
+    </control>
+    <control controlID="354" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="29" y="15" w="1101" h="670" measuredW="450" measuredH="400" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bizmo%0Ahttp%3A//bizmo.logme.in</text>
+      </controlProperties>
+    </control>
+    <control controlID="355" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="29" y="701" w="1101" h="664" measuredW="450" measuredH="400" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bizmo%0Ahttp%3A//bizmo.logme.in</text>
+      </controlProperties>
+    </control>
+    <control controlID="356" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="29" y="1388" w="1101" h="662" measuredW="450" measuredH="400" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bizmo%0Ahttp%3A//bizmo.logme.in</text>
+      </controlProperties>
+    </control>
+    <control controlID="357" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="29" y="2079" w="1101" h="666" measuredW="450" measuredH="400" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bizmo%0Ahttp%3A//bizmo.logme.in</text>
+      </controlProperties>
+    </control>
+    <control controlID="358" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="30" y="2769" w="1101" h="599" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bizmo%0Ahttp%3A//bizmo.logme.in</text>
+      </controlProperties>
+    </control>
+    <control controlID="359" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="29" y="3390" w="1101" h="666" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bizmo%0Ahttp%3A//bizmo.logme.in</text>
+      </controlProperties>
+    </control>
+    <control controlID="373" controlTypeID="com.balsamiq.mockups::Canvas" x="679" y="1645" w="375" h="50" measuredW="100" measuredH="70" zOrder="150" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderColor>15843890</borderColor>
+        <borderStyle>none</borderStyle>
+        <color>16770457</color>
+      </controlProperties>
+    </control>
+    <control controlID="375" controlTypeID="com.balsamiq.mockups::Label" x="680" y="1712" w="58" h="23" measuredW="58" measuredH="24" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>join.me</text>
+      </controlProperties>
+    </control>
+    <control controlID="376" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="695" y="1743" w="155" h="143" measuredW="139" measuredH="105" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <text>-%5Bx%5D%20Remote%20control-%0A-%5Bx%5D%20File%20transfer-%0A-%5B%20%5D%20Use%20internet%20calling-%0A-%5B%20%5D%20Edit%20personal%20link-%0A-%5Bx%5D%20Edit%20background-</text>
+      </controlProperties>
+    </control>
+    <control controlID="377" controlTypeID="com.balsamiq.mockups::CheckBox" x="860" y="1747" w="143" h="21" measuredW="162" measuredH="22" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <state>up</state>
+        <text>-Set%20a%20group%20background-</text>
+      </controlProperties>
+    </control>
+    <control controlID="378" controlTypeID="com.balsamiq.mockups::Icon" x="1027" y="1752" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>Help2Icon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="379" controlTypeID="com.balsamiq.mockups::CheckBox" x="860" y="1808" w="159" h="21" measuredW="181" measuredH="22" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>-Auto%20generate%20personal%20link-</text>
+      </controlProperties>
+    </control>
+    <control controlID="380" controlTypeID="com.balsamiq.mockups::Icon" x="1038" y="1812" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>Help2Icon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="381" controlTypeID="com.balsamiq.mockups::Icon" x="886" y="1769" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CameraIcon%7Cmedium</icon>
+      </controlProperties>
+    </control>
+    <control controlID="382" controlTypeID="com.balsamiq.mockups::Link" x="924" y="1774" w="-1" h="-1" measuredW="101" measuredH="21" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-choose%20an%20image-</text>
+      </controlProperties>
+    </control>
+    <control controlID="383" controlTypeID="com.balsamiq.mockups::ComboBox" x="887" y="1834" w="164" h="-1" measuredW="142" measuredH="23" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>-Choose%20a%20tamplate-</text>
+      </controlProperties>
+    </control>
+    <control controlID="384" controlTypeID="com.balsamiq.mockups::Label" x="680" y="1862" w="-1" h="-1" measuredW="53" measuredH="24" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Cubby</text>
+      </controlProperties>
+    </control>
+    <control controlID="385" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="695" y="1891" w="155" h="32" measuredW="65" measuredH="21" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <text>-%5Bx%5D%20Read-</text>
+      </controlProperties>
+    </control>
+    <control controlID="386" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="695" y="1650" w="344" h="40" measuredW="323" measuredH="40" zOrder="151" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>12</size>
+        <text>%28o%29%20Inherit%20settings%20from%20parent%20group%20-%20%5Bedit%20settings%20there%5D%0A%28%20%29%20Do%20not%20inherit%20settings%20from%20parent%20group</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,13 @@
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\Shadow.ApplicationServices.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\Shadow.ApplicationServices.pdb
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\Shadow.Domain.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\Shadow.Domain.Repositories.EntityFramework.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\Shadow.DTO.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\EntityFramework.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\Shadow.Domain.Repositories.EntityFramework.pdb
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\Shadow.Domain.pdb
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\Shadow.DTO.pdb
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\bin\Debug\EntityFramework.xml
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\obj\Debug\Shadow.ApplicationServices.csprojResolveAssemblyReference.cache
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\obj\Debug\Shadow.ApplicationServices.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.ApplicationServices\obj\Debug\Shadow.ApplicationServices.pdb

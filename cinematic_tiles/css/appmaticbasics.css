@@ -1,0 +1,235 @@
+/*
+    CSS RESET BEGIN
+
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 
+    CSS RESET END
+*/
+
+
+
+html {overflow-y: hidden; background-color: #E5E5E5}
+html, body {height: 100%}
+body {
+    padding: 0;
+    color: #606060;
+    font-family: "Helvetica neue", Helvetica, arial, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    line-height: normal;
+}
+h1 {
+    height: 80px; line-height: 80px;
+    margin-right: 20px;
+    font-size: 28px;
+    font-weight: normal;
+    position: relative; z-index: 9;
+}
+h2 {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+p {
+    margin: 0 0 15px 0
+}
+b, strong {
+    font-weight: bold
+}
+i {
+    font-style: italic
+}
+blockquote {
+    margin: 10px 40px
+}
+small {
+    font-size: 10px;
+}
+a {
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+a, a:active, a:visited {
+    color: #E4A33B;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+a.under, a.hovu:hover {
+    text-decoration: underline;
+}
+h1 a {  /* for the prototype only */
+    opacity: 0.4;
+}
+h1.normal {
+    height: auto;
+    line-height: normal;
+    margin-bottom: 40px
+}
+.floleft {
+    float: left
+}
+.floright {
+    float: right
+}
+.clears {
+    clear: both; width: 0; height: 0; line-height: 0; overflow: hidden;
+}
+.bold {
+    font-weight: bold
+}
+.centered {
+    text-align: center;
+}
+.righted {
+    text-align: right;
+}
+.lefted {
+    text-align: left;
+}
+.bigger {
+    font-size: 120%
+}
+.inliner {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *zoom: 1; *display: inline;
+}
+.relative {
+    position: relative; z-index: 1;
+}
+.smaller {
+    font-size: 50%;
+    font-weight: normal
+}
+.ie6dmrgfix {
+    *display: inline;   /* IE6 double-margin bug fix */
+}
+.nowrap {
+    white-space: nowrap
+}
+.nodisplay,
+.hidden {
+    display: none !important;
+}
+.invisible {
+    visibility: hidden !important;
+}
+.overflowvisible {
+    overflow: visible !important;
+}
+.lh150 {
+    line-height: 150%;
+}
+.lh200 {
+    line-height: 200%;
+}
+span.rqo {
+    padding: 0 5px;
+    color: #B0B0B0;
+}
+ul.default,
+ul.bullet {
+    list-style-type: disc;
+    padding: 0;
+    margin: 0 0 0 20px
+}
+ol.default {
+    list-style-type: decimal;
+    padding: 0;
+    margin: 0 0 0 20px
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.wait {
+    cursor: wait !important;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-track-piece  {
+    background-color: #F0F0F0;
+}
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    
+    background-color: #CDCDCD;
+    border: 1px solid #F0F0F0;
+}
+body {
+    scrollbar-face-color: #CDCDCD;
+    scrollbar-track-color: #F0F0F0;
+    scrollbar-arrow-color: #606060;
+    scrollbar-3dlight-color: #F0F0F0;     /* no effect in ie10 */
+    scrollbar-darkshadow-color: #F0F0F0;  /* no effect in ie10 */
+
+    scrollbar-highlight-color: #F0F0F0;   /* no effect in ie10 */
+    scrollbar-shadow-color: #F0F0F0;
+
+    *scrollbar-highlight-color: #CDCDCD;  /* ie6-7  */
+    *scrollbar-shadow-color: #CDCDCD;     /* ie6-7  */
+}

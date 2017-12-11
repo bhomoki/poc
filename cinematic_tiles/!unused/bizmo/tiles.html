@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>Policy Tiles concept</title>
+<style type="text/css">
+    html {overflow-y: hidden; background-color: #E5E5E5}
+    html, body {height: 100%}
+    body {
+        margin: 0;
+        padding: 15px;
+        font-family: "segoe ui", arial, sans-serif;
+    }
+    .clearfix {
+        *zoom: 1;
+    }
+    .clearfix:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    div.tileswrapper {
+        height: 85%; max-height: 780px;
+        overflow-y: scroll;
+    }
+    div.tile {
+        width: 130px;
+        height: 130px;
+        margin: 0 15px 15px 0;
+        background: white;
+        cursor: pointer;
+        float: left;
+        text-align: center;
+        line-height: 130px;
+    }
+    div.activetile {
+        /*-moz-box-shadow: 0 0 0 3px rgba(200, 0, 0, 0.5);
+        -webkit-box-shadow: 0 0 0 3px rgba(200, 0, 0, 0.5);
+        box-shadow: 0 0 0 3px rgba(200, 0, 0, 0.5);*/
+        background: #6090F0 !important;
+    }
+    div.panel {
+        width: 100%;
+        height: 0; 
+        overflow: hidden;
+        background-color: #C0C0C0;
+        text-align: center;
+        float: left;
+        margin: 0 15px 15px 0;
+        font-size: 20px;
+        position: relative; z-index: 2;
+    }
+    div.panel.on {
+        height: 340px;
+        overflow: visible;
+    }
+    div.policyanim {
+        -moz-transition: height .07s linear;
+        -webkit-transition: height .07s linear;
+        -ms-transition: height .07s linear;
+        -o-transition: height .07s linear;
+        transition: height .07s linear; 
+    }
+    div.panel div.arrow {
+        width: 0; height: 0; overflow: hidden;
+        border-bottom: 15px solid #C0C0C0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        position: absolute; z-index: 1;
+        top: -15px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="tileswrapper clearfix" id="tileswrapper">
+</div>
+
+<script>
+//Object.prototype.insertAfter = function (newNode) { this.parentNode.insertBefore(newNode, this.nextSibling) };
+function getId(whichid) { return document.getElementById(whichid) };
+var tilescollection = [];
+var paneldiv;
+var activeserial;
+var lastoffset = 0;
+var animneeded = false;
+wrapper = getId("tileswrapper");
+window.onresize = function() { resized() };
+
+function resized() {
+    if (getId("panel_" + activeserial)) {
+        paneldivclone = paneldiv;
+        removeElement("panel_" + activeserial, false);
+        paneldiv = paneldivclone;
+        insertPanel(getId("tile_" + activeserial));
+        moveScrollBar();
+    }
+};
+
+function removeElement(node, removeactive) {
+    getNode = getId(node); 
+    if (getNode) {
+        getNode.parentNode.removeChild(getNode); 
+        if (removeactive && getId("tile_" + activeserial))
+            getId("tile_" + activeserial).className = getId("tile_" + activeserial).className.replace(" activetile", "");
+    };
+};
+
+function createTiles() {
+    for (var i = 1; i < 61; i++) { 
+        tilediv = document.createElement("div");
+        tilediv.id = "tile_" + (i);
+        tilediv.className = "tile";
+        tilediv.innerHTML = "policy " + i;
+        tilediv.onclick = function() { tileClicked(this) };
+        wrapper.appendChild(tilediv)
+        tilescollection.push(tilediv);
+    }
+};
+
+function createPanel() {
+    getId("tile_" + activeserial).className = getId("tile_" + activeserial).className + " activetile";
+    paneldiv = document.createElement("div");
+    paneldiv.className = "panel";
+    paneldiv.id = "panel_" + activeserial;
+    paneldiv.innerHTML = "<div class='arrow' id='arrow'></div><br>" + Math.random() + "<br><br>Settings pane for policy " + activeserial + " <br><a href='javascript: lastoffset = 0; removeElement(\"panel_" + activeserial + "\", true, false)'>close this pane</a><br><br><br><br><br><br><br><br>";
+};
+
+function insertPanel(fornode) {
+    starttop = fornode.offsetTop;
+    lasttile = 0;
+    actiondone = false;
+    for (var i = activeserial; i < tilescollection.length; i++) { 
+        lasttile = i;
+        if (tilescollection[i].offsetTop > starttop) {
+            tilescollection[i].parentNode.insertBefore(paneldiv, tilescollection[i]);
+            actiondone = true;
+            break;
+        }
+    };
+    if (!actiondone) {
+        wrapper.appendChild(paneldiv);
+    };
+    paneldiv.style.width = ((145 * parseInt((wrapper.clientWidth) / 145)) - 15) + "px";
+    getId("arrow").style.left = (getId("tile_" + activeserial).offsetLeft + 35) + "px";
+    animneeded = lastoffset != starttop;
+    lastoffset = starttop;
+};
+
+function showPanel() {
+    if (!animneeded) {
+        paneldiv.className = "panel on"; 
+        moveScrollBar();
+    }
+    else {
+        setTimeout(function() { 
+            paneldiv.className = "panel on policyanim"; 
+            setTimeout(function() { moveScrollBar() }, 100);
+        }, 1);        
+    };
+};
+
+function moveScrollBar() {
+    if (paneldiv.offsetTop + paneldiv.offsetHeight > wrapper.scrollTop + wrapper.clientHeight) {
+        wrapper.scrollTop = paneldiv.offsetTop + paneldiv.offsetHeight - wrapper.clientHeight + 15;
+    }
+    else {
+        if (paneldiv.offsetTop - 160 < wrapper.scrollTop)
+            wrapper.scrollTop = paneldiv.offsetTop - 160;
+    }
+};
+
+function tileClicked(that) {
+    removeElement("panel_" + activeserial, true, true);
+    activeserial = that.id.split("_")[1];
+    createPanel();
+    insertPanel(that);
+    showPanel();
+};
+
+
+createTiles();
+
+
+</script>
+
+</body>
+</html>

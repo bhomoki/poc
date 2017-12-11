@@ -1,0 +1,5 @@
+D:\web\3am\branches\websites\jiffi\Main\Shadow.DTO\bin\Debug\Shadow.DTO.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.DTO\bin\Debug\Shadow.DTO.pdb
+D:\web\3am\branches\websites\jiffi\Main\Shadow.DTO\obj\Debug\Shadow.DTO.csprojResolveAssemblyReference.cache
+D:\web\3am\branches\websites\jiffi\Main\Shadow.DTO\obj\Debug\Shadow.DTO.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.DTO\obj\Debug\Shadow.DTO.pdb

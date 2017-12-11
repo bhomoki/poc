@@ -1,0 +1,494 @@
+﻿div.commonUIWrapper {
+    margin-left: 0;
+    min-width: 1000px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
+    z-index: auto;
+}
+body.fatnav div.commonUIWrapper {
+    margin-left: 160px;
+    min-width: 840px;
+}
+
+div.commonUILeftnav.dotrans,
+div.commonUILeftnav > ul > li,
+div.commonUILeftnav.dotrans ul li a,
+div.commonUILeftnav ul li div.arrow {
+    -webkit-transition: none .45s cubic-bezier(.19, 1, .22, 1);
+    -moz-transition: none .45s cubic-bezier(.19, 1, .22, 1);
+    -ms-transition: none .45s cubic-bezier(.19, 1, .22, 1); 
+    transition: none .45s cubic-bezier(.19, 1, .22, 1);
+}
+
+div.commonUILeftnav {
+    position: fixed; z-index: 10; top: 0; left: 0;
+    width: 60px;
+    height: 100%;
+    padding-top: 50px;
+    box-sizing: border-box; -moz-box-sizing: border-box;
+    background: #555555;
+}
+div.commonUILeftnav.dotrans {
+    -webkit-transition-property: width; 
+    -moz-transition-property: width; 
+    -ms-transition-property: width; 
+    transition-property: width;
+}
+div.commonUILeftnav.fat {
+    width: 160px;
+    overflow: visible;
+}
+div.commonUILeftnav ul li {
+    width: 100%;
+    position: relative; z-index: 1;
+    background: #555555;
+    overflow: hidden;
+}
+div.commonUILeftnav.fat ul li {
+    overflow: visible
+}
+div.commonUILeftnav ul li a,
+div.commonUILeftnav .pin,
+div.commonUIHeader div.rightside span.icon {
+    background: url("/img/leftnav-spr.png?v3") no-repeat 0 0;
+}
+div.commonUILeftnav ul li a {
+    position: relative; z-index: 1;
+    display: block;
+    height: 60px; line-height: 60px;
+    padding-left: 60px;
+    border-bottom: 1px solid #444444;
+    color: transparent;
+    -webkit-transition: none; 
+    -moz-transition: none; 
+    -ms-transition: none; 
+    transition: none;
+}
+div.commonUILeftnav.dotrans ul li a,
+div.commonUILeftnav > ul > li {
+    -webkit-transition-property: color, background-color;
+    -moz-transition-property: color, background-color;
+    -ms-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+div.commonUILeftnav ul li.second a {
+    background-position: 0 -60px;
+}
+div.commonUILeftnav ul li.third a {
+    background-position: 0 -120px;
+}
+div.commonUILeftnav ul li.fourth a {
+    background-position: 0 -180px;
+}
+div.commonUILeftnav ul li.fifth a {
+    background-position: 0 -240px;
+}
+div.commonUILeftnav ul li a.selected {
+    background-position: 0 -300px;
+}
+div.commonUILeftnav ul li.second a.selected {
+    background-position: 0 -360px;
+}
+div.commonUILeftnav ul li.third a.selected {
+    background-position: 0 -420px;
+}
+div.commonUILeftnav ul li.fourth a.selected {
+    background-position: 0 -480px;
+}
+div.commonUILeftnav ul li.fifth a.selected {
+    background-position: 0 -540px;
+}
+div.commonUILeftnav ul li ul {
+    width: 0;
+    overflow: hidden;
+    border-radius: 0 2px 2px 0;
+    background: #444444;
+    position: absolute; z-index: 1; 
+    left: 60px; top: 50px;
+    padding: 0 0 10px 0;
+}
+div.commonUILeftnav.fat ul li ul {
+    left: 160px; top: -1px;    
+    padding: 10px 0;
+}
+div.commonUILeftnav ul li:hover ul {
+    width: 140px;
+}
+div.commonUILeftnav ul li ul li {
+    background: none;
+}
+div.commonUILeftnav ul li ul li a {
+    font-weight: normal;
+    background: none;
+    border-bottom: none;
+    height: auto; line-height: 1;
+    padding: 11px 10px;
+    border-radius: 2px;
+    display: block;
+    margin: 0 10px;
+}
+div.commonUILeftnav ul li ul li a.hovered {
+    background: #303030
+}
+div.commonUILeftnav.slim > ul > li:hover {
+    width: 200px;
+    overflow: visible;
+    border-radius: 0 2px 2px 0;
+}
+div.commonUILeftnav > ul > li:hover {
+    background-color: #444444;
+    
+}
+div.commonUILeftnav.slim > ul > li:hover > a {
+    padding-left: 78px;
+    border-top: 1px solid #444444;
+    margin-top: -1px;
+    border-radius: 0 2px 2px 0;
+}
+div.commonUILeftnav ul li div.arrow {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    z-index: 5;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 6px 6px;
+    border-color: transparent transparent #999999 transparent;
+    -webkit-transition-property: border;
+    -moz-transition-property: border;
+    -ms-transition-property: border;
+    transition-property: border;
+}
+div.commonUILeftnav ul li:hover div.arrow {
+    border-width: 0 0 15px 15px;
+    border-color: transparent transparent transparent transparent;
+}
+div.commonUILeftnav.slim ul li:hover div.arrow {
+    right: 148px;
+}
+div.commonUILeftnav.fat ul li a,
+div.commonUILeftnav.slim ul li:hover a {
+    color: #FFFFFF;
+}
+div.commonUILeftnav.fat ul li a.selected,
+div.commonUILeftnav ul li:hover a.selected {
+    color: #FFCD46;
+}
+div.commonUILeftnav .pin {
+    position: absolute; z-index: 1; bottom: 0; right: 0;
+    width: 60px; height: 60px;
+    background-color: #555555;
+    cursor: pointer;
+    background-position: 0 -600px;
+}
+div.commonUILeftnav.fat .pin {
+    background-position: 0 -660px;
+}
+div.tabs.toplevel .maincat {
+    position: absolute; left: 0; 
+    padding-left: 20px; 
+    font-size: 17px; 
+    font-weight: bold
+}
+
+
+
+
+
+
+div.commonUIHeader,
+div.footer {
+    position: fixed; z-index: 11; top: 0; left: 0;
+    width: 100%;
+    height: 50px;
+    color: white;
+}
+div.footer {
+    top: auto; bottom: 0;
+    border-bottom: 0;
+    color: #808080;
+    font-weight: normal;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+}
+div.commonUIHeader div.inner,
+div.footer {
+    width: 100%; min-width: 600px;
+}
+div.commonUIHeader div.inner {
+    width: 100%; min-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    line-height: normal;
+    position: relative; z-index: 1;
+    font-weight: bold;
+}
+div.commonUIHeader {
+    color: #333333;
+    background-color: #FF4833;
+}
+div.commonUIHeader a.logo {
+    position: absolute; z-index: 1; top: 0;
+    left: 20px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #FF4833;
+    color: white;
+    font-size: 28px
+    
+}
+
+
+
+
+div.commonUIHeader div.rightside {
+    position: absolute; z-index: 10; top: 0; right: 0;
+    margin: 0;
+    height: 100%;
+}
+div.commonUIHeader div.rightside div.gettingstarted, 
+div.commonUIHeader div.rightside div.language {
+    width: 50px;
+    text-align: center;
+    color: #B26500;
+    z-index: 3;
+}
+div.commonUIHeader div.rightside div.language {
+    z-index: 4;
+}
+div.commonUIHeader div.rightside a.selected {
+    background-color: #F5F5F5;
+    font-weight: bold;
+    position: relative;
+}
+div.commonUIHeader div.rightside a.selected:after {
+    content: "✔";
+}
+div.commonUIHeader div.rightside div.menubutton {
+    width: 100%;
+    height: 100%;
+}
+div.commonUIHeader div.rightside div.menubutton span.lng {
+    font-size: 9px;
+    line-height: 13px;
+    font-weight: bold;
+    color: white;
+    position: absolute; z-index: 1;
+    right: 5px;
+    bottom: 9px;
+    background-color: #FF4833;
+    padding: 0 3px;
+    border-radius: 2px;
+}
+div.commonUIHeader div.rightside div.menubutton span.icon {
+    width: 100%; height: 100%;
+}
+div.commonUIHeader div.rightside div.gettingstarted div.menubutton span.icon {
+
+}
+div.commonUIHeader div.rightside div.gettingstarted ul,
+div.commonUIHeader div.rightside div.gettingstarted ul li {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+div.commonUIHeader div.rightside div.notifs {
+    width: 50px;
+    z-index: 2;
+}
+div.commonUIHeader div.rightside div.notifs span.icon {
+    width: 100%; height: 100%;
+}
+div.commonUIHeader div.rightside div.notifs div#notifcounter {
+    position: absolute; z-index: 1; top: 6px; right: 5px;
+    color: #333333;
+    background: white;
+    border-radius: 9px;
+    padding: 1px 5px;
+    border: 1px solid #00B8E2;
+}
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton {
+    position: relative; z-index: 1;
+    font-size: 12px;
+    color: white;
+    height: 50px;
+    padding: 0 15px 0 15px;
+    box-sizing: border-box; -moz-box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton div {
+    line-height: 16px;
+    font-weight: normal;
+}
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton div.image {
+    width: 26px;
+    height: 26px; line-height: 26px;
+    margin: 12px 10px 5px 0;
+    color: #FFFFFF;
+    background-color: #B33224;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+    text-transform: uppercase;
+}
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton div.comp {
+    margin-top: 9px;
+}
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton div.buttontext {
+    height: 100%;
+    vertical-align: top;
+}
+
+
+
+
+div.commonUIHeader div.rightside div.accountmenu,
+div.commonUIHeader div.rightside div.gettingstarted,
+div.commonUIHeader div.rightside div.notifs,
+div.commonUIHeader div.rightside div.language {
+    height: 100%;
+}
+div.commonUIHeader div.rightside div.notifs,
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton,
+div.commonUIHeader div.rightside div.menubutton,
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton div.image,
+.slip {
+    -webkit-transition: all .45s cubic-bezier(.19, 1, .22, 1); 
+  	-moz-transition: all .45s cubic-bezier(.19, 1, .22, 1); 
+	-ms-transition: all .45s cubic-bezier(.19, 1, .22, 1); 
+    transition: all .45s cubic-bezier(.19, 1, .22, 1);
+}
+div.commonUIHeader div.rightside div.notifs:hover,
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton:hover,
+div.commonUIHeader div.rightside div.accountmenu.on div.accountbutton,
+div.commonUIHeader div.rightside div.menubutton:hover,
+div.commonUIHeader div.rightside div.on div.menubutton,
+div.commonUIHeader div.rightside div.menubutton:hover span.lng,
+div.commonUIHeader div.rightside div.on div.menubutton span.lng {
+    background-color: #E5402D;
+    color: white;
+    cursor: pointer;
+}
+div.commonUIHeader div.rightside div.gettingstarted div.menubutton span.icon,
+div.commonUIHeader div.rightside div.gettingstarted.on div.menubutton span.icon {
+    background-position: -5px -960px;
+}
+div.commonUIHeader div.rightside div.notifs span.icon {
+    background-position: -5px -900px;
+}
+div.commonUIHeader div.rightside div.language span.icon,
+div.commonUIHeader div.rightside div.language.on span.icon {
+    background-position: -5px -1134px
+}
+div.commonUIHeader div.rightside div.accountmenu div.accountbutton:hover div.image,
+div.commonUIHeader div.rightside div.accountmenu.on div.accountbutton div.image {
+
+}
+
+
+
+div.commonUIHeader div.rightside div.actionmenu div.separator {
+    background-color: #DADADA;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    margin: 7px 0;
+}
+div.commonUIHeader div.rightside div.actionmenu {
+    cursor: default;
+    min-width: 100%; 
+    text-align: left;
+    text-shadow: none;
+    position: absolute; z-index: 10; top: -1000px; right: -1px;
+    border: 1px solid #DADADA;
+    color: #333333;
+    background-color: white;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+div.commonUIHeader div.rightside div.gettingstarted div.actionmenu,
+div.commonUIHeader div.rightside div.language div.actionmenu {
+    /*right: auto;
+    left: -1px;*/
+}
+div.commonUIHeader div.rightside div.on div.actionmenu {
+    top: 50px
+}
+div.commonUIHeader div.rightside div.actionmenu div.inner {
+    margin: 9px 0;
+    min-width: 135px;
+    white-space: nowrap
+}
+div.commonUIHeader div.rightside div.actionmenu a,
+div.commonUIHeader div.rightside div.actionmenu span.nohref {
+    color: #333333;
+    display: block;
+    padding: 8px 45px 8px 25px;
+    font-weight: normal;
+}
+div.commonUIHeader div.rightside div.gettingstarted div.actionmenu a {
+    padding-right: 25px
+}
+div.commonUIHeader div.rightside div.actionmenu span.nohref {
+    font-weight: bold;
+    background-color: #F5F5F5
+}
+div.commonUIHeader div.rightside a.selected:after {
+    position: absolute; z-index: 1; top: 6px; right: 15px;
+    color: #333333;
+    font-weight: normal;
+}
+div.commonUIHeader div.rightside div.actionmenu a.bold {
+    color: #0088CE;
+    font-weight: bold
+}
+div.commonUIHeader div.rightside div.actionmenu a.bold:hover {
+    
+}
+div.commonUIHeader div.rightside div.actionmenu a:hover {
+    background-color: #D0D0D0;
+}
+div.commonUIHeader div.rightside div.actionmenu div.linkedAccount {
+    position: relative;
+}
+div.commonUIHeader div.rightside div.actionmenu div.linkedAccount div.x {
+    display: none;
+    top: 0;
+    right: 5px;
+}
+div.commonUIHeader div.rightside div.actionmenu div.linkedAccount:hover div.x {
+    display: block;
+}
+
+
+
+
+/* actionmenus that slip in by animation, slipping and fading in */
+.slip {
+    -moz-transform: translate(0, -10px);
+    -webkit-transform: translate(0, -10px);
+    -ms-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+    opacity: 0;
+
+    -moz-transition-property: -moz-transform, opacity;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    transition-property: transform, opacity;
+}
+div.on .slip {
+    -moz-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+}

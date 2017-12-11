@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>Tiles concept</title>
+<style type="text/css">
+    html {
+        overflow-y: hidden; background-color: #E5E5E5;
+        box-sizing: border-box;
+        height: 100%;
+        overflow-y: scroll;
+        font-size: 62.5%;
+    }
+    html, body {height: 100%}
+    body {
+        margin: 0;
+        padding: 15px;
+        font-family: sans-serif;
+        color: rgba(0, 0, 0, .7)
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+
+    .clearfix {
+        *zoom: 1;
+    }
+    .clearfix:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 2.0rem;
+        margin: 0 0 3.0rem 0;
+    }
+    div.tileswrapper {
+        /*height: 85%; max-height: 780px;     uncomment this if the wrapper has own scrollbars 
+        overflow-y: scroll;*/
+        width: 80%; margin: 0 auto;
+        position: relative;
+        text-align: center;
+    }
+    div.tile {
+        transform: translate3d(0, 0, 0);
+        transition: box-shadow .35s cubic-bezier(.19, 1, .22, 1);
+        position: relative; z-index: 3;
+        font-size: 1.5rem;
+        font-weight: 400;
+        width: 176px;
+        height: 100px;
+        margin: 0 15px 15px 0;
+        background: white;
+        cursor: pointer;
+        /*float: left;*/ display: inline-block;
+        text-align: center;
+        line-height: 100px;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;          
+    }
+    div.tile.active {
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, .2);
+    }
+    div.panel {
+        width: 100%;
+        height: 0; 
+        display: block;
+        position: relative; z-index: 2; left: -7.5px;
+        transform: translate3d(0, 0, 0);
+        opacity: 0;
+        margin: -15px auto 15px auto;
+    }
+    div.panel > .inner {
+        background-color: #D0D0D0;
+        height: 100%; 
+        position: relative;
+        font-size: 1.6rem;
+        overflow: hidden;
+        /*transition: opacity 5.3s cubic-bezier(.19, 1, .22, 1);*/
+    }
+    div.panel > .inner > .content {
+            text-align: left;
+            line-height: 140%;
+            padding: 30px;
+            position: absolute; bottom: 0;
+            height: 350px;
+            width: 100%;
+            overflow: hidden;
+            transform: translate3d(0, 0, 0);
+    }
+    div.panel.on {
+        height: 350px;
+        margin: 0 auto 15px auto;
+        opacity: 1;
+    }
+    div.panelanim {
+        transition: height .35s cubic-bezier(.19, 1, .22, 1), opacity .35s cubic-bezier(.19, 1, .22, 1), margin .35s cubic-bezier(.19, 1, .22, 1);
+    }
+    div.panel div.arrow {
+        /*display: none;*/
+        width: 0; height: 0; overflow: hidden;
+        border-bottom: 15px solid #D0D0D0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        position: absolute; z-index: 1;
+        top: -13px;
+    }
+    div.panel .closer {
+        color: white;
+        position: absolute;
+        top: 0; right: 0;
+        font-size: 3.0rem;
+        text-decoration: none;
+        width: 40px; height: 40px;
+        text-align: center; line-height: 40px;
+        transition: background-color .35s cubic-bezier(.19, 1, .22, 1);
+    }
+    div.panel .closer:active {
+        color: white
+    }
+    div.panel .closer:hover {
+        background-color: rgba(0, 0, 0, .1)
+    }
+</style>
+</head>
+
+<body>
+
+<div class="tileswrapper clearfix" id="tileswrapper">
+</div>
+
+<script>
+
+cinematicTiles = function () {
+    "use strict";
+    var self = {},
+        paneldiv,
+        activeserial,
+        lastoffset = -1,
+        animneeded = false,
+        tilewidth = 176,
+        margin = 15,
+        panelinmove;
+
+    function getE(whichid) { return document.getElementById(whichid) };
+    function getTile(serial) {return document.querySelector(".tile[data-serial='"+serial+"']")};
+    function getPanel(serial) {return document.querySelector(".panel[data-serial='"+serial+"']")};
+
+    var wrapper = getE("tileswrapper");
+    var bigwindow = document.scrollingElement;
+    //bigwindow = wrapper;   uncomment this if the wrapper has own scrollbars
+    //Object.prototype.insertAfter = function (newNode) { this.parentNode.insertBefore(newNode, this.nextSibling) }; 
+
+    window.onresize = function() { resized() };
+
+    function resized() {
+        if (getPanel(activeserial)) {
+            cutPanel(activeserial);
+            insertPanel(activeserial);
+            moveScrollBar();
+        }
+    };
+
+    function createPanel(serial) {
+        paneldiv = document.createElement("div");
+        paneldiv.className = "panel";
+        paneldiv.dataset.serial = serial;
+        paneldiv.innerHTML = "<div class='arrow' id='arrow'></div><div class='inner'><div class='content'><a href='javascript: cinematicTiles.getTile(" + serial + ").click()' class='closer'>&times;</a>" + "<h1>Settings pane for tile " + serial + "</h1>" + Math.random() + "<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis consequat dolor bibendum auctor. Morbi aliquet ultricies risus in iaculis. Donec aliquet arcu ut mollis laoreet. Morbi ligula eros, faucibus sed lacus sit amet, facilisis maximus erat. Pellentesque ut lectus dapibus, tristique enim eget, dictum massa. <br><br>Nulla auctor, dui at feugiat egestas, dolor urna blandit ligula, in volutpat est velit auctor arcu. Donec sed orci purus. Cras sodales in diam at fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac ipsum dolor. Nulla facilisi.</div></div>";
+    };
+
+    function openPanel(serial) {
+        addActiveTile(serial);
+        if (!animneeded) {
+            paneldiv.className = "panel on"; 
+            moveScrollBar();
+        }
+        else {
+            setTimeout(function() { 
+                paneldiv.className = "panel on panelanim"; 
+                setTimeout(function() { moveScrollBar() }, 100);
+            }, 1);        
+        };
+    };
+
+    function closePanel(serial) {
+        var serialcopy = serial;
+        removeActiveTile(serial);
+        getPanel(serial).className = 'panel panelanim';
+        clearTimeout(panelinmove);
+        panelinmove = setTimeout(function() {
+            removePanel(serial);
+            removeActiveTile(serial);
+            lastoffset = -1;
+            activeserial = 0;
+        }, 350)
+    };
+
+    function cutPanel(serial) {
+        var activepanel = getPanel(serial); 
+        if (activepanel) {
+            paneldiv = activepanel;
+            activepanel.parentNode.removeChild(activepanel);
+        };
+    };
+
+    function insertPanel(serial) {
+        var starttop = getTile(serial).offsetTop;
+        var actiondone = false;
+        var currentTile;
+        for (var i = serial; i < document.querySelectorAll(".tile[data-serial]").length; i++) { 
+            currentTile = getTile(i); 
+            if (currentTile.offsetTop > starttop) {
+                currentTile.parentNode.insertBefore(paneldiv, currentTile);
+                actiondone = true;
+                break;
+            }
+        };
+        if (!actiondone) {
+            wrapper.appendChild(paneldiv);
+        };
+        paneldiv.style.width = (((tilewidth + margin) * parseInt((wrapper.clientWidth) / (tilewidth + margin))) - margin) + "px";
+        //getE('arrow').style.left = (getTile(serial).offsetLeft + ((tilewidth / 2) - 15)) + "px";
+        console.log(getTile(serial).offsetLeft, getPanel(serial).offsetLeft);
+        getE('arrow').style.left = (getTile(serial).offsetLeft - getPanel(serial).offsetLeft + (tilewidth / 2) - 15) + "px";
+        animneeded = lastoffset != starttop;
+        lastoffset = starttop;
+    };
+
+    function removePanel(serial) {
+        var activePanel = getPanel(serial); 
+        if (activePanel) {
+            activePanel.parentNode.removeChild(activePanel); 
+        };
+    };
+
+    function addActiveTile(serial) {
+        getTile(serial).className += " active";
+    };
+
+    function removeActiveTile(serial) {
+        var activeTile = getTile(serial);
+        if (activeTile)
+            activeTile.className = activeTile.className.replace(" active", "");
+    };
+
+    function moveScrollBar() {
+        if (bigwindow) {
+            if (paneldiv.offsetTop + paneldiv.offsetHeight > bigwindow.scrollTop + bigwindow.clientHeight) {
+                bigwindow.scrollTop = paneldiv.offsetTop + paneldiv.offsetHeight - bigwindow.clientHeight + (4*margin);
+            }
+            else {
+                if (paneldiv.offsetTop - 160 < bigwindow.scrollTop)
+                    bigwindow.scrollTop = paneldiv.offsetTop - 160;
+            }
+        }
+        else {
+            paneldiv.scrollIntoView({block: "end", behavior: "smooth"});  
+        }
+        //paneldiv.scrollIntoView(false);
+    };
+
+    function tileClicked(serial) {
+        var sameclick = activeserial == serial;
+        if (sameclick && getTile(serial).className.indexOf('active') > -1) {
+            closePanel(serial);
+            return
+        };
+
+        clearTimeout(panelinmove);
+        removePanel(activeserial);
+        removeActiveTile(activeserial);
+        createPanel(serial);
+        insertPanel(serial);
+        openPanel(serial);
+        activeserial = serial;
+    };
+
+    function createTiles() {
+        var tilediv;
+        for (var i = 1; i < 121; i++) { 
+            tilediv = document.createElement("div");
+            //tilediv.setAttribute('data-serial', i);
+            tilediv.dataset.serial = i;
+            tilediv.className = "tile";
+            tilediv.innerHTML = "tile " + i;
+            tilediv.onclick = function() { tileClicked(this.dataset.serial) };
+            wrapper.appendChild(tilediv)
+        }
+    };
+
+    self.createTiles = createTiles;
+    self.getTile = getTile;
+
+    return self;
+}();
+
+cinematicTiles.createTiles();
+
+
+</script>
+
+</body>
+</html>

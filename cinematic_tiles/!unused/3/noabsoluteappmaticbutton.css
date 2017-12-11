@@ -1,0 +1,268 @@
+﻿input[type="checkbox"], 
+input[type="radio"] 
+{
+    margin: 0;
+    padding: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea
+{
+    -moz-box-shadow: 0 0 0 1px rgba(255,255,255,0.01);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.01);      /* required for a smooth transition in Chrome */
+
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+
+    border: 1px solid #CDCDCD;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    outline: 0;
+
+    margin: 0;
+    padding: 0 20px;
+    height: 30px;
+    background-color: transparent;
+    display: inline-block;
+    
+    font-family: arial, sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    min-width: 120px;
+}
+
+input[type="text"]:focus {
+    background-color: white
+}
+
+input[type="email"][disabled],
+input[type="text"][disabled],
+input[type="password"][disabled],
+select[disabled],
+textarea[disabled]
+{
+    color: #A0A0A0;
+    text-shadow: 1px 1px white;
+    background: none;
+    background-color: #F6F6F6;
+    cursor: default
+}
+
+select {
+    width: 277px;
+    padding: 7px 5px 8px 5px;
+    background: #FAFAFA !important;
+}
+input.inset,
+textarea.inset
+{
+    -moz-box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+input.error {
+    border-color: #E66968;
+}
+input.error:focus {
+    border-color: #E66968;
+    -moz-box-shadow: 0 0 0 1px rgba(230,105,104,0.5);
+    box-shadow: 0 0 0 1px rgba(230,105,104,0.5);
+}
+
+button,
+a.button {
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    margin: 0 8px 0 0;
+    font-size: 12px;
+
+    border: 1px solid #CCCCCC;
+    height: 34px; line-height: 28px; *line-height: normal;
+    color: #00A8B1;
+    background-color: rgba(255,255,255,0.7);
+    
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 20px;
+    min-width: 80px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+}
+button  /* IE7 properties */
+{
+    *padding: 7px 5px 6px 5px;
+    *position: relative; *z-index: 1; *top: -1px;
+}
+a.button  /* IE7 properties */
+{
+    *position: relative;
+    *z-index: 1;
+    *top: -12px;
+}
+a.circlebutton {
+    width: 40px; height: 30px;
+    margin: 0 8px 0 0;
+    overflow: hidden;
+}
+.floright a.circlebutton:last-child {
+    margin: 0
+}
+a.circlebutton.disabled {
+
+}
+button::-moz-focus-inner
+{   
+    border: 0;
+    padding: 0;
+}
+button:active, 
+a.button:active {
+    box-shadow: inset 0 1px 4px  rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 1px 4px rgba(0,0,0,0.5);
+}
+button.gray,
+button.gray:hover,
+button.gray:active,
+a.button.gray,
+a.button.gray:hover,
+a.button.gray:active {
+    border: 1px solid #BBBBBB;
+    border-bottom-color: #999999;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+    color: #555555 !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+button.gray,
+a.button.gray {
+    background: #FCFCFC;
+    background: linear-gradient(top, #FCFCFC 0%, #EEEEEE 80%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FCFCFC), color-stop(80%, #EEEEEE)); /* Chrome,Safari4+ */
+    background: -moz-linear-gradient(top, #FCFCFC 0%, #EEEEEE 80%);
+    background: -o-linear-gradient(top, #FCFCFC 0%, #EEEEEE 80%);
+    background: -ms-linear-gradient(top, #FCFCFC 0%, #EEEEEE 80%);
+}
+button.gray:hover,
+a.button.gray:hover {
+    background: #F0F0F0;
+    background: linear-gradient(top, #FFFFFF 0%, #EEEEEE 80%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(80%, #EEEEEE)); /* Chrome,Safari4+ */
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #EEEEEE 80%);
+    background: -o-linear-gradient(top, #FFFFFF 0%, #EEEEEE 80%);
+    background: -ms-linear-gradient(top, #FFFFFF 0%, #EEEEEE 80%);
+}
+button.gray:active,
+a.button.gray:active {
+    text-shadow: 0 -1px 0 rgba(255,255,255,0.6);
+}
+button[disabled],
+a.button[disabled],
+button[disabled]:hover,
+a.button[disabled]:hover,
+button[disabled]:active,
+a.button[disabled]:active {
+    cursor: default !important;
+    color: #A8A8A8 !important;
+    text-shadow: 1px 1px white;
+    border: 1px solid #D8D8D8;
+
+    background-color: #E8E8E8;
+    background: linear-gradient(top, #F0F0F0, #E8E8E8);
+    background: -moz-linear-gradient(top, #F0F0F0, #E8E8E8);
+    background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), to(#E8E8E8));
+    background: -o-linear-gradient(top, #F0F0F0, #E8E8E8);
+    background: -ms-linear-gradient(top, #F0F0F0, #E8E8E8);
+}
+button[disabled]:active,
+a.button[disabled]:active {
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+button.button_as_link,
+button.button_as_link:hover,
+button.button_as_link:active {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: #88BC00;
+    font-size: 13px;
+    font-weight: normal;
+    text-shadow: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+}
+button.button_as_link:hover,
+button.button_as_link:active {
+    text-decoration: underline;
+}
+
+
+button.delete {
+    color: white;
+    background-color: #E24D63;
+    border-color: #E24D63;
+}
+
+
+a.circlebutton.b1 {
+    background-image: url("btn1.png")
+}
+a.circlebutton.b2 {
+    background-image: url("btn2.png")
+}
+a.circlebutton.b3 {
+    background-image: url("btn3.png")
+}
+a.circlebutton.b4 {
+    background-image: url("btn4.png")
+}
+a.circlebutton.b5 {
+    background-image: url("btn5.png")
+}
+a.circlebutton.b6 {
+    background-image: url("btn6.png")
+}
+a.circlebutton:hover {
+    background-color: #D0D0D0;
+}
+a.circlebutton.disabled:hover {
+    background-color: transparent;
+    cursor: default
+}
+
+/* custom stuff */
+div.policy button {
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+}
+div.header div.buttons button {
+    border: 2px solid #F0F0F0; line-height: 28px; *line-height: normal;
+    color: white;
+    background-color: transparent;
+    margin: 0;
+}
+div.flyout button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+h1 input {
+    position: absolute; z-index: 1; top: 25px; right: 0; 
+    width: 120px;
+}

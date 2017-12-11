@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: #F7F6F5
+        }
+        .contouter {
+            width: 800px; height: 500px; overflow: hidden;
+            margin: 50px;
+        }
+        #cont {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            /*background: #428FE1;*/
+        }
+        .sq {
+            border-radius: 0;
+            /*display: inline-block; vertical-align: top;
+            position: absolute; z-index: 1;
+            margin: 5px; */
+            /*width: 5em;
+            height: 5em;
+            transition: top 1.35s cubic-bezier(.19, 1, .22, 1), left 1.35s cubic-bezier(.19, 1, .22, 1)*/ 
+        }
+        .sq svg {
+            position: absolute; left: 50%; top: 50%;
+            margin-left: -25%; margin-top: -25%;
+            width: 50%; height: 50%;
+            fill: rgba(255, 255, 255, .3);
+        }
+    </style>
+    <script src='packery.pkgd.min.js'></script>
+</head>
+<body>
+    <div class="contouter">
+        <div id="cont"></div>
+    </div>
+    <script>
+        var sq;
+        var cont = document.getElementById("cont");
+
+        function randomIntFromInterval(min, max) {
+            return Math.floor(Math.random()*(max-min+1)+min);
+        };
+        function getShade(baseRGB, shadeOffset) {
+            return parseInt(baseRGB + (baseRGB / 100 * shadeOffset))
+        };
+        ///assets/images/icons.svg#icon-location-pin-outline
+
+        //<svg role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/icons.svg#icon-calendar-1"></use></svg>
+        
+        function generateBackground() {
+            var sq;
+            var cont = document.getElementById("cont");
+            var sqCount = 80;
+            var sizes = [50, 50, 50, 50, 100];
+            //var sizes = [50, 75, 100];
+            var icons = ['icon-account-outline', 'icon-account-outline', 'icon-account-outline', 'icon-location-pin-outline', 'icon-check', 'icon-calendar-1', 'icon-clock', 'icon-chat-bubble-square-1'];
+            var d3colors = ["#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#8C564B","#E377C2", "#7F7F7F", "#BCBD22", "#17BECF"];
+            var colors = ["#3366cc", "#dc3912", "#ff9900", "#109618", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395", "#994499", "#22aa99", "#aaaa11", "#6633cc", "#e67300", "#8b0707", "#651067", "#329262", "#5574a6", "#3b3eac"];
+            for (var x = 0; x < sqCount; x++) {
+                //rndSize = randomIntFromInterval(1, 3) * 25 + 25;
+                rndSize = randomIntFromInterval(0, sizes.length - 1);
+                rndIcon = randomIntFromInterval(0, icons.length - 1);
+                rndColor = randomIntFromInterval(0, 63) * 4;  // monochrome shade
+                rndOffset = randomIntFromInterval(0, 20) - 10;    // shade offset -- max minus half the max
+                rndGColor = randomIntFromInterval(0, d3colors.length - 1);
+                rndColorR = getShade(66, rndOffset);
+                rndColorG = getShade(143, rndOffset);
+                rndColorB = getShade(225, rndOffset);
+
+                sq = document.createElement("DIV");
+                ic = icons[rndIcon].length ? '<svg role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons.svg#'+icons[rndIcon]+'"></use></svg>' : '';
+                sq.innerHTML = ic;
+
+                sq.className = "sq";
+                //sq.style = "width: "+sizes[rndSize]+"px; height: "+sizes[rndSize]+"px; background: rgb("+rndColorR+", "+rndColorG+", "+rndColorB+")";
+                sq.style = "width: "+sizes[rndSize]+"px; height: "+sizes[rndSize]+"px; background: "+d3colors[rndGColor]+";";
+                cont.appendChild(sq);    
+            };
+
+            var pckry = new Packery( '#cont', {
+                itemSelector: '.sq',
+                gutter: 0,
+                originLeft: true
+            });
+        };
+        generateBackground();
+
+    </script>
+</body>
+</html>

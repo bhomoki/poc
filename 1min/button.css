@@ -1,0 +1,218 @@
+﻿@charset "UTF-8";
+
+input[type="text"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+select,
+textarea,
+button,
+.clickable,
+.button,
+.circlebutton,
+.smallapp {
+    transition: all .15s ease-out;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0;
+    padding: 0;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+select,
+textarea {
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid #CED4D8;
+    outline: 0;
+    margin: 0;
+    padding: 7px 10px;
+    color: #6B6B6B;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.01);      /* required for a smooth transition in Chrome */
+}
+input[type="text"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="email"] {
+    height: 40px;
+}
+input[type="text"][disabled],
+input[type="url"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="email"][disabled],
+select[disabled],
+textarea[disabled] {
+    color: #A0A0A0 !important;
+    background: #F6F6F6;
+    border-color: rgba(0, 0, 0, .1);
+    text-shadow: 1px 1px rgba(255, 255, 255, .9) !important;
+    cursor: default
+}
+
+input[type="text"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="email"] {
+    min-width: 120px;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CB7EF;
+    /*box-shadow: 0 0 0 1px #4CB7EF;*/
+}
+input[type="text"].error,
+input[type="url"].error,
+input[type="password"].error,
+input[type="search"].error,
+input[type="email"].error,
+select.error,
+textarea.error,
+.ng-touched.ng-dirty.ng-invalid {
+    border-color: red !important;
+}
+input[type="text"][readonly] {
+    border-color: #E5E5E5;
+    background-color: rgba(0, 0, 0, .03);
+}
+input[readonly]:focus {
+    box-shadow: inherit;
+    border-color: #E5E5E5;
+}
+
+
+
+::-webkit-input-placeholder            {  color: #A9A9A9 !important; text-transform: none; opacity: 1  }
+:-moz-placeholder   /* Firefox 18- */  {  color: #A9A9A9 !important; text-transform: none; opacity: 1  }
+::-moz-placeholder  /* Firefox 19+ */  {  color: #A9A9A9 !important; text-transform: none; opacity: 1  }
+:-ms-input-placeholder                 {  color: #A9A9A9 !important; text-transform: none; opacity: 1  }
+label.placeholder                      {  color: #A9A9A9 !important; text-transform: none; opacity: 1  }
+
+
+
+select {
+    max-width: 200px;
+    padding: 6px 5px;
+}
+label.checkbox {
+    position: relative;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin: 12px 25px 0 0;
+    float: left;
+}
+label.checkbox input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+}
+label.checkbox input[type=checkbox] + span::after {
+    position: absolute; left: 0; top: 0;
+    width: 16px; height: 16px;
+    content: "";
+    background-image: url('content/checkoff.png');
+    background-size: 16px 16px;
+}
+label.checkbox input[type=checkbox]:checked + span::after {
+    background-image: url('content/checkon.png')
+}
+
+button,
+.button {
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    border: none;
+    margin: 0 8px 0 0;
+    font-size: 14px;
+    height: 50px; line-height: 48px; *line-height: normal;
+    color: white;
+    background: #D32D27;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 10px;
+    min-width: 90px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button:hover,
+.button:hover {
+    background-color: #D32D27;
+}
+
+button:active, 
+.button:active {
+    box-shadow: none;
+    background-color: #D32D27;
+}
+
+button[disabled],
+.button[disabled],
+button.green[disabled],
+.button.green[disabled],
+button[disabled]:hover,
+.button[disabled]:hover,
+button[disabled]:active,
+.button[disabled]:active {
+    cursor: default !important;
+    color: rgba(0, 0, 0, .3) !important;
+    text-shadow: 1px 1px rgba(255, 255, 255, .9) !important;
+    background-color: # !important;
+    box-shadow: none !important
+}
+button.cancel,
+.button.cancel {
+    background: #F5F6F9;
+    color: inherit;
+    /*box-shadow: none !important;*/
+}
+button.cancel:hover,
+.button.cancel:hover,
+button.cancel:active,
+.button.cancel:active {
+    /*box-shadow: none !important;
+    background: rgba(80, 80, 80, .07);*/
+}
+button.href {
+    background: none;
+    box-shadow: none;
+}
+button.dark {
+    background: #3C4A54;
+    color: white;
+    min-width: 140px;
+}
+
+button::-moz-focus-inner {   
+    border: 0;
+    padding: 0;
+    margin-top: -1px;
+}
+
+
+
+
+ /*   content: "✕";
+      content: "✓";
+	  content: "|";
+      content: "⃝";  */

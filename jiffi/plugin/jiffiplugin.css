@@ -1,0 +1,178 @@
+html {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html, body {padding: 0; margin: 0}
+body {
+
+
+    padding: 20px 50px;
+
+
+    background-color: white;
+    color: #444444;
+    font-family: "Helvetica neue", Helvetica, arial, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+button::-moz-focus-inner {   
+    border: 0;
+    padding: 0;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.jiffi-box {
+    width: 300px;
+    border: 1px solid #DDDDDD;
+    border-radius: 2px;
+}
+.jiffi-box a {
+    font-weight: bold;
+    color: #FF4833;
+    text-decoration: none;
+    font-size: 12px !important; 
+}
+.jiffi-box a:hover {
+    text-decoration: underline;
+}
+.jiffi-box h1 {
+    line-height: 30px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+.jiffi-box h1 span {
+    float: left;
+}
+.jiffi-box h1 a {
+    float: right;
+    margin-right: 20px;
+}
+.jiffi-box.jiffi-apps {
+    padding-bottom: 10px;
+    border-color: white;
+}
+.jiffi-head {
+    background: url("logosmall.png") no-repeat 19px 15px;
+    padding: 12px 15px 0 72px;
+    height: 50px;
+    line-height: 25px;
+    font-weight: bold;
+    border-bottom: 1px solid #EEEEEE;
+}
+.jiffi-guide .label {
+    background: url("logosmall.png") no-repeat 19px 15px;
+    padding: 0 20px 0 72px;
+    font-weight: bold;
+}
+.jiffi-head input {
+    font-size: 12px;
+    font-weight: bold;
+    border: 0;
+    padding: 5px;
+    font-family: inherit;
+    width: 200px;
+    outline: 0;
+}
+.jiffi-head input:focus {
+    box-shadow: 0 0 0 1px #F0F0F0
+}
+.jiffi-tiles {
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.jiffi-tile {
+    background-color: #A0A0A0;
+    border-radius: 2px;
+    height: 60px;
+    padding: 12px 15px;
+    color: white;
+    margin: 0px 20px 10px 20px;
+    cursor: pointer;
+}
+.jiffi-tile div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 150%
+}
+.jiffi-tile .jiffi-appname {
+    font-weight: bold;
+}
+.jiffi-guide ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.jiffi-guide ul li {
+    line-height: 50px;
+    position: relative; z-index: 1;
+    float: left;
+    padding: 0 45px 0 20px;
+    border: 1px solid #DDDDDD;
+    margin-left: -1px;
+    min-width: 130px;
+}
+.jiffi-guide ul li:last-child {
+    padding: 0;
+    
+}
+.jiffi-guide ul li span {
+    width: 72px;
+    padding-right: 8px;
+    display: inline-block;
+    text-align: right;
+}
+
+.jiffi-guide ul li.jiffi-checked::after {
+    content: " ";
+    position: absolute; z-index: 1; top: 15px; right: 15px;
+    width: 20px; height: 20px;
+    background: url("check.png") no-repeat 0 0;
+}
+
+.jiffi-guide button {
+    line-height: 50px;
+    border: 0;
+    padding: 0 30px;
+    width: 100%;
+    background: #F5F5F5;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+}
+.jiffi-guide button[disabled] {
+    color: #C0C0C0 !important;
+    cursor: default;
+}
+.jiffi-guide button.jiffi-continue {
+    color: #FF4833;
+    font-weight: bold;
+}
+.jiffi-guide button.jiffi-cancel {
+    border-right: 1px solid #EEEEEE
+}
+.jiffi-foot {
+    text-align: center;
+    padding: 15px;
+    line-height: 150%;
+}

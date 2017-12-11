@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>1min frames concept</title>
+<link rel="stylesheet" href="basics.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="haspage hasprogress">
+
+    <div class="dimmer"></div>
+
+    <div class="shadow"></div>
+
+    <div class="progress">
+        <div class="closer"><span>&times;</span></div>
+        <div class="counter">30%</div>
+		<progress max="100" value="30"></progress>
+        <div class="actions clearfix">
+            <button type="button">Pause</button>
+            <a class="hidden">View details (1)</a>
+            <div class="status warning clickable">Instagram &ndash; needs information</div>
+        </div>
+    </div>
+    <div class="dialog hidden">
+        <div class="inner scanning">
+            <div class="x">&times;</div>
+            <div class="dialogcontent centered">
+                <img src="content/scanningemail.png" class="hero">
+                <h1>Great! We're scanning your email</h1>
+                <p>
+                    You can view progress at the bottom of the screen. We will alert you when importing is complete.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="dialog">
+        <div class="inner providers">
+            <div class="x">&times;</div>
+            <div class="dialogcontent centered">
+                <h1>Add sites from email</h1>
+                <p>
+                    We need permission to scan your email for accounts.
+                    Then, <span class="bold">we will generate strong passwords</span> for those
+                    accounts and add them to your LastPass vault.
+                </p>
+                <img src="content/gmail.png">
+                <img src="content/yahoo.png">
+                <img src="content/office365.png">
+                <p>
+                    <a href="">Use a different email provider</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="dialog hidden">
+        <div class="inner custom">
+            <div class="x">&times;</div>
+            <div class="dialogcontent">
+                <h1>Custom email account</h1>
+                <label class="text">
+                    Email address
+                    <input type="text">
+                </label>
+                <label class="text">
+                    Email provider's website
+                    <input type="text">
+                </label>
+                <label class="text">
+                    Username
+                    <input type="text">
+                </label>
+                <label class="text">
+                    Password
+                    <input type="password">
+                </label>
+            </div>
+            <div class="buttons clearfix">
+                <button type="button" class="cancel">Cancel</button>
+                <button type="button">Get started</button>
+            </div>
+        </div>
+    </div>
+    <div class="dialog hidden">
+        <div class="inner changepw">
+            <div class="x">&times;</div>
+            <div class="dialogcontent centered">
+                <img src="content/securitywarning.png" class="hero">
+                <h1>You're about to change 2 passwords</h1>
+                <p>
+                    When possible, we'll reset your old password,
+                    generate a new one, and save it into your vault.
+                </p>
+            </div>
+            <div class="buttons clearfix">
+                <button type="button" class="cancel">Cancel</button>
+                <button type="button">Continue</button>
+            </div>
+        </div>
+    </div>
+    <div class="dialog hidden">
+        <div class="inner changingpw">
+            <div class="x">&times;</div>
+            <div class="dialogcontent centered">
+                <img src="content/changingpw.png" class="hero">
+                <h1>We are now changing your passwords</h1>
+                <p>
+                    You can still feel free to move around your vault and
+                    view progress at the bottom of the screen.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="dialog hidden">
+        <div class="inner vaultready">
+            <div class="x">&times;</div>
+            <div class="dialogcontent centered">
+                <img src="content/vaultready.png">
+                <h1 class="bold">Your LastPass Vault is Ready!</h1>
+                <p>
+                    How do you want to get started?
+                </p>
+            </div>
+            <div class="buttons mrgbtm20 clearfix">
+                <button type="button">Add a site</button>
+                <button type="button" class="dark">Add sites from email</button>
+            </div>
+            <p class="centered">
+                <a href="">Just show me around</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="inner">
+            <nav>
+                <ul class="clearfix">
+                    <li class="active">Complete (5)
+                    <li>Failed (1)
+                    <li>Reminders (1)
+                </ul>
+            </nav>
+            <div class="content">
+                <h1>Complete (5)</h1>
+                <p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="checkbox"><input type="checkbox" checked><span></span></label>
+                            <div class="logo"><img></div>
+                        </td>
+                        <td>
+                            <div class="appname">Mint Finances</div>
+                            <div class="meta">your_email@domain.com</div>
+                        </td>
+                        <td>
+                            <div class="status success">Complete</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="checkbox"><input type="checkbox"><span></span></label>
+                            <div class="logo"><img></div>
+                        </td>
+                        <td>
+                            <div class="appname">Instagram</div>
+                            <div class="meta">your_email@domain.com</div>
+                        </td>
+                        <td>
+                            <div class="status success">Complete</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="logo"><img></div>
+                        </td>
+                        <td>
+                            <div class="appname">Bank of America</div>
+                            <div class="meta">your_email@domain.com</div>
+                        </td>
+                        <td>
+                            <a>Skip</a>
+                            <button type="button" class="dark">Launch</button>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <h1>Complete (5)</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="checkbox"><input type="checkbox" checked><span></span></label>
+                            <div class="logo"><img></div>
+                        </td>
+                        <td>
+                            <div class="appname">Mint Finances</div>
+                            <div class="meta">your_email@domain.com</div>
+                        </td>
+                        <td>
+                            <div class="status success">Complete</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="checkbox"><input type="checkbox"><span></span></label>
+                            <div class="logo"><img></div>
+                        </td>
+                        <td>
+                            <div class="appname">Instagram</div>
+                            <div class="meta">your_email@domain.com</div>
+                        </td>
+                        <td>
+                            <div class="status success">Complete</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="logo"><img></div>
+                        </td>
+                        <td>
+                            <div class="appname">Bank of America</div>
+                            <div class="meta">your_email@domain.com</div>
+                        </td>
+                        <td>
+                            <div class="status inprogress">In progress</div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page hidden">
+        <div class="inner">
+            <div class="content">
+                <div class="singleapp">
+                    <div class="logo inliner middled"><img></div>
+                    <div class="appname h1 inliner middled">Instagram.com</div>
+                    <hr>
+                    <p>
+                        There was an issue changing your password for this 
+                        site. Please follow the instructions to fix the issue.
+                    </p>
+                    <div class="buttons">
+                        <button type="button" class="href">Skip this site</button>
+                        <button type="button" class="dark">Fix issue</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+
+</body>
+</html>

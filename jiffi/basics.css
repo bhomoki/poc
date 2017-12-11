@@ -1,0 +1,369 @@
+/*
+    CSS RESET BEGIN
+
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 
+    CSS RESET END
+*/
+
+
+/* Box model fix for all BEGIN */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Box model fix for all END */
+
+
+html {overflow-y: auto; overflow-x: hidden}
+html, body {height: 100%}
+body {
+    background-color: #F5F5F5;
+    color: #444444;
+    font-family: "Helvetica neue", Helvetica, arial, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    line-height: normal;
+}
+h1 {
+    margin: 0 0 20px 0;
+    font-size: 48px;
+    font-weight: bold;
+    position: relative; z-index: 1;
+    white-space: nowrap;
+}
+h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: normal;
+    color: #555555;
+}
+h3 {
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+p {
+    margin: 0 0 15px 0
+}
+b, strong {
+    font-weight: bold
+}
+i {
+    font-style: italic
+}
+blockquote {
+    margin: 10px 40px
+}
+small {
+    font-size: 10px;
+}
+a,
+ul.orangetabs li {
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+a, a:active, a:visited, .href {
+    color: #FF4833;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+a.under, a.hovu:hover {
+    text-decoration: underline;
+}
+h1.normal {
+    height: auto;
+    line-height: normal;
+    margin-bottom: 40px
+}
+*:focus {  
+    outline: none
+}
+.alltra {
+    transition: all .45s cubic-bezier(.19, 1, .22, 1);
+}
+.clickable {
+    cursor: pointer
+}  
+.floleft {
+    float: left
+}
+.floright {
+    float: right
+}
+.clears {
+    clear: both; width: 0 !important; height: 0 !important; line-height: 0 !important; overflow: hidden !important;
+}
+.bold {
+    font-weight: bold
+}
+.norm {
+    font-weight: normal
+}
+.centered {
+    text-align: center
+}
+.righted {
+    text-align: right
+}
+.lefted {
+    text-align: left
+}
+.bigger {
+    font-size: 120%
+}
+.inliner {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *zoom: 1; *display: inline;
+}
+.relative {
+    position: relative; z-index: 1;
+}
+.smaller {
+    font-size: 50%;
+    font-weight: normal
+}
+.smallerToo {
+    font-size: 90%;
+    font-weight: normal
+}
+.twelvepix {
+    font-size: 12px;
+}
+.ie6dmrgfix {
+    *display: inline;   /* IE6 double-margin bug fix */
+}
+.nowrap {
+    white-space: nowrap
+}
+.nodisplay,
+.hidden {
+    display: none !important;
+}
+.invisible {
+    visibility: hidden !important;
+}
+.overflowvisible {
+    overflow: visible !important;
+}
+.lh150 {
+    line-height: 150%;
+}
+.lh200 {
+    line-height: 200%;
+}
+.mrgbtm10 {
+    margin-bottom: 10px;
+}
+.mrgbtm15 {
+    margin-bottom: 15px;
+}
+.mrgbtm20 {
+    margin-bottom: 20px;
+}
+.mrgbtm30 {
+    margin-bottom: 30px;
+}
+.mrgbtm40 {
+    margin-bottom: 40px;
+}
+.mrgtop40 {
+    margin-top: 40px;
+}
+.nomarg {
+    margin: 0
+}
+.doublesize {
+    -moz-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+}
+.gray {
+    color: gray
+}
+span.rqo {
+    padding: 0 5px;
+    color: #B0B0B0;
+}
+ul.default,
+ul.bullet {
+    list-style-type: disc;
+    padding: 0;
+    margin: 0 0 0 20px
+}
+ol.default {
+    list-style-type: decimal;
+    padding: 0;
+    margin: 0 0 0 20px
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.wait {
+    cursor: wait !important;
+}
+.unselectable,
+div#policieswrap div.sectionheader,
+div#policieswrap div.contentinner div.tile {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cutcontent,
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ui-tooltip {
+    position: absolute;
+    z-index: 9999;
+    max-width: 220px;
+    padding: 6px 11px;
+    color: white;
+    border-radius: 2px;
+    font-size: 11px;
+    font-family: inherit;
+    font-weight: bold;
+    word-wrap: break-word
+}
+.ui-tooltip,
+.ui-tooltip .tiparrow:after {
+    background: #333;
+    border: 0 !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2)
+}
+.ui-tooltip .tiparrow {
+    width: 40px;
+    height: 5px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: -5px;
+}
+.ui-tooltip .tiparrow.top {
+    top: -5px;
+    bottom: auto;
+}
+.ui-tooltip .tiparrow.left {
+    top: 50%; margin-top: -4px;
+    bottom: auto;
+    left: 26px;
+    width: 4px;
+    height: 8px;
+}
+.ui-tooltip .tiparrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 20px;
+    height: 20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.ui-tooltip .tiparrow.top:after {
+    bottom: -20px;
+    top: auto;
+}
+.ui-tooltip .tiparrow.left:after {
+    left: 4px;
+    bottom: auto;
+    top: -6px;
+}
+
+::-webkit-scrollbar               { width: 12px; height: 12px; overflow:visible }
+::-webkit-scrollbar-button        { height: 0; width: 0}
+::-webkit-scrollbar-track         { background-color: rgba(0, 0, 0, .04); border-width: 0 }
+::-webkit-scrollbar-track:hover   { background-color: rgba(0, 0, 0, .06)}
+::-webkit-scrollbar-track:active  { background-color: rgba(0, 0, 0, .08)}
+::-webkit-scrollbar-thumb         { background-color: rgba(0, 0, 0, .3); background-clip: padding-box; border: solid transparent; border-width: 1px; min-height: 25px; padding: 100px 0 0}
+::-webkit-scrollbar-thumb:hover   { background-color: rgba(0, 0, 0, .4) }
+::-webkit-scrollbar-thumb:active  { background-color: rgba(0, 0, 0, .5) }
+::-webkit-scrollbar-corner        { background: transparent }
+
+div.peoplewrap div.content div.contentinner::-webkit-scrollbar-track         { background-color: rgba(0, 0, 0, .09)}
+div.peoplewrap div.content div.contentinner::-webkit-scrollbar-track:hover   { background-color: rgba(0, 0, 0, .11)}
+div.peoplewrap div.content div.contentinner::-webkit-scrollbar-track:active  { background-color: rgba(0, 0, 0, .13)}
+
+
+body {
+    scrollbar-face-color: #B0B0B0;
+    scrollbar-track-color: #F0F0F0;
+    scrollbar-arrow-color: #606060;
+    scrollbar-3dlight-color: #F0F0F0;     /* no effect in ie10 */
+    scrollbar-darkshadow-color: #F0F0F0;  /* no effect in ie10 */
+
+    scrollbar-highlight-color: #F0F0F0;   /* no effect in ie10 */
+    scrollbar-shadow-color: #F0F0F0;
+
+    *scrollbar-highlight-color: #B0B0B0;  /* ie6-7  */
+    *scrollbar-shadow-color: #B0B0B0;     /* ie6-7  */
+}

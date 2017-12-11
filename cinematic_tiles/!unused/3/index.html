@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="refresh" content="0;URL=/bizmo/">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Bizmo by LogMeIn</title>
+<link rel="stylesheet" href="appmatic.css">
+<link rel="stylesheet" href="appmaticbutton.css">
+<style type="text/css">
+div.peoplewrap ul.items li {
+    position: static !important;
+}
+</style>
+</head>
+
+<body>
+
+
+
+
+<div class="dialog" id="dialog">
+    <div class="dimmer"></div>
+    <div class="box zooom">
+        <div class="inner">
+            <div class="x" title="Close" id="dialogcloser">&times;</div>
+            <h1>Lorem ipsum dolor sit amet
+            </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit euismod dui eget viverra. Ut blandit ligula sed metus iaculis id pulvinar lectus elementum.
+            </p>
+            <p>Nam suscipit euismod dui eget viverra?
+            </p>
+            <div class="buttons">
+                <button type="button" id="yesbutton">Yes</button>
+                <button type="button" id="nobutton">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="note" id="note">
+    <div class="inner zooom">
+        <div class="x" title="Close" id="nx1">&times;</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum. <a href="#" class="hovu bold">Undo</a></p>
+    </div>
+</div>
+<div class="loading" id="loading">
+    <div class="inner zooom">Loading...</div>
+</div>
+
+
+
+
+
+<div class="header">
+    <div class="inner">
+        <div class="logo">Bizmo<img src="byLogMeIn.png" width="79" height="23" border="0"></div>
+        <div class="buttons"><span><a href="#" class="hovu">loremipsum@dolor.com</a></span><button type="button">Log out</button></div>
+    </div>
+</div>
+<div class="footer">
+    <div class="inner">
+        <p>Copyright &copy; 2013 <span class="bold">LogMeIn</span>, Inc. All rights reserved.</p>
+    </div>
+</div>
+
+
+<div class="peoplewrap" id="peoplewrap">
+    <div class="content">
+        <h1>People<input type="text" placeholder="Search"></h1>
+        <div class="buttons clearfix">
+            <div class="floleft">
+                <div class="circlebutton inliner b1" title="Add Group" onclick="switchNode('dialog')"></div>
+                <div class="circlebutton inliner b2" title="Add People" onclick="switchNode('dialog')"></div>
+                <div class="circlebutton inliner b3 moredrop" onclick="switchNode('moredrop')" id="moredrop">
+                    <ul>
+                        <li>First item
+                        <li>Second
+                        <li>Whatever, this
+                        <li>Last
+                    </ul>
+                </div>
+            </div>
+            <div class="floright">
+                <div class="circlebutton inliner b4 disabled" title="Delete"></div>
+            </div>
+        </div>
+        <div class="flyoutcontentinner">
+            <div class="flyout" id="fo1">
+                <div class="pointer" id="p1"></div>
+                <div class="flyoutbody" id="fo2">
+                    <div class="x" id="x1" title="Close">&times;</div>
+                    <div class="inner">
+                        <div class="photo">
+                            <img src="u/grblankbig.png" width="240" height="240" class="prpic" id="flypic">
+                        </div>
+                        <div class="prop1">
+                            <div class="fullname bold" id="flyname">Darth Vader</div>
+                            <div class="email editable" id="flyemail" contenteditable="true">vader@darkside.com</div>
+                        </div>
+                        <div class="buttons">
+                            <button type="button">Save</button><button type="button">Cancel</button>
+                        </div>
+                        <div id="flygroups" class="prop2">
+                            <div class="group bold">Group</div>
+                            <div class="groupname">Group Two</div>
+                        </div>
+                        <div class="policies">
+                            <div class="draghere bold"><i></i>Drag policy here</div>
+                            <div class="policy joinme">Standard<div class="x" title="Unassign">&times;</div></div>
+                            <div class="policy cubby">Full control<div class="x" title="Unassign">&times;</div></div>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentinner" id="ci1">
+                <ul class="items">
+                    <li class="i0 group exp" style="top: 0px"><div class="itemrow"><img src="u/blank.png">Acme Corp<span class="arrow"></span><i></i></div></li>
+                    <li class="i1 group exp" style="top: 50px"><div class="itemrow"><img src="u/blank.png">Sales<span class="arrow"></span><i></i></div></li>
+                    <li class="i2 group exp" style="top: 100px"><div class="itemrow"><img src="u/blank.png">Boston<span class="arrow"></span><i></i></div></li>
+                    <li class="i3" style="top: 150px"><div class="itemrow"><img src="u/blank.png">Abramowitz, Steven<i></i></div></li>
+                    <li class="i3" style="top: 200px"><div class="itemrow"><img src="u/blank.png">Bailes, Perry<i></i></div></li>
+                    <li class="i3" style="top: 250px"><div class="itemrow"><img src="u/blank.png">Cahill, Chris<i></i></div></li>
+                    <li class="i3" style="top: 300px"><div class="itemrow"><img src="u/blank.png">Daly, Dennis<i></i></div></li>
+                    <li class="i2 group exp" style="top: 350px"><div class="itemrow"><img src="u/blank.png">Amsterdam<span class="arrow"></span><i></i></div></li>
+                    <li class="i3" style="top: 400px"><div class="itemrow"><img src="u/blank.png">Ehreth, Imre<i></i></div></li>
+                    <li class="i3" style="top: 450px"><div class="itemrow"><img src="u/blank.png">Fales, Amanda<i></i></div></li>
+                    <li class="i3" style="top: 500px"><div class="itemrow"><img src="u/blank.png">Gaal, Andras<i></i></div></li>
+                    <li class="i3" style="top: 550px"><div class="itemrow"><img src="u/blank.png">Haas, Tara<i></i></div></li>
+                    <li class="i3" style="top: 600px"><div class="itemrow"><img src="u/blank.png">Ilich, Nick<i></i></div></li>
+                    <li class="i3" style="top: 650px"><div class="itemrow"><img src="u/blank.png">Jackson, Anthony<i></i></div></li>
+                    <li class="i1 group exp" style="top: 700px"><div class="itemrow"><img src="u/blank.png">Marketing<span class="arrow"></span><i></i></div></li>
+                    <li class="i2" style="top: 750px"><div class="itemrow"><img src="u/blank.png">Kallai, Csaba<i></i></div></li>
+                    <li class="i2" style="top: 800px"><div class="itemrow"><img src="u/blank.png">Labadi, Mate<i></i></div></li>
+                    <li class="i2" style="top: 850px"><div class="itemrow"><img src="u/blank.png">Magni, Mauro<i></i></div></li>
+                    <li class="i2" style="top: 900px"><div class="itemrow"><img src="u/blank.png">Nafissi, Bita<i></i></div></li>
+                    <li class="i2" style="top: 950px"><div class="itemrow"><img src="u/blank.png">O'Brien, Ben<i></i></div></li>
+                    <li class="i1 group exp" style="top: 1000px"><div class="itemrow"><img src="u/blank.png">Administration<span class="arrow"></span><i></i></div></li>
+                    <li class="i2" style="top: 1050px"><div class="itemrow"><img src="u/blank.png">Page, Julie<i></i></div></li>
+                    <li class="i2" style="top: 1100px"><div class="itemrow"><img src="u/blank.png">Qu, Jia<i></i></div></li>
+                    <li class="i2 group exp" style="top: 1150px"><div class="itemrow"><img src="u/blank.png">Budapest<span class="arrow"></span><i></i></div></li>
+                    <li class="i3" style="top: 1200px"><div class="itemrow"><img src="u/blank.png">Rabideau, Gerren<i></i></div></li>
+                    <li class="i3" style="top: 1250px"><div class="itemrow"><img src="u/blank.png">Saghelyi, Peter<i></i></div></li>
+                    <li class="i3" style="top: 1300px"><div class="itemrow"><img src="u/blank.png">Tajnafoi, Gabor<i></i></div></li>
+                    <li class="i3" style="top: 1350px"><div class="itemrow"><img src="u/blank.png">Upton, Dena<i></i></div></li>
+                    <li class="i3" style="top: 1400px"><div class="itemrow"><img src="u/blank.png">Vaingaus, Erica<i></i></div></li>
+                    <li class="i1 group exp" style="top: 1450px"><div class="itemrow"><img src="u/blank.png">Engineering<span class="arrow"></span><i></i></div></li>
+                    <li class="i2" style="top: 1500px"><div class="itemrow"><img src="u/blank.png">Wade, Michael<i></i></div></li>
+                    <li class="i2" style="top: 1550px"><div class="itemrow"><img src="u/blank.png">Yancey, Claire<i></i></div></li>
+                    <li class="i2" style="top: 1600px"><div class="itemrow"><img src="u/blank.png">Zeinoun, Peter<i></i></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="policieswrap" id="policieswrap">
+    <div class="content">
+        <h1>Policies
+        &nbsp;<a style="font-size: 12px" id="bn1" onclick="switchNode('dialog')"><u>Pop hop</u></a>
+        &nbsp;<a style="font-size: 12px" id="nt1" onclick="switchNode('note')"><u>Note node</u></a>
+        &nbsp;<a style="font-size: 12px" id="ld1" onclick="switchNode('loading')"><u>Load mode</u></a>
+        </h1>
+        <div class="buttons clearfix">
+            <div class="floleft">
+                <div class="circlebutton inliner b5" title="Info" onclick="switchNode('dialog')"></div>
+                <div class="circlebutton inliner b6 disabled" title="Duplicate"></div>
+            </div>
+            <div class="floright">
+                <div class="circlebutton inliner b4 disabled" title="Delete"></div>
+            </div>
+        </div>
+        <div class="contentinner" id="ci2">
+            <div class="policy cubby closed">
+                <h2 id="h20">Admin<span class="washed">(2)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol0">
+                    <div class="floleft people">
+                        <div class="inner">
+                            <h3>People</h3>
+                            <div class="list">
+                                <div class="draghere bold"><i></i>Drag people here</div>
+                                <ul class="items clearfix">
+                                    <li><img src="u/mmagni.jpg"><span>Magni, Mauro</span></li>
+                                    <li><img src="u/bnafissi.jpg"><span>Nafissi, Bita</span></li>
+                                    <li><img src="u/bo'brien.jpg"><span>O'Brien, Ben</span></li>
+                                    <li><img src="u/jpage.jpg"><span>Page, Julie</span></li>
+                                    <li><img src="u/jqu.jpg"><span>Qu, Jia</span></li>
+                                    <li><img src="u/grabideau.jpg"><span>Rabideau, Gerren</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floright permissions">
+                        <h3>Permissions</h3>
+                        <div class="settingrow">
+                            <label><input type="checkbox" checked>Create Cubby</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">Delete Cubby</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">Delete file/folder</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox" checked>Upload to cloud</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">Permanently erase file/folder/archive</label>
+                        </div>
+                        <div class="buttons" style="display: none">
+                            <button type="button">Save</button>
+                            <button type="button">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="policy joinme selected closed">
+                <h2 id="h21">Standard<span class="washed">(68)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol1">
+                    <div class="floleft people">
+                        <div class="inner">
+                            <h3>People</h3>
+                            <div class="list">
+                                <div class="draghere bold"><i></i>Drag people here</div>
+                                <ul class="items clearfix">
+                                    <li><img src="u/grblank.png"><span>Budapest</span></li>
+                                    <li><img src="u/grblank.png"><span>Engineering</span></li>
+                                    <li><img src="u/sabramowitz.jpg"><span>Abramowitz, Steven</span></li>
+                                    <li><img src="u/pbailes.jpg"><span>Bailes, Perry</span></li>
+                                    <li><img src="u/ccahill.jpg"><span>Cahill, Chris</span></li>
+                                    <li><img src="u/ddaly.jpg"><span>Daly, Dennis</span></li>
+                                    <li><img src="u/iehreth.jpg"><span>Ehreth, Imre</span></li>
+                                    <li><img src="u/afales.jpg"><span>Fales, Amanda</span></li>
+                                    <li><img src="u/agaal.jpg"><span>Gaal, Andras</span></li>
+                                    <li><img src="u/thaas.jpg"><span>Haas, Tara</span></li>
+                                    <li><img src="u/nilich.jpg"><span>Ilich, Nick</span></li>
+                                    <li><img src="u/ajackson.jpg"><span>Jackson, Anthony</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floright permissions">
+                        <h3>Permissions</h3>
+                        <div class="settingrow">
+                            <label><input type="checkbox" checked>Join.me conference line</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox" checked>Custom conference line and whatnot</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox" checked>Presenter swap</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">Chat</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox" checked>Edit background</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">Remote control</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">Internet calling (VoIP)</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">File transfer</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">Auto generate personal link</label>
+                        </div>
+                        <div class="settingrow">
+                            <label><input type="checkbox">Edit personal link</label>
+                        </div>
+                        <br>
+                        <div class="settingrow">
+                            <p>Background</p>
+                            <p><img src="background.png"></p>
+                            <p>Dream.jpg (327 KB)</p>
+                            <p><a href="#">Browse</a></p>
+                            <br>
+                        </div>
+                        <div class="buttons" style="display: none">
+                            <button type="button">Save</button>
+                            <button type="button">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="policy google closed">
+                <h2 id="h22">Secure<span class="washed">(23)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol2"></div>
+            </div>
+            <div class="policy cubby closed">
+                <h2 id="h23">Full control<span class="washed">(6)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol3"></div>
+            </div>
+            <div class="policy joinme closed">
+                <h2 id="h24">Restricted<span class="washed">(1)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol4"></div>
+            </div>
+            <div class="policy joinme closed">
+                <h2 id="h26">Admins only<span class="washed">(10)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol6"></div>
+            </div>
+            <div class="policy cubby closed">
+                <h2 id="h27">Sales<span class="washed">(9)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol7"></div>
+            </div>
+            <div class="policy google closed">
+                <h2 id="h28">For management<span class="washed">(57)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol8"></div>
+            </div>
+            <div class="policy cubby closed">
+                <h2 id="h29">IT<span class="washed">(55)</span><span class="arrow"></span></h2>
+                <div class="clearfix policybody" id="mainpol9"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    top.location.replace("/bizmo/");
+    function getId(whichid) {
+        return document.getElementById(whichid)
+    };
+    var prevItem;
+    var flystate = false;
+    var gearclick = false;
+    updateDOM();
+    window.onresize = function() { updateDOM() };
+    getId("x1").onclick = function () { noFly(prevItem, true) };
+    getId("ci1").onscroll = function () { setPointerPosition(prevItem) };
+    getId("dialogcloser").onclick = getId("yesbutton").onclick = getId("nobutton").onclick = function () { switchNode('dialog') };
+    getId("nx1").onclick = function () { switchNode('note') };
+    var itemslist = getId("ci1").getElementsByTagName("li");
+    for (var i = 0; i < itemslist.length; i++) { 
+        tempstr = itemslist[i].textContent || itemslist[i].innerText;
+        if (tempstr.indexOf(", ") > 0) {
+            tempid = (tempstr.split(", ")[1].substr(0, 1) + tempstr.split(", ")[0]).toLowerCase();
+            itemslist[i].id = tempid;
+            itemslist[i].getElementsByTagName("img")[0].src = "u/" + itemslist[i].id + ".jpg";
+        }
+        else {
+            itemslist[i].getElementsByTagName("img")[0].src = "u/grblank.png";
+        };
+        itemslist[i].getElementsByTagName("i")[0].onclick = function() {  gearclick = true  }
+        itemslist[i].id += "_" + i;
+        if (itemslist[i].className.indexOf(" cantfly") == -1)
+            itemslist[i].onclick = function() { doSelect(this) };
+        if (itemslist[i].className.indexOf(" group") > -1)
+            itemslist[i].getElementsByTagName("span")[0].onclick = function(event) {  
+                e = event || window.event; 
+                if (typeof(e.cancelBubble) != "boolean") e.stopPropagation(); else e.cancelBubble = true; 
+                collExp(this.parentNode.parentNode);
+                };
+    };
+    var allpolicies = getId("policieswrap").getElementsByTagName("h2");
+    for (var i = 0; i < allpolicies.length; i++) { 
+        allpolicies[i].onclick = function() { collExpPol(this.parentNode, this.id) };
+    }
+    function collExpPol(that, thath2) {
+        poldiv = "mainpol" + thath2.replace("h2", "");
+        if (that.className.indexOf(" open") == -1) {
+            that.className = that.className.replace(" closed", " open");
+            if (getId(poldiv).innerHTML == "") {
+                if (that.className.indexOf("cubby") > -1)
+                    getId(poldiv).innerHTML = getId("mainpol0").innerHTML;
+                else
+                    getId(poldiv).innerHTML = getId("mainpol1").innerHTML;
+            }
+        }
+        else {
+            that.className = that.className.replace(" open", " closed");
+        }
+    }
+    function updateDOM() {
+        getId('ci1').style.height = getId('ci2').style.height = (document.body.clientHeight - 235) + "px";
+        getId("fo1").style.height = getId("fo2").style.height = getId('ci1').style.height;
+    };
+    function collExp(that) {
+        groupserial = parseInt(that.id.split("_")[1]);
+        origindent = parseInt(that.className.substr(1));
+        var collapse = that.className.indexOf(" exp") > -1;
+        if (collapse)
+            that.className = that.className.replace(" exp", " coll")
+        else
+            that.className = that.className.replace(" coll", " exp");
+        var itemslist = getId("ci1").getElementsByTagName("li");
+        for (var i = groupserial + 1; i < itemslist.length; i++) {
+            newindent = parseInt(itemslist[i].className.substr(1));
+            numericid = parseInt(itemslist[i].id.split("_")[1]);
+            if (newindent > origindent) {
+                if (collapse) itemslist[i].className += " hidden";
+                else itemslist[i].className = itemslist[i].className.replace(" hidden", "")
+            }
+            else break
+        };
+    };
+    function doSelect(that) {
+        if (prevItem) {
+            prevItem.className = prevItem.className.replace(" selected", "");
+        };
+        that.className = that.className + " selected";
+        if (gearclick && flystate && prevItem && (prevItem == that)) {
+            noFly(prevItem, true);    
+        }
+        else {
+            if (gearclick || flystate)
+            {
+                setPointerPosition(that);
+                if (prevItem) noFly(prevItem, false);
+                flyNow(that);
+            }
+        };
+        gearclick = false;
+        prevItem = that;
+    };
+    function flyNow(that) {
+        flystate = true;
+        getId("fo1").className = "flyout fly";
+        getId("peoplewrap").className = getId("peoplewrap").className + " fat";
+        getId("policieswrap").className = getId("policieswrap").className + " slim";
+        resetPoliciesWidth();
+        if (that.className.indexOf(" group") == -1) {
+            textid = that.id.split("_")[0];
+            flyname = that.textContent || that.innerText;
+            flynamedisplay = "<span class='editable inliner' contenteditable='true'>" + flyname.split(", ")[0] + "</span>, <span class='editable inliner' contenteditable='true'>" + flyname.split(", ")[1] + "</span>";
+            getId("flypic").src = "u/" + textid + ".jpg";
+            getId("flyname").innerHTML = flynamedisplay;
+            getId("flyemail").style.display = "block";
+            getId("flyemail").innerHTML = textid + "@acmecorp.com";
+            getId("flygroups").style.display = "block";
+        }
+        else {
+            getId("flypic").src = "u/grblankbig.png";
+            getId("flyname").innerHTML = that.textContent || that.innerText;
+            getId("flyemail").innerHTML = "";
+            getId("flyemail").style.display = "none";
+            getId("flygroups").style.display = "none";
+        }
+    };
+    function noFly(whichPrev, stayclosed) {
+        flystate = false;
+        if (stayclosed) getId("fo1").className = "flyout"; 
+        getId("peoplewrap").className = getId("peoplewrap").className.replace(" fat", "");
+        getId("policieswrap").className = getId("policieswrap").className.replace(" slim", "");
+        resetPoliciesWidth();
+    };
+    function setPointerPosition(whichPrev) {
+        if (whichPrev) {
+            getId("p1").style.top = (whichPrev.offsetTop - getId("ci1").scrollTop + 15) + "px";
+        };
+    };
+    function switchNode(whichswitch) {
+        getId(whichswitch).className.indexOf(" on") == -1 ? getId(whichswitch).className = getId(whichswitch).className + " on" : getId(whichswitch).className = getId(whichswitch).className.replace(" on", "");
+    }
+    function resetPoliciesWidth() {   // fixing a Chrome layout bug
+        getId("policieswrap").style.width = (getId("policieswrap").offsetWidth - 1) + "px";
+        getId("policieswrap").style.width = (getId("policieswrap").offsetWidth + 1) + "px";
+        getId("policieswrap").style.width = "100%";
+    };
+    
+    //getId("_2").getElementsByTagName("span")[0].click();
+    //getId("_14").getElementsByTagName("span")[0].click();
+
+    //getId("_0").click();
+    //getId("bn1").click();
+    //getId("ld1").click();
+    //getId("nt1").click();
+</script>
+
+</body>
+</html>

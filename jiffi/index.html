@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Jiffi by LogMeIn</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link href="commonui.css" rel="stylesheet">
+    <link href="basics.css" rel="stylesheet">
+    <link href="button.css" rel="stylesheet">
+    <link href="jiffi.css" rel="stylesheet">
+    
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="LMI.js"></script>
+    <script src="CommonUI.js"></script>
+    <script src="jiffi.js"></script>
+
+</head>
+<body>
+
+<div class="commonUIHeader" id="header">
+    <div class="inner">
+
+        <a href="javascript:switchTo('pageHome')" class="logo"><img src="jiffi.png" border="0" width="55" height="50"></a>
+
+            <div class="rightside clearfix">
+            
+                    <div class="floright relative accountmenu" id="account">
+                        <div class="accountbutton clicker clearfix">
+                            <div class="image floleft">
+                                J
+                            </div>
+
+                            <div class="buttontext floleft">
+                                <div class="comp">Jiffi Demo</div>
+                                <div>jiffidemo@jiffi.com</div>
+                            </div>
+                        </div>
+                        <div class="actionmenu slip">
+                            <div class="inner">
+                               
+
+
+<div id="linkedAccounts">
+        <div class="linkedAccount">
+                <a href="/Settings/Admin/SwitchCompany/995468">
+                        
+                        ThePolicyCloud Inc.
+                        
+                </a>
+        </div>
+        <div class="linkedAccount">
+                <a href="/Settings/Admin/SwitchCompany/3784419">
+                        
+                        Tenczer Inc.
+                        
+                </a>
+        </div>
+        <div class="linkedAccount">
+                <a href="/Settings/Admin/SwitchCompany/5710864" class="selected">
+                        
+                        New company
+                        
+                </a>
+        </div>
+</div>
+   
+                                <div class="separator"></div>
+                                <a href="https://loginservice.dev.3amlabs.net/accountsettings.aspx?clusterid=01&amp;returnurl=https%3a%2f%2fbhomoki.3amlabs.net%2ffederated%2floginsso&amp;headerframe=https%3a%2f%2fbhomoki.3amlabs.net%2ffederated%2fheaderframe&amp;productframe=https%3a%2f%2fbhomoki.3amlabs.net%2fwelcome%2fcommon%2fproduct%2fpages%2fcls%2fdefaultframe&amp;lang=en-US&amp;skin=appguru&amp;regtype=O&amp;trackingproducttype=1&amp;socialloginenabled=0" target="_top">Account settings</a>
+                                <div class="separator"></div>
+                                <a href="https://loginservice.dev.3amlabs.net/logout.aspx?clusterid=01&amp;returnurl=https%3a%2f%2fbhomoki.3amlabs.net%2ffederated%2floginsso&amp;headerframe=https%3a%2f%2fbhomoki.3amlabs.net%2ffederated%2fheaderframe&amp;productframe=https%3a%2f%2fbhomoki.3amlabs.net%2fwelcome%2fcommon%2fproduct%2fpages%2fcls%2fdefaultframe&amp;lang=en-US&amp;skin=appguru&amp;regtype=O&amp;trackingproducttype=1&amp;socialloginenabled=0" target="_top">Log out</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floright relative language" id="language">
+                        <div class="menubutton clicker">
+                            <span class="icon inliner"></span>
+                            <span class="lng"></span>
+                        </div>
+                        <div class="actionmenu languagemenu slip">
+                            <div class="inner">
+                                <ul>
+                                    <li><a href="#" class="selected" data-lng="EN">English</a>
+                                    <li><a href="#" class="" data-lng="ES">Espa&#241;ol</a>
+                                    <li><a href="#" class="" data-lng="FR">Fran&#231;ais</a>
+                                    <li><a href="#" class="" data-lng="DE">Deutsch</a>
+                                    <li><a href="#" class="" data-lng="IT">Italiano</a>
+                                    <li><a href="#" class="" data-lng="NL">Nederlands</a>
+                                    <li><a href="#" class="" data-lng="PT">Portugu&#234;s</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floright relative gettingstarted" id="helpfeedback">
+                        <div class="menubutton clicker">
+                            <span class="icon inliner"></span>
+                        </div>
+                        <div class="actionmenu helpmenu slip">
+                            <div class="inner">
+                                <ul>
+                                    <li><a href="#" onclick="LMI.stopEvent(event);LMI.Appmatic.TooltipGuide.start()">Getting started</a>
+                                    <li><a href="http://help.appguru.com/knowledgebase/topics/48386" target="_blank">Client setup guide</a>
+                                    <li><a href="http://help.appguru.com/" target="_blank">Help center</a>
+                                    <li><a href="javascript: LMI.Appmatic.Facade.showSuggestAppDialog()">Feedback</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floright relative notifs" id="notifications" onclick="openDialog()">
+                        <span class="icon inliner"></span>
+                        <div id="notifcounter" class="hidden">0</div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    LMI.Appmatic.CommonUI.initHeader();
+</script>
+<!-- .header -->
+
+<div class="jumbo">
+    <h1 class="clearfix">
+        <span class="pageDown floleft alltra">Download plugin</span>
+        <span class="pageApp floleft alltra">Add or edit app: Evernote</span>
+        <label>
+            <span class="pageAdd floleft alltra">Add app:&nbsp;</span>
+            <input type="text" id="search" class="floleft">
+        </label>
+        <img src="x.png" id="x" class="off alltra" title="Clear search field">
+        <img src="back.png" id="back" class="off alltra" title="Back">
+    </h1>
+</div>
+
+<div class="content pageHome out">
+
+<div class="tiles my clearfix">
+    <h2>My apps</h2>
+    <div class="tile add">
+        <div class="inner">
+            <div class="appname">+</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Add app</div>
+            &nbsp;
+        </div>
+    </div>
+    <div class="tile a-jira">
+        <div class="inner">
+            <div class="appname">Jira</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">john.doe@domain.com</div>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+    <div class="tile a-twitter">
+        <div class="inner">
+            <div class="appname">Twitter</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">john.doe@domain.com</div>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+    <div class="tile a-github">
+        <div class="inner">
+            <div class="appname">GitHub</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">john.doe@domain.com</div>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+</div>
+
+<div class="tiles notmy clearfix">
+    <h2>Recommended</h2>
+    <div class="tile a-wordpress">
+        <div class="inner">
+            <div class="appname">WordPress</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 10,860 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-gmail">
+        <div class="inner">
+            <div class="appname">Gmail</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 9,180 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-box">
+        <div class="inner">
+            <div class="appname">Box</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 8,568 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-office365">
+        <div class="inner">
+            <div class="appname">Office365</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 8,120 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-facebook">
+        <div class="inner">
+            <div class="appname">Facebook</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 7,350 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-evernote">
+        <div class="inner">
+            <div class="appname">Evernote</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 6,350 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-salesforce">
+        <div class="inner">
+            <div class="appname">Salesforce</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 6,200 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="content pageAdd out">
+
+<div class="tiles notmy clearfix">
+    <h2>All apps</h2>
+    <div class="tile a-zendesk">
+        <div class="inner">
+            <div class="appname">ZenDesk</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 11,860 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-wordpress">
+        <div class="inner">
+            <div class="appname">WordPress</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 10,860 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-gmail">
+        <div class="inner">
+            <div class="appname">Gmail</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 9,180 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-box">
+        <div class="inner">
+            <div class="appname">Box</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 8,568 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-office365">
+        <div class="inner">
+            <div class="appname">Office365</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 8,120 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-facebook">
+        <div class="inner">
+            <div class="appname">Facebook</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 7,350 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-evernote">
+        <div class="inner">
+            <div class="appname">Evernote</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 6,350 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-salesforce">
+        <div class="inner">
+            <div class="appname">Salesforce</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 6,200 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-zendesk">
+        <div class="inner">
+            <div class="appname">ZenDesk</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 11,860 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-wordpress">
+        <div class="inner">
+            <div class="appname">WordPress</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 10,860 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-gmail">
+        <div class="inner">
+            <div class="appname">Gmail</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 9,180 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-box">
+        <div class="inner">
+            <div class="appname">Box</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 8,568 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-office365">
+        <div class="inner">
+            <div class="appname">Office365</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 8,120 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-facebook">
+        <div class="inner">
+            <div class="appname">Facebook</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 7,350 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-evernote">
+        <div class="inner">
+            <div class="appname">Evernote</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">Used by 6,350 users</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-jira">
+        <div class="inner">
+            <div class="appname">Jira</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">john.doe@domain.com</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-twitter">
+        <div class="inner">
+            <div class="appname">Twitter</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">john.doe@domain.com</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+    <div class="tile a-github">
+        <div class="inner">
+            <div class="appname">GitHub</div>
+        </div>
+        <div class="outer alltra">
+            <div class="appuser">john.doe@domain.com</div>
+            <a href="#">+ Add</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="content pageNot out">
+    <div class="centered" style="margin-top: 10%">
+        <h1>Sorry, no result for ’<span id='searchterm'></span>’</h1>
+        <h2>Can't find your app? <a href="javascript:switchTo('pageDown')" class="hovu">Download the browser plugin to add.</a></h2>
+    </div>
+</div>
+
+<div class="content pageDown out">
+    <div style="margin-top: 10%; margin-left: 20%">
+        <h2 class="bold">Add application by recording the login process in 3 steps</h2>
+        <ol>
+            <li>Download and install the plugin</li>
+            <li>Open the selected webpage and start the plugin</li>
+            <li>Select the specific login elements</li>
+        </ol>
+        <button type="button">Download</button>
+    </div>
+</div>
+
+<div class="content pageApp one out">
+    <div class="tiles notmy clearfix">
+        <div class="tile a-evernote">
+            <div class="inner">
+                <div class="appname">Evernote</div>
+            </div>
+        </div>
+        <button type="button" class="cancel" style="margin-top: 20px;">Remove</button>
+    </div>
+</div>
+<div class="content pageApp two out">
+    <div class="form">
+        <h2>App details</h2>
+        <div class="floleft" style="margin-right: 40px">
+            <label>User name</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div class="floleft">
+            <label>Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div class="clears"></div>
+        <div class="floleft" style="margin-right: 40px">
+            <label>Domain</label>
+            <input type="text" name="domain" id="domain">
+        </div>
+        <div class="floleft">
+            <label>Display name</label>
+            <input type="text" name="displayname" id="displayname">
+        </div>
+        <div class="clears"></div>
+        <button type="submit" onclick="switchTo('pageHome')">Add app</button>
+        <button type="button" class="cancel" onclick="switchTo('pageHome')">Cancel</button>
+    </div>
+</div>
+
+
+<div id="_dialog" class="dialog">
+    <div class="dimmer"></div>
+    <div class="box zooom">
+        <div class="x" title="Close"></div>
+        <div class="inner">
+            <h1>App credentials</h1>
+            <p>
+                Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence with revolutionary ROI and more.
+            </p>
+            <div class="buttons">
+                <button class="">OK</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+

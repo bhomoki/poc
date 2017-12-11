@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta charset="utf-8">
+
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        rel="stylesheet"/>
+
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+    #collapseTrigger {
+        color: #fff;
+        float: left;
+        text-decoration: none;
+        border-radius: 3px;
+    }
+    .panel-primary {
+        border: 0;
+        box-shadow: none;
+    }
+    .panel-body {
+        border-radius: 3px;
+        border: 2px solid #337ab7
+    }
+
+    #submitButton {
+        white-space: normal;
+    }
+
+    #instructionBody table {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    #instructionBody table caption {
+        text-align: left;
+        padding: 0 0 5px 0;
+    }
+
+    .content {
+        margin-bottom: 15px;
+    }
+
+    .radio:first-of-type {
+        margin-top: -5px;
+    }
+
+    .hidden {
+        display: none
+    }
+
+    .well {
+        border: 0;
+        box-shadow: none;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .well.actual {
+        background-color: #FFF0E0
+    }
+
+    .control-label {
+        margin: 15px 0 5px 0;
+        font-size: 15px;
+    }
+
+    .checkbox input[type=checkbox] {
+        width: 18px; 
+        height: 18px;
+        margin: 1px 0 0 -24px
+    }
+    div.checkbox label, 
+    div.radio label {
+        padding: 3px 0 3px 30px;
+        margin: 0        
+    }
+
+    div.checkbox, 
+    div.radio {
+        margin: 0 !important
+    }
+
+    .checkbox+.checkbox, 
+    .radio+.radio {
+        margin: 0
+    }
+
+    label.checkbox:hover {
+        background-color: #FFF0E0
+    }
+
+    label.checkbox {
+        -webkit-transition: background-color .35s cubic-bezier(.19, 1, .22, 1);
+        transition: background-color .35s cubic-bezier(.19, 1, .22, 1);
+        border-radius: 3px;
+
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+
+</head>
+
+<body>
+
+<section class="container" id="DialogAct">
+    <div class="row" style="margin-bottom: 40px">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-primary">
+                <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger" onclick="document.getElementById('instructionBody').className == 'panel-body' ? document.getElementById('instructionBody').className = 'panel-body hidden' : document.getElementById('instructionBody').className = 'panel-body'"><strong>Help examples ▾</strong></a>
+
+                <div class="panel-body hidden" id="instructionBody">&nbsp;
+                    <table class="table table-condensed table-striped table-responsive">
+                        <tbody>
+                        <tr>
+                            <td dir="ltr"><b>Main category</b></td>
+                            <td dir="ltr">
+                                <div><b>Fine-grained category</b></div>
+                            </td>
+                            <td dir="ltr">Example</td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td dir="ltr" rowspan="2">Greeting</td>
+                            <td dir="ltr">Opening</td>
+                            <td dir="ltr">Hi, how are you?<br>Hi, my name is John.<br>Welcome to join.me!</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Closing</td>
+                            <td dir="ltr">Have a good evening!<br>Have a nice day!<br>Bye!</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr" rowspan="8">Statement</td>
+                            <td dir="ltr">Informative</td>
+                            <td dir="ltr">I am using windows 10<br>I'll try that.<br>Our pricing at the nonprofit
+                                rate is $199/year
+                            </td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Expressive negative</td>
+                            <td dir="ltr">Join.me is a crap.<br>:/<br>:(<br>this has been incredibely
+                                frustrating<br>grr
+                            </td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Expressive positive</td>
+                            <td dir="ltr">It is great!, Glad to hear it.<br>:D<br>:)</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Complaint</td>
+                            <td dir="ltr">The sound is not working properly</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Offer help</td>
+                            <td dir="ltr">How can I help you?<br>What can I do for you today?</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Suggest action</td>
+                            <td dir="ltr">Please try these troubleshooting steps<br>You will need to right click</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Promise</td>
+                            <td dir="ltr">I do promise that I will do my best to get this processed for you.<br>I will
+                                notify you<br>we will contact you
+                            </td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Other statement</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr" rowspan="3">Request</td>
+                            <td dir="ltr">Request help</td>
+                            <td dir="ltr">I am having problem using my account...</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Request info</td>
+                            <td dir="ltr">I would like to know how to increase the size of the video bubbles<br>how
+                                many
+                                people can join the free joinme?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Other request</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr" rowspan="2">Question</td>
+                            <td dir="ltr">Yes-No question</td>
+                            <td dir="ltr">Is this 24-hour support?</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Open question</td>
+                            <td dir="ltr">What number can I call...?</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr" rowspan="4">Answer</td>
+                            <td dir="ltr">Yes- answer</td>
+                            <td dir="ltr">Yes, you can!, Yes I have.</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">No-answer</td>
+                            <td dir="ltr">Not today.<br>I cannot.</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Response-ack</td>
+                            <td dir="ltr">Got it.<br>ok</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Other answer</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr" rowspan="3">Social act</td>
+                            <td dir="ltr">Thanks</td>
+                            <td dir="ltr">Great, thanks!<br>Thanks<br>Okay, thank you.</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Apology</td>
+                            <td dir="ltr">Sorry for that.<br>I am sorry to hear that.</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">Downplayer</td>
+                            <td dir="ltr">Any time, Kevin!<br>Welcome!</td>
+                        </tr>
+                        <tr>
+                        </tbody>
+                    </table>
+                    <button type="button" onclick="document.getElementById('instructionBody').className = 'panel-body hidden'">Close this panel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End instructions --><!-- Categorization Layout -->
+
+    <div class="row" id="workContent">
+        <div class="col-xs-12 col-sm-5 content">
+
+            <label class="group-label">Actual message</label>
+            <p class="well actual"><b>${user_0}</b>: ${msg_0}</p>
+
+            <label class="group-label" style="margin-top: 20px;">Previous messages</label>
+            <p class="well smaller"><b>${user_p6}</b>: ${msg_p6}</p>
+            <p class="well smaller"><b>${user_p5}</b>: ${msg_p5}</p>
+            <p class="well smaller"><b>${user_p4}</b>: ${msg_p4}</p>
+            <p class="well smaller"><b>${user_p3}</b>: ${msg_p3}</p>
+            <p class="well smaller"><b>${user_p2}</b>: ${msg_p2}</p>
+            <p class="well smaller"><b>${user_p1}</b>: ${msg_p1}</p>
+            
+        </div>
+
+        <div class="col-xs-12 col-sm-7 fields">
+            <div class="form-group"><!-- Question for the Worker -->
+                <label class="group-label">Dialog acts by the speaker (select max 3)</label> <!-- Input from the Worker -->
+                <div class="bootstrap-iso" id="Inputs">
+                    <div class="container-fluid">
+                       
+                        <div class="row">
+                            <form method="post">
+                                <div class="form-group clearfix" id="Tags">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                    
+                                        <label class="control-label">
+                                            Greeting
+                                        </label>
+                                        <div class=" ">
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Greeting" type="checkbox" value="Opening"/>
+                                                    Opening
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Greeting" type="checkbox" value="Closing"/>
+                                                    Closing
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <label class="control-label">
+                                            Statement
+                                        </label>
+                                        <div class=" ">
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Statement" type="checkbox" value="Informative"/>
+                                                    Informative
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Statement" type="checkbox" value="Suggest action"/>
+                                                    Suggest action
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Statement" type="checkbox" value="Offer help"/>
+                                                    Offer help
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Statement" type="checkbox"
+                                                           value="Expressive positive"/>
+                                                    Expressive positive
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Statement" type="checkbox"
+                                                           value="Expressive negative"/>
+                                                    Expressive negative
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Statement" type="checkbox" value="Promise"/>
+                                                    Promise
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Statement" type="checkbox" value="Other"/>
+                                                    Other statement
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <label class="control-label">
+                                            Request
+                                        </label>
+                                        <div class=" ">
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Request" type="checkbox" value="Help request"/>
+                                                    Help request
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Request" type="checkbox" value="Info request"/>
+                                                    Info request
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Request" type="checkbox" value="Other"/>
+                                                    Other request
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <label class="control-label">
+                                            Question
+                                        </label>
+                                        <div class=" ">
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Question" type="checkbox" value="Yes-No question"/>
+                                                    Yes-No question
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Question" type="checkbox" value="Open question"/>
+                                                    Open question
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <label class="control-label">
+                                            Answer
+                                        </label>
+                                        <div class=" ">
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Answer" type="checkbox" value="Yes- answer"/>
+                                                    Yes- answer
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Answer" type="checkbox" value="No- answer"/>
+                                                    No- answer
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Answer" type="checkbox" value="Acknowledgement"/>
+                                                    Acknowledgement
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Answer" type="checkbox" value="Other answer"/>
+                                                    Other answer
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <label class="control-label">
+                                            Social act
+                                        </label>
+                                        <div class=" ">
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Socialact" type="checkbox" value="Gratitude"/>
+                                                    Gratitude
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Socialact" type="checkbox" value="Apology"/>
+                                                    Apology
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label class="checkbox">
+                                                    <input name="Socialact" type="checkbox" value="Downplayer"/>
+                                                    Downplayer
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<!-- End Categorization Layout -->
+
+<script>
+    var helpSession = localStorage.getItem("helpsession");
+    if (helpSession == 1)
+        document.getElementById('instructionBody').className = 'panel-body hidden'
+    else {
+        localStorage.setItem("helpsession", 1);
+        document.getElementById('instructionBody').className = 'panel-body';
+    }
+</script>
+
+</body>
+</html>

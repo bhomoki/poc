@@ -1,0 +1,426 @@
+.dimmer {
+    position: fixed; z-index: 50; left: 0; top: 0; bottom: 0; right: 0;
+    background: rgba(0, 0, 0, .42);
+}
+.progress {
+    display: none;
+    position: fixed; z-index: 70; left: 0; bottom: 0; right: 0; height: 70px;
+    background: white;
+    line-height: 70px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .4);
+}
+.dialog {
+    display: none;
+    position: fixed; z-index: 80; top: 0; width: 100%;
+}
+.page {
+    display: none;
+    position: fixed; z-index: 60; top: 100px; bottom: 0; width: 100%;
+    background-color: #F0F2F3;
+    overflow-y: auto;
+}
+.shadow {
+    position: fixed; z-index: 65; left: 0; top: 100px; width: calc(100% - 20px);
+    box-shadow: inset 0 30px 20px -20px rgba(240, 242, 243, 1);
+    height: 30px;
+    display: none;
+}
+
+.hasprogress .progress {
+    display: block;
+}
+.hasdialog .dialog {
+    display: block;
+}
+.haspage .page,
+.haspage .shadow {
+    display: block;
+}
+.hasprogress .page {
+    bottom: 70px;
+}
+.alldimmer .dimmer {
+    z-index: 75
+}
+
+
+
+
+.dialog > .inner {
+    width: 450px; min-height: 300px;
+    margin: 12% auto 0 auto;
+    background: white;
+    padding: 0 40px 40px 40px;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.2);
+    position: relative;
+}
+.dialog img.hero {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+.dialog .dialogcontent {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-right: -40px; padding-right: 40px;
+    padding-top: 15px;
+} 
+.dialog .providers {
+    width: 960px;
+    background-color: #EAEDF0;
+}
+.dialog .providers p {
+    width: 400px;
+    margin: 20px auto 30px auto;
+}
+.dialog .providers img {
+    margin: 0 5px;
+    cursor: pointer;
+}
+.dialog  > .inner.custom,
+.dialog > .inner.vaultready {
+    background-color: #EAEDF0;
+}
+.dialog > .inner.vaultready {
+    padding: 30px 50px 20px 50px;
+    width: 550px;
+}
+.dialog .custom input[type=text],
+.dialog .custom input[type=password] {
+    height: 50px;
+    width: 100%;
+    margin: 5px 0 15px 0 
+}
+.dialog .custom label.text {
+    font-size: 13px;
+}
+.dialog .buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+.dialog .buttons button {
+    width: calc(50% - 10px);
+    margin: 0 0 0 10px;
+}
+.dialog .buttons button:first-child {
+    float: left;
+    margin: 0;
+}
+.dialog .x {
+    font-size: 22px;
+    font-weight: 600;
+    position: absolute; z-index: 5; top: 10px; right: 10px;
+    width: 30px; height: 30px; line-height: 28px; text-align: center;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    transition: all .1s linear;
+}
+.dialog .x:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+.dialog h1 {
+    margin-top: 20px
+}
+
+
+
+
+.page > .inner {
+    padding: 30px 10%;
+}
+.page .inner nav {
+    border-bottom: 1px solid rgba(0, 0, 0, .03);
+    margin-bottom: 20px;
+}
+.page nav li {
+    float: left;
+    line-height: 40px;
+    padding: 0 5px;
+    margin-left: 20px;
+    border-bottom: 2px solid transparent;
+    color: rgba(0, 0, 0, .5);
+    font-weight: 600;
+    cursor: pointer;
+}
+.page nav li.active {
+    color: rgba(0, 0, 0, .8);
+    border-bottom-color: #D43933
+}
+.page nav li:hover {
+    color: rgba(0, 0, 0, .8);
+}
+.page .content {
+    padding: 20px 20px 5px 20px;
+    background-color: rgba(0, 0, 0, .03);
+}
+.page .content h1 {
+    margin-bottom: 5px;
+}
+.page .content p {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.page table {
+    width: 100%;
+    margin: 20px 0 30px 0;
+}
+.page table tr {
+    background-color: white;
+    border-bottom: 3px solid #E9EBEC;
+}
+.page table tr td {
+    padding: 0 20px;
+    height: 60px;
+    white-space: nowrap;
+}
+.page table tr td:first-child {
+    width: 250px;
+}
+.page table tr td:nth-child(2) {
+    width: 50%;
+}
+.page table tr td:last-child {
+    text-align: right;
+    font-size: 14px;
+}
+.page table input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+.page table button.dark {
+    height: 30px; line-height: 30px;
+    min-width: 120px;
+    font-weight: normal;
+    margin: 0 0 0 30px;
+}
+.page .singleapp {
+    width: 400px;
+    margin: 50px auto 80px auto;
+    text-align: center;
+}
+.page .singleapp .logo {
+    border-radius: 4px;
+    background: white;
+}
+.page .singleapp .appname {
+    padding-left: 20px;
+}
+.page .singleapp .buttons {
+    text-align: center
+}
+.page .singleapp p {
+    font-size: 15px;
+}
+.page .singleapp hr {
+    border-color: #969EA4;
+    margin: 40px 0 20px 0
+}
+.logo {
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .03);
+    vertical-align: middle;
+}
+.logo img {
+    height: 40px;
+}
+.appname {
+    font-weight: 600
+}
+.meta {
+    font-size: 13px;
+    color: rgba(0, 0, 0, .5)
+}
+.status {
+    position: relative; padding-right: 40px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+}
+.status:after {
+    content: " ";
+    position: absolute; top: 13px; right: 0;
+    width: 24px; height: 24px;
+}
+.status.success:after {
+    background: url(content/success.png) no-repeat;
+    background-size: 24px 24px;
+}
+.status.warning:after {
+    background: url(content/warning.png) no-repeat;
+    background-size: 24px 24px;
+}
+.status.error:after {
+    background: url(content/error.png) no-repeat;
+    background-size: 24px 24px;
+}
+.status.inprogress:after {
+    border: 2px solid #D32D27;
+    border-radius: 50%;
+    /*border-right:1px solid #F9E0DF;*/
+    border-right: 2px dotted #F9E0DF;
+    -webkit-animation: rotate .8s infinite ease-in-out;
+    -moz-animation: rotate .8s infinite ease-in-out;
+    animation: rotate .8s infinite ease-in-out;
+}
+.progress .status {
+    margin: 10px 0 0 0;
+    padding: 0 50px 0 20px;
+    border-radius: 4px;
+}
+.progress .status.clickable {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+}
+.progress .status.clickable:active {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+}
+.progress .status:after {
+    right: 15px;
+}
+
+
+div.spinner {
+  width: 50px;
+  height: 50px;
+    margin: 0 auto;
+    border: 3px solid #D32D27;
+    border-radius: 50%;
+    border-right-color: transparent;
+    -webkit-animation: rotate .7s infinite linear;
+    -moz-animation: rotate .7s infinite linear;
+    animation: rotate .7s infinite linear;
+}
+div.spinner.inline {
+  width: 24px;
+  height: 24px;
+  position: static;
+  margin-right: 10px;
+  margin-top: 17px;
+}
+
+
+
+
+@-webkit-keyframes rotate {
+  0%   {-webkit-transform: rotate(  0deg)}
+  100% {-webkit-transform: rotate(360deg)}
+}
+@-moz-keyframes rotate {
+  0%   {transform: rotate(  0deg)}
+  100% {transform: rotate(360deg)}
+}
+@keyframes rotate {
+  0%   {transform: rotate(  0deg)}
+  100% {transform: rotate(360deg)}
+}
+
+
+
+
+
+
+.progress .closer {
+    width: 70px; height: 70px;
+    float: left;
+    text-align: center;
+    font-size: 30px;
+    border-right: 1px solid #F0F2F3;
+    color: #969EA4;
+    cursor: pointer;
+}
+.progress .counter {
+    color: gray;
+	float: left;
+    text-align: center;
+    width: 70px;
+}
+.progress .actions {
+    float: right;
+    text-align: right;
+    width: calc(50% - 160px);
+}
+.progress .actions > * {
+    float: right;
+}
+.progress .actions button {
+    margin: 10px 15px;
+    min-width: 140px;
+}
+
+
+
+
+
+
+progress[value] {
+    float: left;
+    -webkit-appearance: none;
+	border: none;
+	width: 50%; height: 10px;
+	background-color: #F0F2F3;
+	border-radius: 5px;
+	color: #3498DB;
+	position: relative;
+    margin: 30px 0 0 0;
+}
+progress[value]::-webkit-progress-bar {
+	background-color: #F0F2F3;
+	border-radius: 5px;
+}
+progress[value]::-webkit-progress-value {
+	position: relative;
+	border-radius:5px;
+    background-color: #3498DB;
+}
+progress[value]::-moz-progress-bar {
+	background-color: #3498DB;
+	border-radius:5px;
+}
+progress[value="100"] {
+    color: #2ECC71;
+}
+progress[value="100"]::-webkit-progress-value {
+    background-color: #2ECC71;
+}
+progress[value="100"]::-moz-progress-bar {
+	background-color: #2ECC71;
+}
+progress[value="100"]::after {
+    content: "";
+    width: 24px; height: 24px;
+    background: url(content/success.png) no-repeat;
+    background-size: 24px 24px;
+	position: absolute; right: -5px; top: -7px;
+}
+
+
+
+
+@media only screen and (max-width: 1500px) {
+    progress[value] {
+        width: 40%
+    }
+    .progress .actions {
+        width: calc(60% - 160px);
+    }
+}
+@media only screen and (max-width: 1300px) {
+    progress[value] {
+        width: 30%
+    }
+    .progress .actions {
+        width: calc(70% - 160px);
+    }
+}
+@media only screen and (max-width: 1100px) {
+    progress[value] {
+        width: 20%
+    }
+    .progress .actions {
+        width: calc(80% - 160px);
+    }
+}

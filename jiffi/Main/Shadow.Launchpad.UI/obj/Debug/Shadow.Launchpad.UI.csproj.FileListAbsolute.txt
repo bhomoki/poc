@@ -1,0 +1,5 @@
+D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.UI\bin\Shadow.Launchpad.UI.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.UI\bin\Shadow.Launchpad.UI.pdb
+D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.UI\obj\Debug\Shadow.Launchpad.UI.csprojResolveAssemblyReference.cache
+D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.UI\obj\Debug\Shadow.Launchpad.UI.dll
+D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.UI\obj\Debug\Shadow.Launchpad.UI.pdb

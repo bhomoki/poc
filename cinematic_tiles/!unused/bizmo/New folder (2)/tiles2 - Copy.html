@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Expires" content="-1">
+
+<title>AppGuru by LogMeIn</title>
+
+<style type="text/css">
+    #panel1 {
+        cursor: pointer;
+    }
+	div.policieswrap #policypanelouter {
+		position: absolute; z-index: 2; top: 0px; left: 0px;
+        width: 100%; height: 0;
+	}
+    div.policieswrap #policypanelouter div.slider {
+        height: 0;
+        overflow: hidden;
+         -webkit-transition: all .4s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        -moz-transition: all .4s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        -ms-transition: all .4s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        -o-transition: all .4s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all .4s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    }
+    div.policieswrap #policypanelouter div.slider.on {
+        height: 415px;
+    }
+    div.policieswrap #policypanelouter.animate,
+    div.policieswrap div.policy {
+        -webkit-transition: all .5s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   		-moz-transition: all .5s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    	-ms-transition: all .5s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     	-o-transition: all .5s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all .5s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    }
+	div.policieswrap div.policypanel {
+        height: 400px;
+        margin-top: 15px;
+	}
+	div.policieswrap div.slider div.policypanel div.arrow {
+        border-width: 10px;
+        top: 0;
+        opacity: 0.2;
+		-webkit-transition: all .3s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   		-moz-transition: all .3s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    	-ms-transition: all .3s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     	-o-transition: all .3s cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all .3s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	}
+    div.policieswrap div.slider.on div.policypanel div.arrow {
+        top: -20px;
+        opacity: 1;
+    }
+	div.policieswrap div.policy {
+		position: absolute !important;
+	}
+</style>
+
+<link href="https://bhomoki-32552.3amlabs.net/css/appmatic.css" rel="stylesheet">
+<link href="https://bhomoki-32552.3amlabs.net/css/appmaticbutton.css" rel="stylesheet">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+</head>
+
+<body>
+
+<div class="header" id="header">
+    <div class="inner">
+        <a href="#" class="logo">
+            <img src="https://bhomoki-32552.3amlabs.net/img/appgurupreview.png" width="192" height="50" border="0">
+        </a>
+       <ul id="topMenu" class="clearfix">
+            <li><a href="#" class="active">Policy Manager</a></li>
+            <li><a href="#">App Catalog</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="peoplewrap" id="peoplewrap">
+    <div class="content">
+        <div class="sectionheader">
+            <h1>
+                <span class="inliner">People</span>
+                <div class="buttons inliner clearfix">
+                    <div id="addPersonButton" class="circlebutton inliner b2" title="Add People">
+                    </div><div id="addGroupButton" class="circlebutton inliner b1 disabled" title="Add group (coming soon)">
+                    </div><div id="showMoreOptionsButton" class="circlebutton inliner b3" title="More...">
+                    </div><div id="deleteButton" class="circlebutton inliner b4 disabled" title="Delete selected people">
+                    </div>
+                </div>
+            </h1>
+        </div>
+        <div class="flyoutcontentinner" id='panel1'>
+            <div class="flyout" id="fo1">
+                <div class="flyoutbody" id="fo2">
+                </div>
+            </div>
+            <div class="contentinner" id="ci1">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="policieswrap" id="policieswrap">
+    <div class="content">
+        <div class="contentpadding">
+            <div class="sectionheader">
+                <h1><span class="inliner">Policies</span>
+                    <div class="buttons inliner clearfix">
+                        <div id="addPolicyButton" class="circlebutton inliner b5" title="Add policy">
+                        </div><div class="circlebutton inliner b6 disabled" title="Duplicate">
+                        </div><div id="deletePolicyButton" class="circlebutton inliner b4 disabled" title="Delete selected policies"></div>
+                    </div>
+                </h1>
+            </div>
+            <div class="contentinner" id="ci2" style="height: 700px;">
+                <div class="tile policy cubby"><span class="policyname">cubby 1</span><span class="washed">33</span></div>
+                <div class="tile policy cubby"><span class="policyname">cubby 2</span><span class="washed">5</span></div>
+                <div class="tile policy cubby"><span class="policyname">cubby 3</span><span class="washed">1</span></div>
+                <div class="tile policy cubby"><span class="policyname">cubby 4</span><span class="washed">0</span></div>
+                <div class="tile policy google"><span class="policyname">goog 5</span><span class="washed">52</span></div>
+                <div class="tile policy google"><span class="policyname">goog 6</span><span class="washed">53</span></div>
+                <div class="tile policy google"><span class="policyname">goog 7</span><span class="washed">40</span></div>
+                <div class="tile policy google"><span class="policyname">goog 8</span><span class="washed">41</span></div>
+                <div class="tile policy google"><span class="policyname">goog 9</span><span class="washed">9</span></div>
+                <div class="tile policy joinme"><span class="policyname">joinme 10</span><span class="washed">33</span></div>
+                <div class="tile policy joinme"><span class="policyname">joinme 11</span><span class="washed">11</span></div>
+                <div class="tile policy joinme"><span class="policyname">joinme 12</span><span class="washed">22</span></div>
+                <div class="tile policy joinme"><span class="policyname">joinme 13</span><span class="washed">23</span></div>
+                <div class="tile policy joinme"><span class="policyname">joinme 14</span><span class="washed">13</span></div>
+                <div class="tile policy joinme"><span class="policyname">joinme 15</span><span class="washed">16</span></div>
+                <div class="tile policy o365"><span class="policyname">off365 16</span><span class="washed">17</span></div>
+                <div class="tile policy o365"><span class="policyname">off365 17</span><span class="washed">154</span></div>
+                <div class="tile policy o365"><span class="policyname">off365 18</span><span class="washed">2</span></div>
+                <div id="policypanelouter">
+                    <div class="slider">
+                        <div class="policypanel">
+                            <div class="arrow"></div>
+                            <div class="x" title="Close" onclick="closePolicyPanel()"></div>
+                            <h2 class="policypanelname"><span class="label"></span></h2>
+
+                            <div class="peopleandpermissions clearfix" id="peopleandpermissions">
+                                <div class="floleft people"><div class="policypersonpanel inner">
+                                    <div class="filtercheck"><label><input type="checkbox" id="pendingOnly">Show pending invitations only</label></div>
+                                    <div id="policyPersonList" class="list">
+                                        <ul id="policyPersonItems" class="items clearfix">
+                                            <li class="draghereContainer">
+                                                <div class="draghere ui-droppable"><span class="inner">Drag people here</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                                    <div class="floright permissions"><div class="settingsFrame">
+                                    <div class="settingGroups"><div class="settingGroup closed" id="group0">
+                                    <h2 class="settingGroupTitle" onclick="toggleSettingGroup(jQuery(this))">Personalization</h2>
+                                    <span class="arrow"></span>
+                                    
+                                    <div class="settingListContainer"><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp0" disabled="disabled">
+                                        <span class="settingLabel" title="Set a default background image for all members of this policy. Select Lock this background to prevent change.">Set background image</span>
+                                    </label>
+                                <div class="innerSettingListContainer">
+                                <div class="settingrow pictureSelector">
+                                    <p>
+                                        Background</p>
+                                    <p>
+                                        <img src="/img/pictureSettingDummyBg.png"></p>
+                                    <p>
+                                        Dream.jpg (327 KB)</p>
+                                    <p>
+                                        <a href="#">Browse</a></p>
+                                </div>
+                                <div class="settingrow radioButtonGroup">
+                                    <div class="optionListContainer"><div class="radioButtonOption">
+                                    <label>
+                                        <input type="radio" class="settingOption" value="0" name="inp2" disabled="disabled">
+                                        <span class="settingLabel" title="Disable the choose your background option at join.me.">Lock this background</span>
+                                    </label>
+                                    
+                                    <div class="innerSettingListContainer"></div>
+                                </div><div class="radioButtonOption">
+                                    <label>
+                                        <input type="radio" class="settingOption" value="1" name="inp2" disabled="disabled" checked="checked">
+                                        <span class="settingLabel" title="Enable the choose your background option at join.me.">Allow users to change it</span>
+                                    </label>
+                                    
+                                    <div class="innerSettingListContainer"></div>
+                                </div></div>
+                                </div></div>
+                                </div><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp3">
+                                        <span class="settingLabel" title="Set a default Personal Link for all policy members. Select Lock this link to prevent change.">Set Personal Link for all users</span>
+                                    </label>
+                                    <div class="innerSettingListContainer"><div class="settingrow dropDownList">
+                                    <select class="ddlSettingSelector" title="e.g. &quot;jsmith@example.com&quot; becomes &quot;jsmith.example.com&quot;" disabled="disabled">
+                                    <option value="local-part">local-part</option></select>
+                                </div><div class="settingrow radioButtonGroup">
+                                    <div class="optionListContainer"><div class="radioButtonOption">
+                                    <label>
+                                        <input type="radio" class="settingOption" value="0" name="inp5" disabled="disabled">
+                                        <span class="settingLabel" title="Disable the personal link option at join.me.">Lock this link</span>
+                                    </label>
+                                    
+                                    <div class="innerSettingListContainer"></div>
+                                </div><div class="radioButtonOption">
+                                    <label>
+                                        <input type="radio" class="settingOption" value="1" name="inp5" disabled="disabled" checked="checked">
+                                        <span class="settingLabel" title="Enable the personal link option at join.me.">Allow users to change it</span>
+                                    </label>
+                                    
+                                    <div class="innerSettingListContainer"></div>
+                                </div></div>
+                                </div></div>
+                                </div></div>
+                                </div><div class="settingGroup closed" id="group1">
+                                    <h2 class="settingGroupTitle" onclick="toggleSettingGroup(jQuery(this))">Meeting features</h2>
+                                    <span class="arrow"></span>
+                                    <p class="settingGroupDescription">Control feature use when hosting a meeting:</p>
+                                    <div class="settingListContainer"><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp6">
+                                        <span class="settingLabel" title="Allow policy members to chat during meetings they host.">Chat</span>
+                                    </label>
+                                    <div class="innerSettingListContainer"></div>
+                                </div><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp7">
+                                        <span class="settingLabel" title="Allow policy members to transfer files during meetings they host">File Transfer</span>
+                                    </label>
+                                    <div class="innerSettingListContainer"></div>
+                                </div><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp8" disabled="disabled">
+                                        <span class="settingLabel" title="Allow policy members to use their personal link during meetings they host. This option is inactive when a personal link has been set for all users.">Personal Link</span>
+                                    </label>
+                                    <div class="innerSettingListContainer"></div>
+                                </div><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp9">
+                                        <span class="settingLabel" title="Allow policy members to share control of their screen with participants during meetings they host.">Remote Control</span>
+                                    </label>
+                                    <div class="innerSettingListContainer"></div>
+                                </div><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp10">
+                                        <span class="settingLabel" title="Allow policy members to allow participants to present their screen during meetings they host.">Presenter Swap</span>
+                                    </label>
+                                    <div class="innerSettingListContainer"></div>
+                                </div></div>
+                                </div><div class="settingGroup closed" id="group2">
+                                    <h2 class="settingGroupTitle" onclick="toggleSettingGroup(jQuery(this))">Audio</h2>
+                                    <span class="arrow"></span>
+                                    
+                                    <div class="settingListContainer"><div class="settingrow radioButtonGroup">
+                                    <div class="optionListContainer"><div class="radioButtonOption">
+                                    <label>
+                                        <input type="radio" class="settingOption" value="1" name="inp11" checked="checked">
+                                        <span class="settingLabel" title="Allow policy members to set their own conference line at join.me &gt; meeting settings.">Use own conference line</span>
+                                    </label>
+                                    <p class="description">Note: join.me users are responsible for specifying their own audio details.</p>
+                                    <div class="innerSettingListContainer"></div>
+                                </div><div class="radioButtonOption">
+                                    <label>
+                                        <input type="radio" class="settingOption" value="0" name="inp11">
+                                        <span class="settingLabel">Use join.me audio services</span>
+                                    </label>
+                                    
+                                    <div class="innerSettingListContainer"><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp12" disabled="disabled" name="inp11">
+                                        <span class="settingLabel" title="Enable a free join.me conference line each time a policy member starts a meeting.">Use join.me conference line</span>
+                                    </label>
+                                    <div class="innerSettingListContainer"></div>
+                                </div><div class="settingrow checkBoxSetting">
+                                    <label>
+                                        <input type="checkbox" class="settingCheckbox" id="inp13" disabled="disabled" name="inp11">
+                                        <span class="settingLabel" title="Allow meeting participants to use join.me VoIP internet calling.">Allow join.me internet calling</span>
+                                    </label>
+                                    <div class="innerSettingListContainer"></div>
+                                </div></div>
+                                </div></div>
+                                </div></div>
+                                </div></div>
+                                    <div class="buttons">
+                                        <button type="button" class="okButton" style="display: none;">
+                                            Save</button>
+                                        <button type="button" class="cancelButton" style="display: none;">
+                                            Cancel</button>
+                                    </div>
+                                </div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <div class="inner">
+        <p>
+            Copyright &#169; 2013 <span class="bold">LogMeIn</span>, Inc. All rights reserved.</p>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" >
+
+    var tileW = 130;
+    var tileH = 130;
+    var gap = 15;
+    var panelH = 400;
+    var sliderH = panelH + gap;
+    var columns = 0;
+    var rows = 0;
+    var selectedRow = null;
+    var selectedItem = null;
+    var isPolicyPanelOn = false;
+
+    var ci1 = jQuery('#ci1');
+    var ci2 = jQuery('#ci2');
+    var fo1 = jQuery('#fo1');
+    var fo2 = jQuery('#fo2');
+    var policypanelouter = jQuery('#policypanelouter');
+    var policypanelslider = policypanelouter.find('div.slider');
+    var policypanel = policypanelouter.find('div.policypanel');
+
+    function updateDOM()
+    {
+        ci1.height(jQuery(window).height() - 182 - jQuery('#header').offset().top);  // 195
+        ci2.height(ci1.height());
+        fo1.height(ci1.height());
+        fo2.height(ci1.height());
+        
+        columns = Math.floor(ci2.width() / (tileW + gap));
+        rows = Math.ceil(ci2.find('.tile').length / columns);
+        
+        var id = 0;
+        
+        for (var i = 0; i < rows; i++) {
+            for ( var j = 0; j < columns; j++ ) {
+                var posX = j * (tileW + gap );
+                var tile = ci2.find('.tile')[id];
+                jQuery(tile).attr('opos', i * (tileH + gap ));
+                jQuery(tile).attr('row', i);
+                jQuery(tile).css('top', (i * (tileH + gap ))+'px');
+                jQuery(tile).attr('id', id);
+                jQuery(tile).css('left', (j * (tileW + gap ))+'px');
+                id++;		
+            }
+        };
+            
+        if (isPolicyPanelOn) {
+            setPolicyPanelPosition();
+            ci2.find('.tile').each(function() {
+                var row = Number(jQuery(this).attr('row'));
+                var si = getSelectedPolicyTile();
+                var sr = Number(jQuery(si).attr('row'));
+                selectedRow = sr;
+                if ( row > sr ) {
+                    var top = (row * (tileH + gap)) + sliderH;
+                    jQuery(this).css('top', top + 'px' );
+                }
+            })
+            window.setTimeout(setArrowPosition, 400);
+        };
+    };
+   
+    function setPolicyPanelPosition() {
+        var si = getSelectedPolicyTile();
+        var sr = Number(jQuery(si).attr('row')); 
+        var pos = ((Number(sr)+1) * (tileH + gap)) - gap;
+        policypanelouter.css('top', pos + 'px');
+    };
+    
+    function setPolicyTilePosition(tallSliderHeight) {
+        if (!tallSliderHeight) tallSliderHeight = sliderH;
+        ci2.find('.tile').each(function() {
+            var row = Number(jQuery(this).attr('row'));
+            var t = Number(jQuery(this).attr('opos'));
+            var si = getSelectedPolicyTile();
+            var sr = Number(jQuery(si).attr('row'));
+                            
+            row > sr ? jQuery(this).css('top', ( t + tallSliderHeight ) + 'px') : jQuery(this).css('top', t + 'px');
+        });
+    };
+    
+    function setOriginalPolicyTilePosition() {
+        ci2.find('.tile').each(function() {
+            var row = Number(jQuery(this).attr('row'));
+            var t = new Number(jQuery(this).attr('opos'));
+            jQuery(this).css('top', t + 'px');
+        });
+    };
+
+    function overFlowNow() {
+        policypanelslider.addClass('overflowvisible')
+    };
+
+    function moveIt() {
+        ci2.animate({
+            scrollTop: Math.round(parseFloat((policypanelouter.css('top')))) - 130
+        }, 300);
+    };
+
+    function checkPolicyPanel() {
+        if ( isPolicyPanelOn ) {
+            if ( currentRow == selectedRow ) {
+                setArrowPosition();
+                fillPolicyPanel();
+                selectedRow = currentRow;
+            }
+            else {
+                setPolicyTilePosition();
+                setPolicyPanelPosition();
+                setArrowPosition();
+                fillPolicyPanel();
+                selectedRow = currentRow;
+            }
+        }
+        else {
+            policypanelouter.removeClass('animate');
+            showPolicyPanel();
+            policypanelouter.addClass('animate');
+        }
+        window.setTimeout(moveIt, 350);
+    };
+
+    function showPolicyPanel() {	
+        isPolicyPanelOn = true;
+        fillPolicyPanel();
+        setPolicyPanelPosition();
+        policypanelslider.addClass('on');
+        window.setTimeout(overFlowNow, 400);
+        setArrowPosition();
+        selectedRow = currentRow;
+    };
+    
+    function closePolicyPanel() {
+        setOriginalPolicyTilePosition();
+        selectedItem = undefined;
+        isPolicyPanelOn = false;
+        policypanelslider.removeClass('on');
+        policypanelslider.removeClass('overflowvisible');
+        resetPolicyTileHighlight();
+    };
+    
+    function fillPolicyPanel() {
+        var si = getSelectedPolicyTile();
+        jQuery('.label').text(jQuery(si).find('.policyname').text());
+        policypanelouter.find('div.settingGroup').addClass('closed');
+        setPolicyTilePosition();
+        highlightSelectedPolicyTile();        
+    };
+    
+    function setArrowPosition() {
+        var si = getSelectedPolicyTile();
+        var pos = Number(jQuery(si).css('left').replace('px', ''));
+        var arrowPos = pos + Math.round((tileW - 20)/2);
+        jQuery('div.arrow').css('left', arrowPos + 'px');
+    };
+    
+    jQuery('.tile').click(
+        function() {
+            var si = Number(jQuery(this).attr('id'));
+            currentRow = Number(jQuery(this).attr('row'));
+            if ( si != selectedItem ) {
+                selectedItem = si;
+                checkPolicyPanel();
+            }
+            else
+                closePolicyPanel();
+        }
+    );
+
+    function getSelectedPolicyTile() {
+        return ci2.find('.tile')[selectedItem]
+    };
+    
+    function highlightSelectedPolicyTile() {
+        ci2.find('.tile').each(function() {
+            var id =  Number(jQuery(this).attr('id'));
+            var si =  getSelectedPolicyTile();
+            var sid = Number(jQuery(si).attr('id'));
+            id == sid ? jQuery(this).removeClass('opaque') : jQuery(this).addClass('opaque');
+        });	
+    };
+    
+    function resetPolicyTileHighlight() {
+        ci2.find('.tile').each(function() {
+            jQuery(this).removeClass('opaque');
+        });	
+    };
+
+    jQuery('#panel1').click(function() {
+        jQuery('#peoplewrap').toggleClass('fat'); 
+        jQuery('#policieswrap').toggleClass('slim'); 
+        jQuery('#fo1').toggleClass('fly'); 
+        window.setTimeout(updateDOM, 200);
+    });
+    
+    function toggleSettingGroup(which) {
+        which.parent().toggleClass('closed');
+        newHeight = jQuery('#peopleandpermissions').height() + 65 + (gap * 2);
+        newHeight < sliderH ? newHeight = sliderH : null;
+        setPolicyTilePosition(newHeight);
+    }
+    
+    updateDOM();
+    jQuery(window).resize(updateDOM);
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Follow the white rabbit.</title>
+<link rel="stylesheet" href="appmatic.css">
+<link rel="stylesheet" href="appmaticbutton.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="inner">
+        <div class="logo">Appmatic</div>
+        <div class="buttons"><button type="button">Log in</button></div>
+    </div>
+</div>
+
+<div class="mainwrap">
+    <div class="cover"></div>
+    <div class="peoplewrap floleft">
+        <div class="content">
+            <h1>People</h1>
+            <div class="buttons">
+                <button type="button">Add Group</button>
+                <button type="button">Add People</button>
+            </div>
+            <div class="flyoutcontentinner">
+                <div class="flyout" id="fo1">
+                    <div class="pointer" id="p1"></div>
+                    <div class="flyoutbody" id="fo2">
+                        <div class="x" id="x1" title="Close">&times;</div>
+                        <div class="inner">
+                            <img src="dv7.jpg" width="70" height="70" class="prpic">
+                            <div class="fullname bold">Darth Vader</div>
+                            <div class="email">vader@darkside.com</div>
+                            <br>
+                            <div class="group bold">Group</div>
+                            <div class="groupname">Group Two</div>
+                            <div class="draghere bold"><i></i>Drag policy here</div>
+                            <div class="items"></div>
+                            <div class="items"></div>
+                            <div class="buttons">
+                                <button type="button">Save</button>
+                                <button type="button">Cancel</button>
+                                <button type="button" class="delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentinner" id="ci1">
+                    <div class="items">
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">click any row in this list</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                        <div class="item">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="policieswrap floleft">
+        <div class="content">
+            <h1>Policies</h1>
+            <div class="buttons">
+                <button type="button">Add Policy</button>
+            </div>
+            <div class="contentinner" id="ci2">
+                <div class="items">
+                </div>
+                <div class="items">
+                    <div style="height: 426px">&nbsp;</div>
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                    <div style="height: 376px">&nbsp;</div>
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+                <div class="items">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var prevItem;
+    window.onload = function() { updateDOM() };
+    window.onresize = function() { updateDOM() };
+    document.getElementById("x1").onclick = function () { noFly(prevItem) };
+    document.getElementById("ci1").onscroll = function () { setPointerPosition(prevItem) };
+    var itemslist = document.getElementById("ci1").getElementsByClassName("item");
+    for (var i = 0; i < itemslist.length; i++) { itemslist[i].onclick = function() { doFly(this) } };
+
+    function updateDOM() {
+        document.getElementById('ci1').style.height = document.getElementById('ci2').style.height = (document.body.clientHeight - 280) + "px";
+        document.getElementById("fo1").style.height = document.getElementById("fo2").style.height = document.getElementById('ci1').style.height;
+    };
+    function doFly(that) {
+        setPointerPosition(that);
+        noFly(prevItem);
+        setTimeout(function() { flyNow(that) }, 1);
+        that.onclick = function() { return false };
+        prevItem = that;
+    };
+    function flyNow(that) {
+        document.getElementById("fo1").className = "flyout fly";
+        that.className = "item selected";
+    };
+    function noFly(whichPrev) {
+        document.getElementById("fo1").className = "flyout"; 
+        if (whichPrev) {
+            whichPrev.className = "item";
+            whichPrev.onclick = function() { doFly(whichPrev) };
+        };
+    };
+    function setPointerPosition(whichPrev) {
+        document.getElementById("p1").style.top = (whichPrev.offsetTop - document.getElementById("ci1").scrollTop + 15) + "px";
+    };
+</script>
+
+</body>
+</html>

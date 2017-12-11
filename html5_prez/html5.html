@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style type="text/css">
+        body, html {
+            height: 100%;
+        }
+        body {
+            font-size: 150%;
+            padding: 30px 380px 30px 30px;
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+        h2 {
+            margin-top: 100px;
+        }
+        pre {
+            word-wrap: break-word;
+        }
+        aside {
+            position: fixed; z-index: 1; top: 20px; right: 20px; bottom: 20px; 
+            width: 300px;
+            word-wrap: break-word;
+            padding: 20px;
+            background: #F4F4F4;
+            font-size: 80%;
+            overflow: auto;
+        }
+		aside a {
+			display: block; 
+			margin-bottom: 10px;
+		}
+		asideX a:before {
+			content: "o";
+			margin-right: 5px;
+			font-weight: bold;
+		}
+        section.vh {
+            margin: 80vh 0
+        }
+        ul:last-child {
+            margin-bottom: 100px
+        }
+        ul li {
+            line-height: 150%
+        }
+        .strike {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+<h1>HTML5</h1>
+
+<aside>
+    <a target=_blank href="http://www.w3.org/TR/html5/">http://www.w3.org/TR/html5/</a>
+    <a target=_blank href="https://rawgit.com/whatwg/html-differences/master/Overview.html">https://rawgit.com/whatwg/html-differences/master/Overview.html</a>
+    <a target=_blank href="http://en.wikipedia.org/wiki/HTML5#Differences_from_HTML.C2.A04.01_and_XHTML.C2.A01.x">http://en.wikipedia.org/wiki/HTML5#Differences_from_HTML.C2.A04.01_and_XHTML.C2.A01.x</a>
+    <a target=_blank href="http://validator.w3.org/">http://validator.w3.org/</a>
+	<a target=_blank href="http://www.w3schools.com/html/html5_syntax.asp">http://www.w3schools.com/html/html5_syntax.asp</a>
+    <a target=_blank href="http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml">http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml</a>
+	<a target=_blank href="http://codeguide.co/">http://codeguide.co/</a>
+    <a target=_blank href="http://i.stack.imgur.com/SEr7v.png">http://i.stack.imgur.com/SEr7v.png</a>
+    <a target=_blank href="http://playground.html5rocks.com/">http://playground.html5rocks.com/</a>
+    <a target=_blank href="http://html5demos.com/drag">http://html5demos.com/drag</a>
+    <a target=_blank href="http://caniuse.com/#search=input%20type">http://caniuse.com/#search=input%20type</a>
+    <a target=_blank href="http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css">http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css</a>
+    <a target=_blank href="http://www.iecss.com/">http://www.iecss.com/</a>
+    <a target=_blank href="https://www.youtube.com/watch?v=EYvTJnWrH2Q">https://www.youtube.com/watch?v=EYvTJnWrH2Q</a>
+    <a target=_blank href="http://en.wikipedia.org/wiki/HTML5_in_mobile_devices#HTML5_capabilities_in_top_mobile_devices">http://en.wikipedia.org/wiki/HTML5_in_mobile_devices#HTML5_capabilities_in_top_mobile_devices</a>
+    <a target=_blank href="http://cssdeck.com/labs/dhzkzo7a">http://cssdeck.com/labs/dhzkzo7a HTML5?</a>
+    <a target =_blank href="http://cssdeck.com/labs/jbhiske5">http://cssdeck.com/labs/jbhiske5 XHTML</a>
+    <a target =_blank href="http://cssdeck.com/labs/da2rcti2">http://cssdeck.com/labs/da2rcti2 HTML5 for real</a>
+    
+</aside>
+
+<section>
+<h2>(X)HTML Doctype Declarations</h2>
+
+<pre>
+HTML4 Strict
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+
+HTML4 Transitional
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+
+HTML4 Frameset
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+
+
+
+XHTML1 Strict
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+
+XHTML1 Transitional
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+XHTML1 Frameset
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;
+
+
+
+XHTML1.1
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+
+XHTML Basic 1.1
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd"&gt;
+
+
+
+HTML5
+&lt;!DOCTYPE html&gt;
+</pre>
+</section>
+
+
+
+
+<section>
+<h2>Goals</h2>
+
+<ul>
+    <li>Semantics
+    <li>Separation of concerns
+    <li>UX
+    <li>No strict rules
+    <li>XHTML too document centric
+    <li>easy for devs, friendly for users, helpful for bots
+</ul>
+</section>
+
+
+
+<section>
+<h2>New elements</h2>
+
+<ul>
+    <li>Tags (address, article, aside, div, footer, header, hgroup, layer, main, nav, section)
+    <li>Input types (number, color, range, date, month, week, time, datetime, datetime-local, email, search, tel, url)
+    <li>Input attributes (max, min, pattern, required, step)
+    <li>data-* (custom data attributes)
+	<li>Case-insensitive
+</ul>
+</section>
+
+
+
+<section>
+<h2>New APIs</h2>
+
+<ul>
+    <li>Native or polyfills?
+    <li>Drag and drop
+    <li>Local storage
+    <li>Canvas, SVG
+    <li>Audio, video
+    <li>Microdata
+	<li>Web Workers
+	<li>Offline support (Application cache)
+    <li>GeoLocation API
+</ul>
+</section>
+
+
+
+<section>
+<h2>Style guide</h2>
+
+<ul>
+	<li>Separate markup, styling and scripting...
+    <li>Follow the <span class="strike">white rabbit</span> Google style guide
+</ul>
+</section>
+
+
+
+<section>    
+<h2>Tools</h2>
+
+<ul>
+	<li>Text editor (data:text/html, &lt;html contenteditable&gt;)
+    <li>F12 browser dev tools DOM explorer
+    <li>Markup validator
+</ul>
+</section>
+
+
+
+<section>
+<h2>Common syntax errors</h2>
+    
+<ul>
+    <li>Unnecessary extra divs
+    <li>Self closing (void) tags
+    <li>Node content contains same semantic node type
+    <li>List nodes contain foreign nodes
+</ul>
+</section>
+
+
+
+<section>
+<h2>Mobile</h2>
+
+<ul>
+    <li>Offline support (Application cache)
+    <li>GeoLocation API
+    <li>Top 5 supported / not supported features
+</ul>
+</section>
+
+
+
+<section>
+<h2>So what</h2>
+
+<ul>
+    <li>Semantics
+    <li>Semantics!
+    <li>Sloppy
+    <li>&lt;!doctype html&gt;
+    <li>Semantics
+    <li>Separation of concerns
+    <li>Lower case
+    <li>Semantics!
+    <li>10 years in the making
+    <li>likely won't change much, no monolithic releases anymore
+    <li>Semantics
+</ul>
+</section>
+
+
+
+<section class="vh">
+<h2>What's missing</h2>
+
+<p>The cat API</p>
+
+<a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
+
+</section>
+
+</body>
+</html>

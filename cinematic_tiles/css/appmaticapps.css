@@ -1,0 +1,50 @@
+div.basecamp {
+    background: url("../img/apps/basecamp.png") no-repeat 0 0
+}
+div.boxcom {
+    background: url("../img/apps/box.png") no-repeat 0 0
+}
+div.cubby {
+    background: url("../img/apps/cubby.png") no-repeat 0 0
+}
+div.evernote {
+    background: url("../img/apps/evernote.png") no-repeat 0 0
+}
+div.google {
+    background: url("../img/apps/google.png") no-repeat 0 0
+}
+div.joinme {
+    background: url("../img/apps/joinme.png") no-repeat 0 0
+}
+div.netsuite {
+    background: url("../img/apps/netsuite.png") no-repeat 0 0
+}
+div.o365 {
+    background: url("../img/apps/office.png") no-repeat 0 0
+}
+div.salesforce {
+    background: url("../img/apps/salesforce.png") no-repeat 0 0
+}
+div.zendesk {
+    background: url("../img/apps/zendesk.png") no-repeat 0 0
+}
+
+
+
+
+
+div.app {
+    background-position: 0 0
+}
+div.tron {
+    background-position: 0 -160px
+}
+div.policy {
+    background-position: -280px 0
+}
+div.dialog div.app {
+    background-position: -160px 0
+}
+div.flyout div.policy {
+    background-position: -400px 0
+}

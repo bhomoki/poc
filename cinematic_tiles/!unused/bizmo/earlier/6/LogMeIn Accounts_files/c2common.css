@@ -1,0 +1,408 @@
+/*
+    CSS RESET BEGIN
+
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    outline: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 
+    CSS RESET END
+*/
+
+
+
+
+
+span.bubble, a.bubble,
+div.tilerow,
+div.groupHeader,
+div.dialog div.box,
+div.dialog div.box div.inner div.closer,
+div.fieldset,
+div.infobox
+{
+    behavior: url("/css/PIE.htc");         /* PIE for IE8 only */
+    *behavior: none;                       /* no PIE for IE6-7 */
+}
+html {
+    _behavior: url("/css/csshover3.htc");  /* teaching IE6 the csshover stuff */
+}
+div#ApplyAlertPackage div.fieldset
+{
+    behavior: none;                        /* no PIE here since it breaks the layout */
+}
+body {
+    background-color: white;
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    line-height: normal;
+}
+h1 {
+    height: 50px; line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;                     /* for easy positioning of extra buttons in the title line */
+}
+h2 {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+input[type="checkbox"], input[type="radio"] 
+{
+    margin: 3px;
+}
+p {
+    margin: 0 0 15px 0
+}
+b, strong {
+    font-weight: bold
+}
+i {
+    font-style: italic
+}
+blockquote {
+    margin: 10px 40px
+}
+small
+{
+    font-size: 10px;
+}
+a, a:active, a:visited {
+    color: #0088CE;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+}
+a.under {
+    text-decoration: underline;
+}
+.floleft {
+    float: left
+}
+.floright {
+    float: right
+}
+.clears {
+    clear: both; width: 0; height: 0; line-height: 0; overflow: hidden;
+}
+.bold {
+    font-weight: bold
+}
+.centered {
+    text-align: center;
+}
+.righted {
+    text-align: right;
+}
+.lefted {
+    text-align: left;
+}
+.inlineblock, .inliner {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *zoom: 1; *display: inline;
+}
+span.rqo {
+    padding: 0 5px;
+    color: #B0B0B0;
+}
+.ie6dmrgfix {
+    *display: inline;   /* IE6 double-margin bug fix */
+}
+div.h1buttons
+{
+    position: absolute; right: 0; top: 13px;
+}
+a.hovu:hover {
+    text-decoration: underline
+}
+.nowp {white-space: nowrap}
+
+.nodisplay {
+    display: none !important;
+}
+
+
+
+
+
+
+
+div.arrow, 
+span.arrow
+{
+    width: 0; height: 0; font-size: 0; line-height: 0;
+    border: 4px solid transparent;
+    _border: 4px solid #F3F3F3;
+    _filter: chroma(color=#F3F3F3);
+    position: relative; 
+    cursor: pointer;
+}
+div.arrow.dArrow,
+span.arrow.dArrow, 
+span.arrow.select
+{
+    border-top: 4px solid #0088CE;
+    top: 3px;
+    margin: 0 5px;
+}
+div.arrow.rArrow,
+span.arrow.rArrow
+{
+    border-left: 4px solid #0088CE;
+    top: 1px;
+    margin: 0 0 0 12px;
+}
+
+
+
+
+span.bubble, a.bubble
+{
+    position: absolute; z-index: 3;
+    color: red !important;
+    border: 1px solid #C0C0C0;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    background-color: white;
+    line-height: 16px;
+    padding: 0 5px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+div.actionmenu {
+    position: absolute; z-index: 10;
+    border: 1px solid #B0B0B0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #333333;
+    background-color: white;
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+    width: 150px;
+}
+
+div.actionmenu div.inner {
+    padding: 10px;
+}
+
+div.actionmenu div.inner label {
+    position: relative; top: -2px;
+    color: #0088CE;
+}
+
+div.actionmenu div.section {
+    padding-bottom: 10px;
+}
+
+div.actionmenu div.inliner {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.actionmenu div.separator {
+    background-color: #D8D8D8;
+    height: 1px;    
+    font-size: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+div.actionmenu div.inner div.separator
+{
+    margin: 10px -10px;
+}
+
+
+div.actionmenu div.pointer1,
+div.actionmenu div.pointer2
+{
+    position: absolute; z-index: 3; top: -11px; left: 64px; bottom: auto;
+    width: 0; height: 0; font-size: 0; line-height: 0;
+    border: 10px solid transparent;
+    _border: 10px solid #F3F3F3;
+    _filter: chroma(color=#F3F3F3);
+    border-top: 0;
+    border-bottom-color: #808080;
+}
+div.actionmenu div.pointer2
+{
+    top: -10px;
+    border-bottom-color: white;
+}
+
+div.actionmenu.alt div.pointer1,
+div.actionmenu.alt div.pointer2
+{
+    border: 10px solid transparent;
+    _border: 10px solid #F3F3F3;
+    _filter: chroma(color=#F3F3F3);
+    border-bottom: 0;
+    border-top-color: #808080;
+    top: auto; bottom: -11px;
+}
+div.actionmenu.alt div.pointer2
+{
+    bottom: -10px;
+    border-top-color: white;
+}
+div.actionmenu.autoWidth
+{
+    width: auto
+}
+div.actionmenu div.pointer1, x:-moz-any-link, x:only-child { border-bottom-color: rgba(220,220,220,0.6) }    /* FF */
+div.actionmenu.alt div.pointer1, x:-moz-any-link, x:only-child { border-top-color: rgba(220,220,220,0.6) }   /* FF */
+
+
+/* Please wait spinner */
+div.LoadingPanel
+{
+    position: fixed; z-index: 20000; left: 50%; top: 170px; *position: absolute;
+    padding: 10px 10px 12px 40px;
+    margin-left: -70px;
+    font-size: 15px;
+    white-space: nowrap;
+    border: 1px solid #B0B0B0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #333333;
+    background-color: #F6F6F6;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    cursor: wait;
+    background: #F6F6F6 url('/img/c2/spinner.gif') no-repeat 10px 9px;
+}
+div#LoadingPanel 
+{
+    display: block !important;
+}
+div.LoadingPanel.auto
+{
+	width: auto;
+	height: auto;	
+}
+
+
+/* Info box on top of the pages */
+div.infobox
+{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #F1EBBE;
+    background-color: #F9F2BE;
+    padding: 8px 40px 10px 40px;
+    position: relative; top: 15px; z-index: 12;
+    margin-bottom: 15px;
+    color: #342E20;
+}
+div.infobox div.icon
+{
+    position: absolute; z-index: 1;
+    top: 6px; left: 10px;
+}
+div.infobox div.closer
+{
+    position: absolute; z-index: 1;
+    top: 2px; right: 3px;
+    font-size: 16px;
+    padding: 1px 6px 0 6px;
+    background-color: #FFF9D6;
+    color: #807A46;
+    font-weight: bold;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+div.infobox.blue
+{
+    border: 1px solid #B6E0EC;
+    background-color: #C3F3FF;
+}
+div.infobox.blue div.closer
+{
+    background-color: #D8F8FF;
+    color: #0088CE;
+}
+div.infobox.red
+{
+    border: 1px solid #D78987;
+    background-color: #FFA8A7;
+}
+div.infobox.red div.closer
+{
+    background-color: #FFBDBB;
+    color: #A44948;
+}
+div.infobox div.closer:hover
+{
+    background-color: white;
+}
+div.infobox h1
+{
+    margin: 0 0 8px 0; 
+    font-size: 14px;
+    height: auto; line-height: normal;
+}
