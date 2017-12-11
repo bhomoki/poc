@@ -160,13 +160,13 @@ div.header div.gettingstarted {
     padding-right: 30px;
 }
 div.header div.gettingstarted i {
-    background: url('/img/getstart2.png') no-repeat top right;
+    background: url('../img/getstart2.png') no-repeat top right;
     width: 18px; height: 18px;
     padding-left: 5px;
     position: relative; z-index: 1; top: 4px;
 }
 div.header div.gettingstarted:hover i {
-    background-image: url('/img/getstart1.png');
+    background-image: url('../img/getstart1.png');
 }
 div.header a {
     color: #606060
@@ -324,16 +324,16 @@ div.peoplewrap ul.items li {
     
 }
 div.peoplewrap ul.items li div.itemrow {
-    background: white url('/img/blank.png') no-repeat 30px 0;
+    background: white url('../img/blank.png') no-repeat 30px 0;
 }
 div.peoplewrap ul.items li.group div.itemrow {
-    background-image: url('/img/grblank.png');
+    background-image: url('../img/grblank.png');
 }
 div.peoplewrap ul.items li.selected div.itemrow {
-    background-image: url('/img/blank-selected.png');
+    background-image: url('../img/blank-selected.png');
 }
 div.peoplewrap ul.items li.group.selected div.itemrow {
-    background-image: url('/img/grblank-selected.png');
+    background-image: url('../img/grblank-selected.png');
 }
 div.itemrow {
     position: relative; z-index: 1;
@@ -724,7 +724,7 @@ div.policy span.washed {
     font-size: 13px;
     line-height: normal;
     padding-left: 15px;
-    background: url('/img/small-user.png?v=2') no-repeat 0 2px;
+    background: url('../img/small-user.png?v=2') no-repeat 0 2px;
 }
 
 
@@ -1213,7 +1213,7 @@ div.subscriptions div.haspie {
     min-height: 110px;
     margin-bottom: 40px;
     border-right: 1px solid #777;
-    background: url('/img/pie-icon-dark.png') no-repeat 42px 52px;
+    background: url('../img/pie-icon-dark.png') no-repeat 42px 52px;
 }
 div.dialog div.subscriptions div.haspie,
 div.dialog div.subscriptions div.numbers {
@@ -1221,7 +1221,7 @@ div.dialog div.subscriptions div.numbers {
 }
 div.dialog div.subscriptions div.haspie {
     border-right-color: #EEE;
-    background: url('/img/pie-icon-light.png') no-repeat 32px 44px;
+    background: url('../img/pie-icon-light.png') no-repeat 32px 44px;
 }
 div.subscriptions div.numbers {
     padding-left: 40px;
@@ -1518,7 +1518,7 @@ div.regmessage {
 
 div.itemrow.ui-draggable-dragging {
     color: #E4A33B;
-    background: #FFF3D3 url('/img/blank.png') no-repeat 0 0;
+    background: #FFF3D3 url('../img/blank.png') no-repeat 0 0;
     padding: 0 10px 0 50px;
     border: 1px solid #CADADA;
     min-width: 120px;
