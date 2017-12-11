@@ -1,5 +1,0 @@
-D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.Api.Tests\bin\Debug\Shadow.Launchpad.Api.Tests.dll
-D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.Api.Tests\bin\Debug\Shadow.Launchpad.Api.Tests.pdb
-D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.Api.Tests\obj\Debug\Shadow.Launchpad.Api.Tests.csprojResolveAssemblyReference.cache
-D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.Api.Tests\obj\Debug\Shadow.Launchpad.Api.Tests.dll
-D:\web\3am\branches\websites\jiffi\Main\Shadow.Launchpad.Api.Tests\obj\Debug\Shadow.Launchpad.Api.Tests.pdb
