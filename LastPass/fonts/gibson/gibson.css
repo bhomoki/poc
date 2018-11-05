@@ -1,0 +1,64 @@
+/* BEGIN Light */
+@font-face {
+  font-family: 'Gibson';
+  src: url("./Light/gibson-light-webfont.eot");
+  src: url("./Light/gibson-light-webfont.eot?#iefix") format("embedded-opentype"), url("./Light/gibson-light-webfont.woff2") format("woff2"), url("./Light/gibson-light-webfont.woff") format("woff"), url("./Light/gibson-light-webfont.ttf") format("truetype"), url("./Light/gibson-light-webfont.svg#gibsonlight") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+/* END Light */
+/* BEGIN Light Italic */
+@font-face {
+  font-family: 'Gibson';
+  src: url("./LightItalic/gibson-lightitalic-webfont.eot");
+  src: url("./LightItalic/gibson-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("./LightItalic/gibson-lightitalic-webfont.woff2") format("woff2"), url("./LightItalic/gibson-lightitalic-webfont.woff") format("woff"), url("./LightItalic/gibson-lightitalic-webfont.ttf") format("truetype"), url("./LightItalic/gibson-lightitalic-webfont.svg#gibsonlight_italic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+/* END Light Italic */
+/* BEGIN Regular */
+@font-face {
+  font-family: 'Gibson';
+  src: url("./Regular/gibson-regular-webfont.eot");
+  src: url("./Regular/gibson-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./Regular/gibson-regular-webfont.woff2") format("woff2"), url("./Regular/gibson-regular-webfont.woff") format("woff"), url("./Regular/gibson-regular-webfont.ttf") format("truetype"), url("./Regular/gibson-regular-webfont.svg#gibsonregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* END Regular */
+/* BEGIN Italic */
+@font-face {
+  font-family: 'Gibson';
+  src: url("./Italic/gibson-italic-webfont.eot");
+  src: url("./Italic/gibson-italic-webfont.eot?#iefix") format("embedded-opentype"), url("./Italic/gibson-italic-webfont.woff2") format("woff2"), url("./Italic/gibson-italic-webfont.woff") format("woff"), url("./Italic/gibson-italic-webfont.ttf") format("truetype"), url("./Italic/gibson-italic-webfont.svg#gibsonitalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+/* END Italic */
+/* BEGIN Semibold */
+@font-face {
+  font-family: 'Gibson';
+  src: url("./SemiBold/gibson-semibold-webfont.eot");
+  src: url("./SemiBold/gibson-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("./SemiBold/gibson-semibold-webfont.woff2") format("woff2"), url("./SemiBold/gibson-semibold-webfont.woff") format("woff"), url("./SemiBold/gibson-semibold-webfont.ttf") format("truetype"), url("./SemiBold/gibson-semibold-webfont.svg#gibsonsemibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+/* END Semibold */
+/* BEGIN Semibold Italic */
+@font-face {
+  font-family: 'Gibson';
+  src: url("./SemiBoldItalic/gibson-semibolditalic-webfont.eot");
+  src: url("./SemiBoldItalic/gibson-semibolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("./SemiBoldItalic/gibson-semibolditalic-webfont.woff2") format("woff2"), url("./SemiBoldItalic/gibson-semibolditalic-webfont.woff") format("woff"), url("./SemiBoldItalic/gibson-semibolditalic-webfont.ttf") format("truetype"), url("./SemiBoldItalic/gibson-semibolditalic-webfont.svg#gibsonsemibolditalic") format("svg");
+  font-weight: 600;
+  font-style: italic; }
+/* END Semibold Italic */
+/* BEGIN Bold */
+@font-face {
+  font-family: 'Gibson';
+  src: url("./Bold/gibson-bold-webfont.eot");
+  src: url("./Bold/gibson-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./Bold/gibson-bold-webfont.woff2") format("woff2"), url("./Bold/gibson-bold-webfont.woff") format("woff"), url("./Bold/gibson-bold-webfont.ttf") format("truetype"), url("./Bold/gibson-bold-webfont.svg#gibsonbold") format("svg");
+  font-weight: 800;
+  font-style: normal; }
+/* END Bold */
+/* BEGIN Bold Italic */
+@font-face {
+  font-family: 'Gibson';
+  src: url("./BoldItalic/gibson-bolditalic-webfont.eot");
+  src: url("./BoldItalic/gibson-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("./BoldItalic/gibson-bolditalic-webfont.woff2") format("woff2"), url("./BoldItalic/gibson-bolditalic-webfont.woff") format("woff"), url("./BoldItalic/gibson-bolditalic-webfont.ttf") format("truetype"), url("./BoldItalic/gibson-bolditalic-webfont.svg#gibsonbolditalic") format("svg");
+  font-weight: 800;
+  font-style: italic; }
+/* END Bold Italic */

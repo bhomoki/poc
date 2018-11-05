@@ -1,0 +1,425 @@
+@charset "UTF-8";
+html {
+    overflow-y: scroll
+}
+body {
+    width: auto; 
+    height: auto; 
+    margin: 0;
+    padding: 0; 
+    background-color: #F9FBFD; 
+}
+body * {
+    box-sizing: border-box;
+    outline: none;
+    -webkit-transition: all .35s cubic-bezier(.19,1,.22,1);
+    transition: all .35s cubic-bezier(.19,1,.22,1);
+}
+body, input, button, textarea, select, table {
+    font-family: "Gibson", "Open Sans", Gibson, sans-serif; 
+    font-size: 16px;
+    color: rgba(0, 0, 0, .8);
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .1);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .2);
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+header svg {
+    width: 24px; height: 24px;
+}
+header {
+    height: 60px;
+    padding: 0 20px;
+    box-shadow: 0 0 0 1px rgba(0 , 0, 0, .1);
+    font-weight: 500;
+    background-color: #F9FBFD; 
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+}
+header img,
+header svg {
+    display: inline-block;
+    margin-right: 10px
+}
+header > div {
+    white-space: nowrap;
+    flex-basis: 50%
+}
+header > div:first-child {
+    flex: 0 0 300px;
+}
+header > div:first-child svg:first-child {
+    margin-right: 20px
+}
+header .logo {
+    width: 120px;
+}
+input[type="text"] {
+    width: 300px; 
+    border: 1px solid #9AC0DA; 
+    height: 46px;
+    border-radius: 5px; 
+    box-shadow: 0 0 1px 1px transparent
+}
+input[type="text"].vaultsearch {
+    width: 100%; 
+    border: 0; 
+    box-shadow: none;
+    padding: 0 12px 0 40px;
+    background: rgba(0, 0, 0, .03) url('img/search.svg') no-repeat 10px 13px;
+    background-size: 20px 20px;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.hidden {
+    display: none
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    direction: ltr;
+    align-items: center;
+}
+.flexleft {
+    justify-content: flex-start;
+}
+.flexright {
+    justify-content: flex-end;
+}
+.grow1 {
+    flex-grow: 1
+}
+.grow2 {
+    flex-grow: 2
+}
+.grow3 {
+    flex-grow: 3
+}
+.floleft {
+    float: left
+}
+.floright {
+    float: right
+}
+.mrgbtm30 {
+    margin-bottom: 30px;
+}
+.pointer {
+    cursor: pointer
+}
+
+a, .href                      {color: #2980B8; text-decoration: none; font-weight: 500; cursor: pointer}
+a:hover, .href:hover          {text-decoration: underline}
+.searchsites a                {margin-left: 10px}
+input[type="search"]   {transition: box-shadow .35s cubic-bezier(.19,1,.22,1);
+                        -webkit-transition: box-shadow .35s cubic-bezier(.19,1,.22,1)}
+button, input[type="button"]  
+                        {background-color: rgba(0, 0, 0, .06); border: 0; border-radius: 100px; 
+                        font-weight: 500; cursor: pointer; padding: 10px 20px; min-width: 80px;}
+button.red              {background-color: #D32D27; color: white}
+select                  {border: 1px solid #9AC0DA; padding: 7px; border-radius: 5px; box-shadow: 0 0 1px 1px transparent}
+button .icon {
+    float: left;
+    width: 20px; height: 20px;
+    margin-right: 5px;
+}
+button.adder,
+button.adder:active {
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+.addfolder {
+    padding: 0 !important
+}
+.addfolder button.adder {
+    padding: 10px 16px 10px 12px;
+    background-color: transparent;
+    box-shadow: none;
+}
+button.adder:hover {
+    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
+    background-color: #f8f9fa;
+}
+.redcol {
+    color: #D32D27 !important;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.content  {
+    padding: 81px 40px 20px 320px;
+}
+.clears {
+    clear: both; width: 0 !important; height: 0 !important; line-height: 0 !important; overflow: hidden !important;
+}
+nav {
+    width: 300px;
+    user-select: none;
+    position: fixed; top: 61px;
+    height: calc(100% - 61px);
+    overflow: auto;
+}
+nav > ul {
+    margin: 20px 20px 20px 0;
+    font-weight: 500;
+}
+nav ul ul {
+    height: 0; overflow: hidden; opacity: 0;
+    transform: translate(0, -20px);
+    font-weight: 400;
+    list-style-type: disc;
+}
+nav ul ul li span {
+    padding: 5px 20px 5px 80px;
+    position: relative;
+}
+nav ul ul li span:before {
+    position: absolute; top: 6px; left: 65px;
+    content: "•"
+}
+nav ul li > span {
+    display: block;
+    border-radius: 0 50px 50px 0;
+    padding: 10px 20px 10px 25px;
+    cursor: pointer;
+    position: relative;
+}
+nav ul li > span.selected,
+nav ul li > span.selected:hover {
+    background-color: rgba(164, 35, 30, .1)
+}
+nav ul li > span:hover {
+    background-color: rgba(0, 0, 0, .05)
+}
+nav ul li > span span.sum {
+    position: absolute; right: 12px;
+    min-width: 21px;
+    text-align: center;
+    padding: 2px 5px;
+    background-color: rgba(0, 0, 0, .08);
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 400;
+}
+nav svg.icon {
+    width: 18px;
+    height: 18px;
+    margin: 1px 22px 0 0;
+    float: left;
+    -webkit-transition: transform .35s cubic-bezier(.19,1,.22,1);
+    transition: transform .35s cubic-bezier(.19,1,.22,1);
+}
+nav .selected svg.icon {
+    color: #d32d27;
+}
+nav ul li > span.open + ul {
+    height: auto; opacity: 1;
+    transform: translate(0, 0);
+}
+nav ul li > span.open svg.icon {
+    transform: rotate(90deg)
+}
+
+ul {
+    margin: 0
+}
+ul.horizontal {
+    margin-bottom: 20px;
+}
+ul.horizontal li {
+    cursor: pointer;
+    margin: 0 20px 5px 0;
+    float: left;
+    font-weight: 500;
+}
+ul.horizontal li a {
+    display: inline-block;
+    padding: 9px 5px;
+    border-bottom: 2px solid transparent;
+}
+ul.horizontal li a svg.icon {
+    float: left;
+    margin: 1px 5px 0 0;
+    width: 18px; height: 18px;
+}
+ul.horizontal li a.selected svg.icon {
+    color: rgba(211, 45, 39, 1);
+}
+ul.horizontal li a:hover {
+    text-decoration: none;
+    border-bottom-color: inherit;
+}
+ul.horizontal li a.selected {
+    color: inherit;
+    border-bottom-color: rgba(211, 45, 39, 1);
+}
+
+.foldername {
+    margin: 10px 0;
+    color: rgba(211, 45, 39, 1);
+    color: #2980B8;
+    position: relative;
+}
+.foldername span {
+    position: relative;
+    padding-right: 35px;
+    /*text-transform: uppercase;*/
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.foldername svg.icon {
+    cursor: pointer;
+    position: absolute; right: 15px; top: -1px;
+    width: 18px; height: 18px;
+}
+.foldername svg.icon.more {
+    padding: 5px;
+    top: -5px;
+    border-radius: 50%;
+    width: 28px; height: 28px;
+}
+.foldername svg.icon.more:hover {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+.listcontrols {
+    margin: 0 15px 30px 0;
+    color: #323233;
+}
+.listcontrols .inner span.floright {
+    margin-left: 40px;
+}
+.listcontrols .inner span.floright > * {
+    float: left;
+    padding: 8px;
+    border-radius: 50%;
+}
+.listcontrols .inner div {
+    cursor: pointer;
+}
+.addfolder button.adder:hover {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    background-color: transparent
+}
+.listcontrols .inner div:hover {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+.listcontrols .inner div.selected {
+    color: #d32d27;
+}
+.listcontrols .inner button {
+    margin: 0 20px 0 0
+}
+
+.items .foldername,
+.items .clears {
+    display: none;
+}
+.items.folders .foldername,
+.items.folders .clears {
+    display: block;
+}
+.items .clears {
+    margin-bottom: 20px;
+}
+.items .item {
+    width: calc(100% - 15px);
+    height: 30px;
+    margin: 0 15px 0 0;
+    float: left;
+    padding: 5px 0 5px 55px;
+    position: relative;
+}
+.items .item:hover {
+    background-color: rgba(0, 0, 0, .05)
+}
+.items .item span.itemicon {
+    position: absolute; left: 8px; top: 3px;
+    width: auto; height: auto;
+    background-color: transparent;
+    color: white;
+    background-color: #6AB1C1;
+    border-radius: 50%;
+    padding: 5px;
+}
+.items .item span.itemicon svg.icon {
+    width: 14px; height: 14px;
+}
+.items .item svg.more {
+    position: absolute; top: 5px; right: 5px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.items .item svg.more:hover {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+.items .item div {
+    float: left;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+    width: 25%;
+}
+.items .item div.name {
+    font-weight: 500
+}
+
+.items.cards .item {
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(59, 74, 84, 0.12), 0 1px 2px rgba(59, 74, 84, 0.24);
+    width: calc(20% - 15px);
+    height: 60px;
+    margin: 0 15px 15px 0;
+    padding: 9px 0 9px 55px;
+    background-color: white;
+    cursor: pointer;
+}
+.items.cards .item:hover {
+    box-shadow: 0 5px 10px rgba(59, 74, 84, 0.19), 0 3px 4px rgba(59, 74, 84, 0.23)
+}
+.items.cards .item span.itemicon {
+    left: 8px; top: 10px;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    padding: 8px;
+}
+.items.cards .item span.itemicon svg.icon {
+    width: 24px; height: 24px;
+}
+.items.cards .item div {
+    float: none;
+    width: auto;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
