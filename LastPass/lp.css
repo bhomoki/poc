@@ -147,7 +147,7 @@ button .icon {
 }
 button.adder,
 button.adder:active {
-    background-color: white;
+    background-color: transparent;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
 }
 .addfolder {
@@ -202,7 +202,7 @@ nav ul ul li span:before {
 }
 nav ul li > span {
     display: block;
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 5px 5px 0;
     padding: 10px 20px 10px 25px;
     cursor: pointer;
     position: relative;
@@ -285,25 +285,36 @@ ul.horizontal li a.selected {
 }
 .foldername span {
     position: relative;
-    padding-right: 35px;
+    padding-right: 25px;
     /*text-transform: uppercase;*/
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
 }
-.foldername svg.icon {
+.foldername span.foldermore {
+    position: absolute; top: -5px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
     cursor: pointer;
-    position: absolute; right: 15px; top: 1px;
+}
+.foldername span.foldermore:hover,
+.foldername span.foldermore.on {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+.foldername span:first-child svg.icon {
+    position: absolute; right: 2px; top: 1px;
+}
+.foldername svg.icon {
     width: 18px; height: 18px;
 }
 .foldername svg.icon.more {
+    cursor: pointer;
     padding: 5px;
     top: -5px;
-    border-radius: 50%;
     width: 28px; height: 28px;
 }
-.foldername svg.icon.more:hover {
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+.foldername span.off svg.icon {
+    transform: rotateX(180deg);
 }
 .listcontrols {
     margin: 0 15px 30px 0;
@@ -345,6 +356,9 @@ ul.horizontal li a.selected {
 .items .clears {
     margin-bottom: 20px;
 }
+.items .item.hidden + .clears {
+    margin: 0
+}
 .items .item {
     width: calc(100% - 15px);
     height: 30px;
@@ -368,16 +382,22 @@ ul.horizontal li a.selected {
 .items .item span.itemicon svg.icon {
     width: 14px; height: 14px;
 }
-.items .item svg.more {
-    position: absolute; top: 5px; right: 5px;
-    width: 18px; height: 18px;
+.items .item .itemmore {
+    position: absolute; top: 4px; right: 5px;
+    width: 22px; height: 22px;
+    padding: 2px;
     border-radius: 50%;
     cursor: pointer;
+    color: #2980B8;
+}   
+.items .item svg.more {
+    width: 18px; height: 18px;
 }
-.items .item svg.more:hover {
+.items .item .itemmore:hover,
+.items .item .itemmore.on {
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
 }
-.items .item div {
+.items .item > div {
     float: left;
     font-size: 15px;
     font-weight: 300;
@@ -391,6 +411,7 @@ ul.horizontal li a.selected {
 .items .item div.name {
     font-weight: 500
 }
+
 
 .items.cards .item {
     border-radius: 5px;
@@ -414,7 +435,7 @@ ul.horizontal li a.selected {
 .items.cards .item span.itemicon svg.icon {
     width: 24px; height: 24px;
 }
-.items.cards .item div {
+.items.cards .item > div {
     float: none;
     width: auto;
     font-size: 15px;
@@ -422,4 +443,49 @@ ul.horizontal li a.selected {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.items.cards .item .moredetails {
+    display: none
+}
+.on > .inlinemenu {
+    opacity: 1;
+    height: auto;
+    transform: translate(0, 0);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+.inlinemenu {
+    transform: translate(0, -20px);
+    opacity: 0;
+    height: 0; overflow: hidden;
+    position: absolute; right: 0; z-index: 1;
+    background: white;
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: none;
+    font-size: 15px;
+    min-width: 170px;
+}
+.inlinemenu .inner {
+    padding: 8px 0;
+}
+.inlinemenu .inner ul li {
+    padding: 5px 20px;
+}
+.inlinemenu .inner ul li:not(.sep):hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+.inlinemenu .inner ul li.sep {
+    cursor: default;
+    user-select: none;
+    
+}
+.inlinemenu .inner ul li.sep:before {
+    content: "";
+    height: 0;
+    display: block;
+    border-top: 1px solid lightgray
+}
+.inlinemenu .inner ul li svg {
+    width: 18px; height: 18px;
+    float: left; margin-right: 15px;
 }
