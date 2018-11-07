@@ -17,7 +17,7 @@
 
 <header class="flex">
     <div class="flex flexleft">
-        <div><svg class="icon pointer"><use xlink:href="img/icons.svg#menu"></svg></div>
+        <div><svg class="icon pointer" onclick="toggleNav()"><use xlink:href="img/icons.svg#menu"></svg></div>
         <div><img src='img/lplogo.svg' class="logo"></div>
     </div>
     <div><input type="text" placeholder="search vault" class="vaultsearch"></div>
@@ -54,7 +54,7 @@
 </nav>
 
 <div class="content">
-    <div id="vault" class="hidden clearfix">
+    <div id="vault" class="navoption hidden clearfix">
         <ul class="horizontal clearfix">
             <li><a class="selected"><svg class="icon"><use xlink:href="img/icons.svg#circle"></svg>All items</a></li>
             <li><a><svg class="icon"><use xlink:href="img/icons.svg#lock"></use></svg>Passwords</a></li>
@@ -67,7 +67,7 @@
         <div class="listcontrols">
             <div class="inner clearfix">
                 <span class="floleft">
-                    <button class="adder" title="Add item"><svg class="icon"><use xlink:href="img/icons.svg#plus"></use></svg>Item</button>
+                    <button class="adder" title="Add item" onclick="addItem()"><svg class="icon"><use xlink:href="img/icons.svg#plus"></use></svg>Item</button>
                 </span>
                 <span class="floright">
                     <span class="addfolder floleft">
@@ -264,10 +264,55 @@
             </div>
             <div class="clears"></div>
         </div>
+        <div class="addform">
+            <h2>Add <select><option>Password<option>Note<option>Address<option>Credit card<option>SSN<option>Insurance</select></h2>
+            
+                <div class="row">
+                    <label>Name</label>
+                    <input type="text" name="Name">
+                </div>
+                <div class="row">
+                    <label>URL</label>
+                    <input type="text" name="URL">
+                </div>
+                <div class="row">
+                    <label>Username</label>
+                    <input type="text" name="Username">
+                </div>
+                <div class="row">
+                    <label>Password</label>
+                    <input type="password" name="Password">
+                </div>
+                <div class="row">
+                    <label>In folder</label>
+                    <input type="text" name="Folder">
+                </div>
+                <div class="row">
+                    <label>Notes</label>
+                    <textarea name="Notes"></textarea>
+                </div>
+                <div class="row">
+                    <label class="checkbox"><input type="checkbox"><span></span>Require password reprompt</label>
+                </div>
+                <div class="row">
+                    <label class="checkbox"><input type="checkbox"><span></span>Autologin</label>
+                </div>
+                <div class="row">
+                    <label class="checkbox"><input type="checkbox"><span></span>Disable auto-fill</label>
+                </div>
+                <div class="row">
+                    <label class="checkbox"><input type="checkbox"><span></span>Add to favorites</label>
+                </div>
+                <div class="row buttons">
+                    <button class="pri" onclick="addItem(false)">Save</button><button onclick="addItem(false)">Cancel</button>
+                </div>
+            
+        </div>
     </div>
 </div>
 
 <script>
+    var addMode = false;
     $('body').click(function(e) {
         $('body').find('*').removeClass("on");
     });
@@ -277,16 +322,18 @@
         else {
             $('nav ul li span').removeClass('selected');
             $(this).addClass('selected');
-            if ($(this).text() == 'Vault')
-                $('#vault').removeClass('hidden')
-            else
-                $('#vault').addClass('hidden')
+            var thisText = $(this).text().replace(/ /g, '').toLowerCase();
+            $('.navoption').addClass('hidden');
+            $('#' + thisText).removeClass('hidden');
+            addItem(false);
         };
     });
     $('nav ul.vertical > li:first-child span').click();
     $('ul.horizontal li a').click(function() {
         $('ul.horizontal li a').removeClass('selected');
         $(this).addClass('selected');
+        var thisText = $(this).text().replace(/ /g, '').toLowerCase();
+        addItem(false);
     });
     $('.listcontrols .inner div').click(function() {
         $(this).toggleClass('off');
@@ -354,7 +401,20 @@
             $(".item[data-folder='"+thisId+"']").removeClass('hidden');
         }
         
-    })
+    });
+    function toggleNav() {
+        $('body').toggleClass('navclosed')
+    };
+    function addItem(forcedTo) {
+        if (typeof forcedTo != 'undefined') 
+            addMode = forcedTo
+        else 
+            addMode = !addMode;
+        $('.listcontrols .adder').attr('disabled', addMode);
+        $('.listcontrols .floright').toggleClass('hidden', addMode);
+        $('.items').toggleClass('hidden', addMode);
+        $('.addform').toggleClass('invisible', !addMode);
+    }
 </script>
 </body>
 </html>

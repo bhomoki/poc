@@ -1,7 +1,5 @@
 @charset "UTF-8";
-html {
-    overflow-y: scroll
-}
+
 body {
     width: auto; 
     height: auto; 
@@ -10,11 +8,21 @@ body {
     background-color: #F9FBFD; 
 }
 body * {
-    box-sizing: border-box;
     outline: none;
     -webkit-transition: all .35s cubic-bezier(.19,1,.22,1);
     transition: all .35s cubic-bezier(.19,1,.22,1);
 }
+/* Box model fix for all BEGIN */
+html {
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: scroll;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Box model fix for all END */
 body, input, button, textarea, select, table {
     font-family: "Gibson", "Open Sans", Gibson, sans-serif; 
     font-size: 16px;
@@ -32,6 +40,12 @@ body, input, button, textarea, select, table {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, .2);
+}
+*[disabled] {
+    user-select: none !important;
+    pointer-events: none !important;
+    opacity: .5 !important;
+    color: gray !important;
 }
 .icon {
     width: 24px;
@@ -71,12 +85,14 @@ header > div:first-child svg:first-child {
 header .logo {
     width: 120px;
 }
-input[type="text"] {
+input[type="text"],
+input[type="password"],
+textarea {
     width: 300px; 
+    padding: 0 10px;
     border: 1px solid #9AC0DA; 
-    height: 46px;
+    height: 36px;
     border-radius: 5px; 
-    box-shadow: 0 0 1px 1px transparent
 }
 input[type="text"].vaultsearch {
     width: 100%; 
@@ -86,7 +102,48 @@ input[type="text"].vaultsearch {
     background: rgba(0, 0, 0, .03) url('img/search.svg') no-repeat 10px 13px;
     background-size: 20px 20px;
 }
-
+input[type="text"].vaultsearch {
+    height: 46px;
+}
+textarea {
+    height: auto;
+    min-height: 120px;
+    padding: 5px 10px;
+}
+.addform.invisible {
+    transform: translate3d(0, -40px, 0);
+    -webkit-transition: none;
+    transition: none;
+}
+.addform {
+    transform: translate3d(0, 0, 0);
+}
+.addform input[type="text"],
+.addform input[type="password"],
+.addform textarea,
+.addform select {
+    width: 50%;
+    max-width: 600px;
+    min-width: 300px;
+    box-shadow: 0 0 0 1px rgba(154, 192, 218, 0);
+}
+.addform select {
+    width: auto;
+    min-width: auto;
+}
+.addform input[type="text"]:focus,
+.addform input[type="password"]:focus,
+.addform textarea:focus,
+.addform select:focus { 
+    box-shadow: 0 0 0 1px rgba(154, 192, 218, 1);
+}
+.row label {
+    display: block;
+    position: relative;
+}
+.row {
+    padding-bottom: 10px;
+}
 
 .clearfix::after {
     content: "";
@@ -95,6 +152,10 @@ input[type="text"].vaultsearch {
 }
 .hidden {
     display: none
+}
+.invisible {
+    visibility: hidden;
+    opacity: 0;
 }
 .flex {
     display: flex;
@@ -129,21 +190,44 @@ input[type="text"].vaultsearch {
 .pointer {
     cursor: pointer
 }
+h1, h2 {
+    font-weight: 600;
+}
+h2, h2 select {
+    font-size: 20px;
+    font-weight: 600;
+    font-size: 22px;
+    color: rgba(0, 0, 0, .7);
+}
+h2 select, h2 select:focus {
+    border-color: transparent;
+    box-shadow: none !important;
+    background: transparent;
+    color: #2980B8;
+}
 
 a, .href                      {color: #2980B8; text-decoration: none; font-weight: 500; cursor: pointer}
 a:hover, .href:hover          {text-decoration: underline}
 .searchsites a                {margin-left: 10px}
-input[type="search"]   {transition: box-shadow .35s cubic-bezier(.19,1,.22,1);
-                        -webkit-transition: box-shadow .35s cubic-bezier(.19,1,.22,1)}
 button, input[type="button"]  
                         {background-color: rgba(0, 0, 0, .06); border: 0; border-radius: 100px; 
                         font-weight: 500; cursor: pointer; padding: 10px 20px; min-width: 80px;}
 button.red              {background-color: #D32D27; color: white}
-select                  {border: 1px solid #9AC0DA; padding: 7px; border-radius: 5px; box-shadow: 0 0 1px 1px transparent}
+button.pri              {background-color: #2980B8; color: white}
+select                  {border: 1px solid #9AC0DA; padding: 4px; border-radius: 5px; box-shadow: 0 0 1px 1px transparent}
 button .icon {
     float: left;
     width: 20px; height: 20px;
     margin-right: 5px;
+}
+.row.buttons button {
+    min-width: 100px
+}
+.row.buttons button.pri {
+    margin-right: 5px;
+}
+.row.buttons {
+    padding-top: 30px;
 }
 button.adder,
 button.adder:active {
@@ -162,6 +246,36 @@ button.adder:hover {
     box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
     background-color: #f8f9fa;
 }
+
+label.checkbox {
+    padding-left: 25px;
+    margin: 10px 0 0 0;
+    user-select: none;
+}
+label.checkbox input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    width: 18px;
+    height: 18px;
+}
+label.checkbox input[type=checkbox]:checked + span::after {
+    background-image: url(img/checkon.png);
+    background-color: #D32D27;
+    border-color: #D32D27;
+}
+label.checkbox input[type=checkbox] + span::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    content: "";
+    background-size: 16px 16px;
+    background-color: white;
+    border: 1px solid #9AC0DA;
+    border-radius: 3px;
+}
+
 .redcol {
     color: #D32D27 !important;
 }
@@ -181,6 +295,14 @@ nav {
     position: fixed; top: 61px;
     height: calc(100% - 61px);
     overflow: auto;
+    transform: translate3d(0, 0, 0);
+}
+body.navclosed nav {
+    transform: translate3d(-300px, 0, 0);
+    opacity: 0;
+}
+body.navclosed .content {
+    padding-left: 64px;
 }
 nav > ul {
     margin: 20px 20px 20px 0;
@@ -376,6 +498,7 @@ ul.horizontal li a.selected {
     background-color: transparent;
     color: white;
     background-color: #6AB1C1;
+    background-color: #6EB1DA;
     border-radius: 50%;
     padding: 5px;
 }
