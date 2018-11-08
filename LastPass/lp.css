@@ -527,6 +527,7 @@ ul.horizontal li a.selected {
     border-radius: 50%;
     cursor: pointer;
     color: #236F9F;
+    background-color: white;
 }   
 .items .item svg.more {
     width: 18px; height: 18px;
