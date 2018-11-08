@@ -26,48 +26,48 @@
 
 <nav>
     <ul class="vertical">
-        <li><span><svg class="icon"><use xlink:href="img/icons.svg#lock"></svg>Vault</span></li>
-        <li><span><svg class="icon"><use xlink:href="img/icons.svg#share-2"></svg>Sharing center<span class="sumX"></span></span></li>
-        <li><span><svg class="icon"><use xlink:href="img/icons.svg#unlock"></svg>Security challenge</span></li>
-        <li><span><svg class="icon"><use xlink:href="img/icons.svg#users"></svg>Admin console</span></li>
-        <li><span><svg class="icon"><use xlink:href="img/icons.svg#settings"></svg>Settings</span></li>
+        <li><span data-location="vault"><svg class="icon"><use xlink:href="img/icons.svg#lock"></svg>Vault</span></li>
+        <li><span data-location="sharingcenter"><svg class="icon"><use xlink:href="img/icons.svg#share-2"></svg>Sharing center<span class="sum">15</span></span></li>
+        <li><span data-location="securitychallenge"><svg class="icon"><use xlink:href="img/icons.svg#unlock"></svg>Security challenge</span></li>
+        <li><span data-location="adminconsole"><svg class="icon"><use xlink:href="img/icons.svg#users"></svg>Admin console</span></li>
+        <li><span data-location="settings"><svg class="icon"><use xlink:href="img/icons.svg#settings"></svg>Settings</span></li>
         <li><span class="hasmore"><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></svg>More &hellip;</span>
             <ul>
-                <li><span>Import / Export</span></li>
-                <li><span>History</span></li>
-                <li><span>Deleted items</span></li>
-                <li><span>Credit monitoring</span></li>
-                <li><span>Bookmarklets</span></li>
-                <li><span>One time passwords</span></li>
-                <li><span>Identity management</span></li>
-                <li><span>Generate secure password</span></li>
+                <li><span data-location="importexport">Import / Export</span></li>
+                <li><span data-location="history">History</span></li>
+                <li><span data-location="deleteditems">Deleted items</span></li>
+                <li><span data-location="creditmonitoring">Credit monitoring</span></li>
+                <li><span data-location="bookmarklets">Bookmarklets</span></li>
+                <li><span data-location="onetimepasswords">One time passwords</span></li>
+                <li><span data-location="identitymanagement">Identity management</span></li>
+                <li><span data-location="generatesecurepasswords">Generate secure password</span></li>
             </ul>
         </li>
         <li><span class="hasmore"><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></svg>Help</span>
             <ul>
-                <li><span>Help center</span></li>
-                <li><span>Tutorials</span></li>
-                <li><span>Vault tour</span></li>
+                <li><span data-location="helpcenter">Help center</span></li>
+                <li><span data-location="tutorials">Tutorials</span></li>
+                <li><span data-location="vaulttour">Vault tour</span></li>
             </ul>
         </li>
     </ul>
 </nav>
 
 <div class="content">
-    <div id="vault" class="navoption hidden clearfix">
+    <div data-pageid="vault" class="navoption hidden clearfix">
         <ul class="horizontal clearfix">
-            <li><a class="selected"><svg class="icon"><use xlink:href="img/icons.svg#circle"></svg>All items</a></li>
-            <li><a><svg class="icon"><use xlink:href="img/icons.svg#lock"></use></svg>Passwords</a></li>
-            <li><a><svg class="icon"><use xlink:href="img/icons.svg#file-text"></use></svg>Notes</a></li>
-            <li><a><svg class="icon"><use xlink:href="img/icons.svg#map-pin"></use></svg>Addresses</a></li>
-            <li><a><svg class="icon"><use xlink:href="img/icons.svg#credit-card"></use></svg>Credit cards</a></li>
-            <li><a><svg class="icon"><use xlink:href="img/icons.svg#hash"></use></svg>SSN</a></li>
-            <li><a><svg class="icon"><use xlink:href="img/icons.svg#shield"></use></svg>Insurance</a></li>
+            <li><a href='/#vault' class="selected"><svg class="icon"><use xlink:href="img/icons.svg#circle"></svg>All items</a></li>
+            <li><a href='/#vault_passwords'><svg class="icon"><use xlink:href="img/icons.svg#lock"></use></svg>Passwords</a></li>
+            <li><a href='/#vault_notes'><svg class="icon"><use xlink:href="img/icons.svg#file-text"></use></svg>Notes</a></li>
+            <li><a href='/#vault_addresses'><svg class="icon"><use xlink:href="img/icons.svg#map-pin"></use></svg>Addresses</a></li>
+            <li><a href='/#vault_creditcards'><svg class="icon"><use xlink:href="img/icons.svg#credit-card"></use></svg>Credit cards</a></li>
+            <li><a href='/#vault_ssn'><svg class="icon"><use xlink:href="img/icons.svg#hash"></use></svg>SSN</a></li>
+            <li><a href='/#vault_insurance'><svg class="icon"><use xlink:href="img/icons.svg#shield"></use></svg>Insurance</a></li>
         </ul>
         <div class="listcontrols">
             <div class="inner clearfix">
                 <span class="floleft">
-                    <button class="adder" title="Add item" onclick="addItem()"><svg class="icon"><use xlink:href="img/icons.svg#plus"></use></svg>Item</button>
+                    <button class="adder" title="Add item" onclick="window.location.hash='vault_additem'"><svg class="icon"><use xlink:href="img/icons.svg#plus"></use></svg>Item</button>
                 </span>
                 <span class="floright">
                     <span class="addfolder floleft">
@@ -264,7 +264,7 @@
             </div>
             <div class="clears"></div>
         </div>
-        <div class="addform">
+        <div class="addform invisible">
             <h2>Add <select><option>Password<option>Note<option>Address<option>Credit card<option>SSN<option>Insurance</select></h2>
             
                 <div class="row">
@@ -304,27 +304,55 @@
                     <label class="checkbox"><input type="checkbox"><span></span>Add to favorites</label>
                 </div>
                 <div class="row buttons">
-                    <button class="pri" onclick="addItem(false)">Save</button><button onclick="addItem(false)">Cancel</button>
+                    <button class="pri" onclick="window.location.hash='vault'">Save</button><button onclick="window.history.go(-1)">Cancel</button>
                 </div>
             
         </div>
     </div>
-    <div id="sharingcenter" class="navoption hidden">
+    <div data-pageid="sharingcenter" class="navoption hidden">
         <h2>Sharing center</h2>
         <p>Sharing center content.</p>
     </div>
-    <div id="securitychallenge" class="navoption hidden">
+    <div data-pageid="securitychallenge" class="navoption hidden">
         <h2>Security challenge</h2>
         <p>Security challenge content.</p>
     </div>
-    <div id="adminconsole" class="navoption hidden">
+    <div data-pageid="adminconsole" class="navoption hidden">
         <h2>Admin console</h2>
         <p>Admin console content.</p>
+    </div>
+    <div data-pageid="settings" class="navoption hidden">
+        <h2>Account settings</h2>
+        <p>Settings content.</p>
     </div>
 </div>
 
 <script>
-    var addMode = false;
+    var globalWhere = '';
+    window.onhashchange = hashCh;
+    function hashCh() {
+        var lhash = window.location.hash
+        addItem(lhash == '#vault_additem');
+        go(lhash);
+    };
+    function go(whereTo) {
+        if (!whereTo.length) return;
+        var where = whereTo.split('_')[0].replace('#', '');
+        var whereSub = whereTo.split('_')[1];
+        if (globalWhere != where) {
+            $('.navoption').addClass('hidden');
+            $('div[data-pageid="' + where + '"]').removeClass('hidden');
+        };
+        window.scrollTo(0, 0);
+        $('nav ul.vertical li span').removeClass('selected');
+        $("nav ul.vertical li span[data-location='" + where + "']").addClass('selected'); 
+        $('ul.horizontal li a').removeClass('selected');
+        $('ul.horizontal li a[href$="'+(whereSub || where)+'"]').addClass('selected');
+        var parentOpener = $("nav ul.vertical li span[data-location='" + where + "']").closest('li').closest('ul').closest('li');
+        if (parentOpener.length && parentOpener.find('span.hasmore').length)
+            parentOpener.find('span.hasmore').addClass('open');
+        globalWhere = where;
+    };
     $('body').click(function(e) {
         $('body').find('*').removeClass("on");
     });
@@ -333,23 +361,9 @@
         if ($this.hasClass('hasmore'))
             $this.toggleClass('open')
         else {
-            $('nav ul li span').removeClass('selected');
-            $this.addClass('selected');
-            var thisText = $this.text().replace(/ /g, '').toLowerCase();
-            //console.log(thisText);
-            //var thisText2 = $this.remove('span.sum').text().replace(/ /g, '').toLowerCase();
-            //console.log(thisText2);
-            $('.navoption').addClass('hidden');
-            $('#' + thisText).removeClass('hidden');
-            addItem(false);
+            var thisLocation = $this.data('location');
+            window.location.hash = thisLocation;
         };
-    });
-    $('nav ul.vertical > li:first-child span').click();
-    $('ul.horizontal li a').click(function() {
-        $('ul.horizontal li a').removeClass('selected');
-        $(this).addClass('selected');
-        var thisText = $(this).text().replace(/ /g, '').toLowerCase();
-        addItem(false);
     });
     $('.listcontrols .inner div').click(function() {
         var $this = $(this);
@@ -413,17 +427,12 @@
     $('.foldername span:first-child').click(function() {
         var thisId = $(this).attr('id');
         $(this).toggleClass('off');
-        if ($(this).hasClass('off')) {
-            $(".item[data-folder='"+thisId+"']").addClass('hidden');
-        }
-        else {
-            $(".item[data-folder='"+thisId+"']").removeClass('hidden');
-        }
-        
+        $(".item[data-folder='"+thisId+"']").toggleClass('hidden', $(this).hasClass('off'));
     });
     function toggleNav() {
         $('body').toggleClass('navclosed')
     };
+    var addMode = false;
     function addItem(forcedTo) {
         if (typeof forcedTo != 'undefined') 
             addMode = forcedTo
@@ -433,7 +442,13 @@
         $('.listcontrols .floright').toggleClass('hidden', addMode);
         $('.items').toggleClass('hidden', addMode);
         $('.addform').toggleClass('invisible', !addMode);
-    }
+    };
+
+    var wlhash = window.location.hash;
+    if (!wlhash.length) 
+        window.location.hash = 'vault';
+    else
+        $(window).trigger("hashchange");
 </script>
 </body>
 </html>
