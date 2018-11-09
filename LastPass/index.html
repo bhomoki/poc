@@ -56,7 +56,7 @@
 <div class="content">
     <div data-pageid="vault" class="navoption hidden clearfix">
         <ul class="horizontal clearfix">
-            <li><a href='#vault' class="selected"><svg class="icon"><use xlink:href="img/icons.svg#circle"></svg>All items</a></li>
+            <li><a href='#vault'><svg class="icon"><use xlink:href="img/icons.svg#circle"></svg>All items</a></li>
             <li><a href='#vault_passwords'><svg class="icon"><use xlink:href="img/icons.svg#lock"></use></svg>Passwords</a></li>
             <li><a href='#vault_notes'><svg class="icon"><use xlink:href="img/icons.svg#file-text"></use></svg>Notes</a></li>
             <li><a href='#vault_addresses'><svg class="icon"><use xlink:href="img/icons.svg#map-pin"></use></svg>Addresses</a></li>
@@ -264,47 +264,62 @@
             </div>
             <div class="clears"></div>
         </div>
-        <div class="addform invisible">
-            <h2>Add <select><option>Password<option>Note<option>Address<option>Credit card<option>SSN<option>Insurance</select></h2>
+        <div class="addform form invisible">
+                <div class="section">
+                    <div class="row">
+                        <div></div><div><h2>Add <select><option>Password<option>Note<option>Address<option>Credit card<option>SSN<option>Insurance</select></h2></div>
+                    </div>
+                </div>
             
-                <div class="row">
-                    <label>Name</label>
-                    <input type="text" name="Name">
+                <div class="section">
+                    <div class="row">
+                        <label>Name</label>
+                        <div><input type="text" name="Name"></div>
+                    </div>
+                    <div class="row">
+                        <label>URL</label>
+                        <div><input type="text" name="URL"></div>
+                    </div>
+                    <div class="row">
+                        <label>Username</label>
+                        <div><input type="text" name="Username"></div>
+                    </div>
+                    <div class="row">
+                        <label>Password</label>
+                        <div><input type="password" name="Password"></div>
+                    </div>
+                    <div class="row">
+                        <label>In folder</label>
+                        <div><input type="text" name="Folder"></div>
+                    </div>
+                    <div class="row">
+                        <label>Notes</label>
+                        <div><textarea name="Notes"></textarea></div>
+                    </div>
                 </div>
-                <div class="row">
-                    <label>URL</label>
-                    <input type="text" name="URL">
-                </div>
-                <div class="row">
-                    <label>Username</label>
-                    <input type="text" name="Username">
-                </div>
-                <div class="row">
-                    <label>Password</label>
-                    <input type="password" name="Password">
-                </div>
-                <div class="row">
-                    <label>In folder</label>
-                    <input type="text" name="Folder">
-                </div>
-                <div class="row">
-                    <label>Notes</label>
-                    <textarea name="Notes"></textarea>
-                </div>
-                <div class="row">
-                    <label class="checkbox"><input type="checkbox"><span></span>Require password reprompt</label>
-                </div>
-                <div class="row">
-                    <label class="checkbox"><input type="checkbox"><span></span>Autologin</label>
-                </div>
-                <div class="row">
-                    <label class="checkbox"><input type="checkbox"><span></span>Disable auto-fill</label>
-                </div>
-                <div class="row">
-                    <label class="checkbox"><input type="checkbox"><span></span>Add to favorites</label>
-                </div>
-                <div class="row buttons">
-                    <button class="pri" onclick="window.location.hash='vault'">Save</button><button onclick="window.history.go(-1)">Cancel</button>
+                <div class="section">
+                    <div class="row">
+                        <div>&nbsp;</div>
+                        <div><label class="checkbox"><input type="checkbox"><span>Require password reprompt</span></label></div>
+                    </div>
+                    <div class="row">
+                        <div></div>
+                        <div><label class="checkbox"><input type="checkbox"><span>Autologin</span></label></div>
+                    </div>
+                    <div class="row">
+                        <div></div>
+                        <div><label class="checkbox"><input type="checkbox"><span>Disable auto-fill</span></label></div>
+                    </div>
+                    <div class="row">
+                        <div></div>
+                        <div><label class="checkbox"><input type="checkbox"><span>Add to favorites</span></label></div>
+                    </div>
+                    <div class="row buttons">
+                        <div></div>
+                        <div>
+                            <button class="pri" onclick="window.location.hash='vault'">Save</button><button onclick="window.history.go(-1)">Cancel</button>
+                        </div>
+                    </div>
                 </div>
             
         </div>
@@ -323,7 +338,120 @@
     </div>
     <div data-pageid="settings" class="navoption hidden">
         <h2>Account settings</h2>
-        <p>Settings content.</p>
+        <ul class="horizontal clearfix">
+            <li><a href='#settings'>General</a></li>
+            <li><a href='#settings_multifactoroptions'>Multifactor options</a></li>
+            <li><a href='#settings_trusteddevices'>Trusted devices</a></li>
+            <li><a href='#settings_mobiledevices'>Mobile devices</a></li>
+            <li><a href='#settings_neverurls'>Never URLs</a></li>
+            <li><a href='#settings_equivalentdomains'>Equivalent domains</a></li>
+            <li><a href='#settings_urlrules'>URL rules</a></li>
+        </ul>
+        <div data-subpageid="settings">
+            <p class="desc">Manage your LastPass account information, privacy, email subscriptions, and security settings.<a href="https://support.logmeininc.com/lastpass" target="_blank"><svg class="icon"><use xlink:href="img/icons.svg#help-circle"></use></svg><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></use></svg></a></p>
+
+            <div class="settings form">
+                <h3>Login credentials</h3>
+                <div class="section">
+                    <div class="row">
+                        <label>Account email</label>
+                        <div><input type="text" name="Email"> <button>Send test email</button></div>
+                    </div>
+                    <div class="row">
+                        <label>Master password</label>
+                        <div>
+                            <p>You last changed your LastPass master password 2 months and 15 days ago.</p>
+                            <button>Change master password</button> <button>Revert password change</button>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <label>Master Password Reminder</label>
+                        <div><button>View</button></div>
+                    </div>
+                </div>
+
+                <h3>Account information</h3>
+                <div class="section">
+                    <div class="row">
+                        <label>Type</label>
+                        <div>LastPass Administrator : adminname</div>
+                    </div>
+                    <div class="row">
+                        <label>Links</label>
+                        <div>
+                            <a href="javascript:void(0)">My account</a><br>
+                            <a href="javascript:void(0)">Payment history</a><br>
+                            <a href="javascript:void(0)">Email subscriptions</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label>Language</label>
+                        <div><select><option>English</option><option>English (United Kingdom)</option></select></div>
+                    </div>
+                    <div class="row">
+                        <label>Time zone</label>
+                        <div><select><option>(-05:00) Eastern Time (US & Canada)</option></select></div>
+                    </div>
+                </div>
+                <h3>SMS account recovery</h3>
+                <div class="section">
+                    <div class="row">
+                        <label>Recovery phone</label>
+                        <div>
+                            <p>Not set.</p>
+                            <button>Update phone</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="opener" onclick="$(this).toggleClass('openeron')"><span class="href semibold">Advanced settings<svg class="icon"><use xlink:href="img/icons.svg#chevron-down"></use></svg></span></h3>
+                <div class="section">
+                    <div class="row">
+                        <label>Password alerts</label>
+                        <div><button>Disable password alerts</button></div>
+                    </div>
+                    <div class="row">
+                        <label>Re-prompt for master password</label>
+                        <div>
+                            <div>Re-prompt for your LastPass master password before you:</div>
+                            <div><label class="checkbox"><input type="checkbox"><span>Access an identity</span></label></div>
+                            <div><label class="checkbox"><input type="checkbox"><span>Access a site's password</span></label></div>
+                            <div><label class="checkbox"><input type="checkbox"><span>Access a site</span></label></div>
+                            <div><label class="checkbox"><input type="checkbox"><span>Access a secure note</span></label></div>
+                            <div><label class="checkbox"><input type="checkbox"><span>Access a form fill</span></label></div>
+                            <div><label class="checkbox"><input type="checkbox"><span>Log into a site</span></label></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="section">
+                    <div class="row buttons">
+                        <label></label><button class="pri">Update</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div data-subpageid="settings_multifactoroptions">
+            <p class="desc">Add another layer of protection by requiring a second login step. Keep the bad guys out, even if they steal your password through malicious software.<a href="https://support.logmeininc.com/lastpass" target="_blank"><svg class="icon"><use xlink:href="img/icons.svg#help-circle"></use></svg><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></use></svg></a></p>
+        </div>
+        <div data-subpageid="settings_trusteddevices">
+            <p class="desc">When you turn on multifactor authentication for your LastPass account, you can choose to 'trust' a device. When logging in on a trusted device, you will not be asked to provide your multifactor authentication. Trusted devices automatically expire after 30 days, after which you must re-trust them.<a href="https://support.logmeininc.com/lastpass" target="_blank"><svg class="icon"><use xlink:href="img/icons.svg#help-circle"></use></svg><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></use></svg></a></p>
+        </div>
+        <div data-subpageid="settings_mobiledevices">
+            <p class="desc">Control what smartphones and tablets may access your LastPass account. By default, a unique identifier (UUID) is created to track each device, but you can edit the device label at any time.<a href="https://support.logmeininc.com/lastpass" target="_blank"><svg class="icon"><use xlink:href="img/icons.svg#help-circle"></use></svg><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></use></svg></a></p>
+        </div>
+        <div data-subpageid="settings_neverurls">
+            <p class="desc">Need to turn off LastPass on specific websites? Add a website as a Never URL if you do not want LastPass to take action when you visit it.<a href="https://support.logmeininc.com/lastpass" target="_blank"><svg class="icon"><use xlink:href="img/icons.svg#help-circle"></use></svg><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></use></svg></a></p>
+        </div>
+        <div data-subpageid="settings_equivalentdomains">
+            <p class="desc">If you have the same login credentials across multiple different websites, you can mark the websites as 'equivalent'. 'Global' domains are ones created by LastPass.<a href="https://support.logmeininc.com/lastpass" target="_blank"><svg class="icon"><use xlink:href="img/icons.svg#help-circle"></use></svg><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></use></svg></a></p>
+        </div>
+        <div data-subpageid="settings_urlrules">
+            <p class="desc">When you're logging in to a website, LastPass shows all login entries having a similar URL. If you want to see fewer entries, you can set a URL Rule to limit which logins are shown.<a href="https://support.logmeininc.com/lastpass" target="_blank"><svg class="icon"><use xlink:href="img/icons.svg#help-circle"></use></svg><svg class="icon"><use xlink:href="img/icons.svg#chevron-right"></use></svg></a></p>
+        </div>
     </div>
 </div>
 
@@ -343,6 +471,8 @@
             $('.navoption').addClass('hidden');
             $('div[data-pageid="' + where + '"]').removeClass('hidden');
         };
+        $('div[data-subpageid]').removeClass('shown');
+        $('div[data-subpageid="'+whereTo.replace('#', '')+'"]').addClass('shown');
         window.scrollTo(0, 0);
         $('nav ul.vertical li span').removeClass('selected');
         $("nav ul.vertical li span[data-location='" + where + "']").addClass('selected'); 

@@ -110,6 +110,55 @@ textarea {
     min-height: 120px;
     padding: 5px 10px;
 }
+select {
+    border: 1px solid #9AC0DA; 
+    padding: 4px; 
+    border-radius: 5px; 
+    box-shadow: 0 0 1px 1px transparent; 
+    height: 36px;
+}
+.bluetext {
+    color: #2980B8;
+}
+.form .section .row {
+    display: flex;
+    align-items: center;
+}
+.form .section label:not(.checkbox),
+.form .section .row p {
+    margin-top: 0; margin-bottom: 0;
+}
+.form .section .row p {
+    font-size: 90%;
+    margin-bottom: 5px;
+}
+.form .section .row > * {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-height: 30px;
+}
+.form .section .row > *:first-child {
+    width: 170px;
+    padding-right: 20px;
+    text-align: right; 
+    font-weight: 300;
+}
+.form .section .row:not(.buttons) button {
+    height: 36px;
+    width: auto;
+    white-space: nowrap;
+    color: #2980B8;
+}
+.form .section .row:not(.buttons) button:hover {
+    background-color: rgba(0, 0, 0, .03)
+}
+.form .row h2 {
+    margin: 0
+}
+
+
+
+
 .addform.invisible {
     transform: translate3d(0, -40px, 0);
     -webkit-transition: none;
@@ -119,8 +168,8 @@ textarea {
 }
 .addform {
     transform: translate3d(0, 0, 0);
-    width: 600px;
-    margin-left: 15%;
+    /*width: 600px;
+    margin-left: 15%;*/
 }
 .addform input[type="text"],
 .addform input[type="password"],
@@ -135,20 +184,12 @@ textarea {
     width: auto;
     min-width: auto;
 }
-.addform input[type="text"]:focus,
-.addform input[type="password"]:focus,
-.addform textarea:focus,
-.addform select:focus { 
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus { 
     box-shadow: 0 0 0 1px rgba(154, 192, 218, 1);
 }
-.row label {
-    display: block;
-    position: relative;
-}
-.row {
-    padding-bottom: 10px;
-}
-
 .clearfix::after {
     content: "";
     clear: both;
@@ -194,6 +235,9 @@ textarea {
 .pointer {
     cursor: pointer
 }
+.semibold {
+    font-weight: 600 !important
+}
 ul li {
     user-select: none
 }
@@ -211,22 +255,36 @@ h2 select, h2 select:focus {
     box-shadow: none !important;
     background: transparent;
     color: #2980B8;
-    color: #236F9F;
     cursor: pointer;
 }
 .navoption h2 {
     margin-top: 5px;
 }
-
-a, .href                      {color: #236F9F; text-decoration: none; font-weight: 500; cursor: pointer}
+h3 {
+    font-size: 16px; 
+    font-weight: 600;
+    color: rgba(0, 0, 0, .7);
+}
+h3 span {
+    position: relative;
+    padding-right: 30px;
+}
+a, .href                      {color: #2980B8; text-decoration: none; font-weight: 500; cursor: pointer}
 a:hover, .href:hover          {text-decoration: underline}
 .searchsites a                {margin-left: 10px}
 button, input[type="button"]  
-                        {background-color: rgba(0, 0, 0, .06); border: 0; border-radius: 100px; 
-                        font-weight: 500; cursor: pointer; padding: 10px 20px; min-width: 80px;}
-button.red              {background-color: #D32D27; color: white}
-button.pri              {background-color: #236F9F; color: white}
-select                  {border: 1px solid #9AC0DA; padding: 4px; border-radius: 5px; box-shadow: 0 0 1px 1px transparent}
+                        {border: 0; border-radius: 100px; 
+                        font-weight: 500; cursor: pointer; padding: 0 20px; min-width: 80px; height: 40px}
+button, input[type="button"],                        
+button:active, input[type="button"]:active {
+    background-color: rgba(0, 0, 0, .06); 
+}
+button:hover, input[type="button"]:hover {
+    background-color: rgba(0, 0, 0, .03);
+}
+button.red                                 {background-color: #D32D27; color: white}
+button.pri, button.pri:active              {background-color: #2980B8; color: white}
+button.pri:hover                           {background-color: #2F93D1}
 button .icon {
     float: left;
     width: 20px; height: 20px;
@@ -264,11 +322,15 @@ button.adder:hover {
 .listcontrols .inner div:hover {
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
 }
-
+.row label {
+    display: block;
+    position: relative;
+}
 label.checkbox {
     padding-left: 25px;
-    margin: 10px 0 0 0;
+    margin: 5px 0;
     user-select: none;
+    font-weight: 400;
 }
 label.checkbox input[type=checkbox] {
     position: absolute;
@@ -276,10 +338,13 @@ label.checkbox input[type=checkbox] {
     width: 18px;
     height: 18px;
 }
+label.checkbox input[type=checkbox]:checked + span {
+    font-weight: 400
+}
 label.checkbox input[type=checkbox]:checked + span::after {
     background-image: url(img/checkon.png);
-    background-color: #D32D27;
-    border-color: #D32D27;
+    background-color: #2980B8;
+    border-color: #2980B8;
 }
 label.checkbox input[type=checkbox] + span::after {
     position: absolute;
@@ -422,7 +487,7 @@ ul.horizontal li a.selected {
 .foldername {
     margin: 10px 0;
     color: rgba(211, 45, 39, 1);
-    color: #236F9F;
+    color: #2980B8;
     position: relative;
 }
 .foldername span {
@@ -508,13 +573,13 @@ ul.horizontal li a.selected {
     position: absolute; left: 8px; top: 3px;
     width: auto; height: auto;
     background-color: transparent;
-    color: #236F9F;
+    color: #2980B8;
     background-color: #6AB1C1;
     background-color: #6EB1DA;
     background-color: transparent;
     border-radius: 50%;
     padding: 5px;
-    box-shadow: inset 0 0 0 1px #236F9F;
+    box-shadow: inset 0 0 0 1px #2980B8;
 }
 .items .item span.itemicon svg.icon {
     width: 14px; height: 14px;
@@ -526,7 +591,7 @@ ul.horizontal li a.selected {
     padding: 2px;
     border-radius: 50%;
     cursor: pointer;
-    color: #236F9F;
+    color: #2980B8;
     background-color: white;
 }   
 .items .item svg.more {
@@ -635,4 +700,45 @@ ul.horizontal li a.selected {
 .inlinemenu .inner ul li svg {
     width: 18px; height: 18px;
     float: left; margin-right: 15px;
+}
+*[data-subpageid] {
+    display: none;
+}
+*[data-subpageid] p.desc {
+    font-size: 90%;
+    max-width: 700px;
+    line-height: 1.5;
+    padding: 0 40px 30px 0;
+    position: relative;
+    margin: 0 0 30px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, .05)
+}
+*[data-subpageid] p.desc svg,
+h3 svg {
+    width: 20px;
+    height: 20px;
+    position: absolute; right: 0; top: 0;
+}
+*[data-subpageid] p.desc svg:first-child {
+    right: 20px;
+}
+.shown[data-subpageid] {
+    display: block
+}
+
+h3.opener + .section {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translate3d(0, -20px, 0);
+}
+h3.opener.openeron + .section {
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+h3.opener.openeron svg {
+    transform: rotateX(180deg);
 }
