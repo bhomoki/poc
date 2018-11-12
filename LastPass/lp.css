@@ -342,14 +342,14 @@ label.checkbox {
 label.checkbox input[type=checkbox] {
     position: absolute;
     opacity: 0;
-    width: 18px;
-    height: 18px;
+    width: 0;
+    height: 0;
 }
 label.checkbox input[type=checkbox]:checked + span {
     font-weight: 400
 }
 label.checkbox input[type=checkbox]:checked + span::after {
-    background-image: url(img/checkon.png);
+    content: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='square' stroke-linejoin='square'%3E%3Cpolyline points='6.5 11.3 9 13.3 14 6.3' /%3E%3C/svg%3E");
     background-color: #2980B8;
     border-color: #2980B8;
 }
@@ -357,8 +357,8 @@ label.checkbox input[type=checkbox] + span::after {
     position: absolute;
     left: 0;
     top: 0;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     content: "";
     background-size: 16px 16px;
     background-color: white;
@@ -752,4 +752,86 @@ h3.opener.openeron + .section {
 }
 h3.opener.openeron svg {
     transform: rotateX(180deg);
+}
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 40px 0 15px 0;
+    color: rgba(0, 0, 0, .7);
+}
+
+
+
+
+
+.settable {
+    border-collapse: separate; 
+    border-spacing: 0;
+    width: 100%;
+}
+.settable * {
+    vertical-align: middle !important;
+}
+.settable tr:first-child {
+    margin-bottom: 10px
+}
+.settable tr:not(:first-child):hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+.settable th  {
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    white-space: nowrap;
+    color: white;
+    background-color: #2980B8;
+}
+.settable th,
+.settable td {
+    padding: 5px 5px;
+}
+.settable td {
+    font-size: 90%;
+}
+.settable .setaction {
+    white-space: nowrap;
+}
+.settable img {
+    width: 160px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+}
+.settable svg {
+    width: 18px; height: 18px;
+    margin: 0 5px;
+}
+.settable.auth td:first-child {
+    width: 180px;
+}
+.settable.auth td:nth-child(2) {
+    width: 120px;
+}
+.settable.auth th,
+.settable.auth td {
+    padding: 8px 5px;
+}
+.settable.rules td:first-child {
+    width: 50%;
+}
+.settable:not(.auth) th:not(:first-child),
+.settable:not(.auth) td:not(:first-child) {
+    text-align: center
+}
+.settable.never td:first-child {
+    width: 80%;
+}
+.settable .eqdomain {
+    display: inline-block;
+}
+.settable .eqdomainstxt {
+    display: none
+}
+.settable .eqdomain:not(:last-child)::after {
+    content: ",";
+    margin-right: 5px;
 }
