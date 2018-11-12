@@ -651,7 +651,7 @@ ul.horizontal li a.selected {
     border-radius: 50%;
     padding: 8px;
     box-shadow: none;
-    background-color: #E0EFF8;
+    background-color: #E3F1F9;
 }
 .items.cards .item span.itemicon svg.icon {
     width: 24px; height: 24px;
@@ -800,6 +800,10 @@ h4 {
     width: 160px;
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+    filter: grayscale(100%);
+}
+.settable tr:hover img {
+    filter: none
 }
 .settable svg {
     width: 18px; height: 18px;
