@@ -7,11 +7,6 @@ body {
     padding: 0; 
     background-color: #F9FBFD; 
 }
-body * {
-    outline: none;
-    -webkit-transition: all .35s cubic-bezier(.19,1,.22,1);
-    transition: all .35s cubic-bezier(.19,1,.22,1);
-}
 /* Box model fix for all BEGIN */
 html {
     box-sizing: border-box;
@@ -20,7 +15,10 @@ html {
     font-size: 62.5%;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+    -webkit-transition: all .35s cubic-bezier(.19,1,.22,1);
+    transition: all .35s cubic-bezier(.19,1,.22,1);
+    outline: none;
+    box-sizing: inherit;
 }
 /* Box model fix for all END */
 body, input, button, textarea, select, table {
@@ -159,28 +157,33 @@ select {
 
 
 
-.addform.invisible {
+.addform.invisible,
+.addfolderform.invisible {
     transform: translate3d(0, -40px, 0);
     -webkit-transition: none;
     transition: none;
     height: 0;
     overflow: hidden;
 }
-.addform {
+.addform,
+.addfolderform {
     transform: translate3d(0, 0, 0);
-    /*width: 600px;
-    margin-left: 15%;*/
 }
 .addform input[type="text"],
 .addform input[type="password"],
 .addform textarea,
-.addform select {
+.addform select,
+.addfolderform input[type="text"],
+.addfolderform input[type="password"],
+.addfolderform textarea,
+.addfolderform select {
     width: 50%;
     max-width: 600px;
     min-width: 500px;
     box-shadow: 0 0 0 1px rgba(154, 192, 218, 0);
 }
-.addform select {
+.addform select,
+.addfolderform select {
     width: auto;
     min-width: auto;
 }

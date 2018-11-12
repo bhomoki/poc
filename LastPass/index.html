@@ -71,7 +71,7 @@
                 </span>
                 <span class="floright">
                     <span class="addfolder floleft">
-                        <button class="adder" title="Add folder" onclick="showDialog()"><svg class="icon"><use xlink:href="img/icons.svg#plus"></use></svg>Folder</button>
+                        <button class="adder" title="Add folder" onclick="window.location.hash='vault_addfolder'"><svg class="icon"><use xlink:href="img/icons.svg#plus"></use></svg>Folder</button>
                     </span>
                     <div class="folder off" title="Turn folders off" id="folderview">
                         <svg class="icon"><use xlink:href="img/icons.svg#folder-off"></use></svg>
@@ -267,7 +267,7 @@
         <div class="addform form invisible">
                 <div class="section">
                     <div class="row">
-                        <div></div><div><h2>Add <select><option>Password<option>Note<option>Address<option>Credit card<option>SSN<option>Insurance</select></h2></div>
+                        <div></div><div><h2>Add <select><option selected>Password<option>Note<option>Address<option>Credit card<option>SSN<option>Insurance<option>Folder</select></h2></div>
                     </div>
                 </div>
             
@@ -321,7 +321,28 @@
                         </div>
                     </div>
                 </div>
-            
+        </div>
+        <div class="addfolderform form invisible">
+            <div class="section">
+                <div class="row">
+                    <div></div><div><h2>Add <select><option>Password<option>Note<option>Address<option>Credit card<option>SSN<option>Insurance<option selected>Folder</select></h2></div>
+                </div>
+            </div>
+        
+            <div class="section">
+                <div class="row">
+                    <label>Folder name</label>
+                    <div><input type="text" name="Name"></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row buttons">
+                    <div></div>
+                    <div>
+                        <button class="pri" onclick="window.location.hash='vault'">Save</button><button onclick="window.history.go(-1)">Cancel</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div data-pageid="sharingcenter" class="navoption hidden">
@@ -505,7 +526,7 @@
     window.onhashchange = hashCh;
     function hashCh() {
         var lhash = window.location.hash
-        addItem(lhash == '#vault_additem');
+        addItem(lhash == '#vault_additem', lhash == '#vault_addfolder');
         go(lhash);
     };
     function go(whereTo) {
@@ -516,7 +537,7 @@
             $('.navoption').addClass('hidden');
             $('div[data-pageid="' + where + '"]').removeClass('hidden');
         };
-        if (where == 'vault') {
+        if (where == 'vault' && whereSub != 'additem' && whereSub != 'addfolder') {
             if (whereSub) {
                 $('.items .item[data-itemtype]').addClass('hidden');
                 $('.items .item[data-itemtype="'+whereSub+'"]').removeClass('hidden');
@@ -640,15 +661,20 @@
         $('body').toggleClass('navclosed')
     };
     var addMode = false;
-    function addItem(forcedTo) {
-        if (typeof forcedTo != 'undefined') 
-            addMode = forcedTo
+    function addItem(forcedTo, forcedToFolder) {
+        if (typeof forcedTo != 'undefined' || typeof forcedToFolder != 'undefined') 
+            addMode = forcedTo || forcedToFolder
         else 
             addMode = !addMode;
         $('.listcontrols .adder').attr('disabled', addMode);
         $('.listcontrols .floright').toggleClass('hidden', addMode);
         $('.items').toggleClass('hidden', addMode);
-        $('.addform').toggleClass('invisible', !addMode);
+        $('.addform').addClass('invisible');
+        $('.addfolderform').addClass('invisible');
+        if (forcedTo)
+            $('.addform').removeClass('invisible');
+        if (forcedToFolder)
+            $('.addfolderform').removeClass('invisible');
     };
     function showDialog() {
         $('.dialog').addClass('shown')
