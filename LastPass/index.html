@@ -73,10 +73,10 @@
                     <span class="addfolder floleft">
                         <button class="adder" title="Add folder"><svg class="icon"><use xlink:href="img/icons.svg#plus"></use></svg>Folder</button>
                     </span>
-                    <div class="folder off" title="Turn folders off">
+                    <div class="folder off" title="Turn folders off" id="folderview">
                         <svg class="icon"><use xlink:href="img/icons.svg#folder-off"></use></svg>
                     </div>
-                    <div class="list" title="List view">
+                    <div class="list" title="List view" id="cardview">
                         <svg class="icon"><use xlink:href="img/icons.svg#list"></use></svg>
                     </div>
                 </span>
@@ -457,6 +457,8 @@
 
 <script>
     var globalWhere = '';
+    var locStore = window.localStorage;
+    var listControls = locStore.getItem('ListControls') || '0, 1';
     window.onhashchange = hashCh;
     function hashCh() {
         var lhash = window.location.hash
@@ -492,6 +494,7 @@
             parentOpener.find('span.hasmore').addClass('open');
         globalWhere = where;
     };
+
     $('body').click(function(e) {
         $('body').find('*').removeClass("on");
     });
@@ -504,39 +507,59 @@
             window.location.hash = thisLocation;
         };
     });
+    function setupControls() {
+        $('.listcontrols .inner div').each(function () {
+            var $this = $(this);
+            if ($this.attr('id') == 'folderview')
+                $this.toggleClass('off', listControls.split(', ')[0] == '0')
+            if ($this.attr('id') == 'cardview')
+                $this.toggleClass('off', listControls.split(', ')[1] == '0')
+        })
+    };
+    function applyControls() {
+        $('.listcontrols .inner div').each(function () {
+            var $this = $(this);
+            if ($this.hasClass('folder')) {
+                if ($this.hasClass('off')) {
+                    $this.attr('title', 'Turn folders off');
+                    $('.items').addClass('folders');
+                    $this.html('<svg class="icon"><use xlink:href="img/icons.svg#folder-off"></use></svg>');
+                    $('.listcontrols .addfolder').removeClass('hidden');
+                }
+                else {
+                    $this.attr('title', 'Turn folders on');
+                    $('.items').removeClass('folders');
+                    $this.html('<svg class="icon"><use xlink:href="img/icons.svg#folder"></use></svg>');
+                    $('.listcontrols .addfolder').addClass('hidden');
+                    $(".foldername span").removeClass('off');
+                    $(".items .item").removeClass('hidden');
+                    hashCh();
+                }
+            };
+            if ($this.hasClass('list')) {
+                if ($this.hasClass('off')) {
+                    $('.items').removeClass('cards');
+                    $this.attr('title', 'Card view');
+                    $this.html('<svg class="icon"><use xlink:href="img/icons.svg#cards"></use></svg>');
+                }
+                else {
+                    $('.items').addClass('cards');
+                    $this.attr('title', 'List view');
+                    $this.html('<svg class="icon"><use xlink:href="img/icons.svg#list"></use></svg>');
+                
+                }
+            };
+        })
+    };
     $('.listcontrols .inner div').click(function() {
         var $this = $(this);
         $this.toggleClass('off');
-        if ($this.hasClass('folder')) {
-            if ($this.hasClass('off')) {
-                $this.attr('title', 'Turn folders off');
-                $('.items').addClass('folders');
-                $this.html('<svg class="icon"><use xlink:href="img/icons.svg#folder-off"></use></svg>');
-                $('.listcontrols .addfolder').removeClass('hidden');
-            }
-            else {
-                $this.attr('title', 'Turn folders on');
-                $('.items').removeClass('folders');
-                $this.html('<svg class="icon"><use xlink:href="img/icons.svg#folder"></use></svg>');
-                $('.listcontrols .addfolder').addClass('hidden');
-                $(".foldername span").removeClass('off');
-                $(".items .item").removeClass('hidden');
-            }
-        };
-        if ($this.hasClass('list')) {
-            if ($this.hasClass('off')) {
-                $('.items').removeClass('cards');
-                $this.attr('title', 'Card view');
-                $this.html('<svg class="icon"><use xlink:href="img/icons.svg#cards"></use></svg>');
-            }
-            else {
-                $('.items').addClass('cards');
-                $this.attr('title', 'List view');
-                $this.html('<svg class="icon"><use xlink:href="img/icons.svg#list"></use></svg>');
-            
-            }
-        };
+        locStore.setItem('ListControls', ($('#folderview').hasClass('off') ? '0' : '1') + ', ' + ($('#cardview').hasClass('off') ? '0' : '1'));
+        listControls = locStore.getItem('ListControls');
+        applyControls();
     });
+    setupControls();
+    applyControls();
     $('.items .item').append($('<span class="itemmore"><svg class="icon more"><use xlink:href="img/icons.svg#more-vertical"></svg></span>'));
     $('.foldername').append($('<span class="foldermore"><svg class="icon more"><use xlink:href="img/icons.svg#more-vertical"></svg></span>'));
     $('.foldername .foldermore').click(function(e) {
