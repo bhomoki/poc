@@ -640,7 +640,7 @@
     $('.items .item').append($('<span class="itemmore"><svg class="icon more"><use xlink:href="img/icons.svg#more-vertical"></svg></span>'));
     $('.foldername').append($('<span class="foldermore"><svg class="icon more"><use xlink:href="img/icons.svg#more-vertical"></svg></span>'));
     $('.foldername .foldermore').click(function(e) {
-        var ifoldermenutemplate = $('<div class="inlinemenu"><div class="inner"><ul><li><svg class="icon"><use xlink:href="img/icons.svg#delete"></svg>Rename<li><svg class="icon"><use xlink:href="img/icons.svg#share-2"></svg>Share<li onclick="showDialog(\'deletefolder\')"><svg class="icon"><use xlink:href="img/icons.svg#trash-2"></svg>Delete<li class="sep"><li><svg class="icon"><use xlink:href="img/icons.svg#arrow-left"></svg>Move to&hellip;<li class="sep"><li><svg class="icon"><use xlink:href="img/icons.svg#external-link"></svg>Open all sites</ul></div></div>');
+        var ifoldermenutemplate = $('<div class="inlinemenu"><div class="inner"><ul><li><svg class="icon"><use xlink:href="img/icons.svg#delete"></svg><span>Rename</span><li><svg class="icon"><use xlink:href="img/icons.svg#share-2"></svg><span>Share</span><li onclick="showDialog(\'deletefolder\')"><svg class="icon"><use xlink:href="img/icons.svg#trash-2"></svg><span>Delete</span><li class="sep"><li><svg class="icon"><use xlink:href="img/icons.svg#arrow-left"></svg><span>Move to&hellip;</span><li class="sep"><li><svg class="icon"><use xlink:href="img/icons.svg#external-link"></svg><span>Open all sites</span></ul></div></div>');
         if ($(this).has(".inlinemenu").length == 0) {
             $(this).append(ifoldermenutemplate);
         };
@@ -648,7 +648,7 @@
         e.stopPropagation();
     });
     $('.item .itemmore').click(function(e) {
-        var iitemmenutemplate = $('<div class="inlinemenu"><div class="inner"><ul><li><svg class="icon"><use xlink:href="img/icons.svg#edit"></svg>Edit<li><svg class="icon"><use xlink:href="img/icons.svg#share-2"></svg>Share<li><svg class="icon"><use xlink:href="img/icons.svg#copy"></svg>Clone<li class="sep"><li><svg class="icon"><use xlink:href="img/icons.svg#arrow-left"></svg>Move to&hellip;<li class="sep"><li onclick="showDialog(\'deleteitem\')"><svg class="icon"><use xlink:href="img/icons.svg#trash-2"></svg>Delete</ul></div></div>');
+        var iitemmenutemplate = $('<div class="inlinemenu"><div class="inner"><ul><li><svg class="icon"><use xlink:href="img/icons.svg#edit"></svg><span>Edit</span><li><svg class="icon"><use xlink:href="img/icons.svg#share-2"></svg><span>Share</span><li><svg class="icon"><use xlink:href="img/icons.svg#copy"></svg><span>Clone</span><li class="sep"><li><svg class="icon"><use xlink:href="img/icons.svg#arrow-left"></svg><span>Move to&hellip;</span><li class="sep"><li onclick="showDialog(\'deleteitem\')"><svg class="icon"><use xlink:href="img/icons.svg#trash-2"></svg><span>Delete</span></ul></div></div>');
         if ($(this).has(".inlinemenu").length == 0) {
             $(this).append(iitemmenutemplate);
         };
