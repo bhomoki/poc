@@ -24,7 +24,7 @@ html {
 body, input, button, textarea, select, table {
     font-family: "Gibson", "Open Sans", Gibson, sans-serif; 
     font-size: 16px;
-    color: rgba(0, 0, 0, .8);
+    color: rgba(0, 0, 0, .9);
 }
 ::-webkit-scrollbar {
     width: 6px;
@@ -99,9 +99,11 @@ input[type="text"].vaultsearch {
     padding: 0 12px 0 40px;
     background: rgba(0, 0, 0, .03) url('img/search.svg') no-repeat 10px 13px;
     background-size: 20px 20px;
-}
-input[type="text"].vaultsearch {
     height: 46px;
+}
+input[type="text"].vaultsearch:focus {
+    box-shadow: none;
+    background-color: #ECEEF0;
 }
 textarea {
     height: auto;
@@ -281,12 +283,25 @@ h3 span {
 .centered {
     text-align: center
 }
-a, .href                      {color: #2980B8; text-decoration: none; font-weight: 500; cursor: pointer}
-a:hover, .href:hover          {text-decoration: underline}
-.searchsites a                {margin-left: 10px}
-button, input[type="button"]  
-                        {border: 0; border-radius: 100px; 
-                        font-weight: 500; cursor: pointer; padding: 0 20px; min-width: 80px; height: 40px}
+a, .href {
+    color: #2980B8; 
+    text-decoration: none; 
+    font-weight: 500; 
+    cursor: pointer
+}
+a:hover, .href:hover {
+    text-decoration: underline
+}
+
+button, input[type="button"] {
+    border: 0; 
+    border-radius: 100px; 
+    font-weight: 500; 
+    cursor: pointer; 
+    padding: 0 20px; 
+    min-width: 80px; 
+    height: 40px
+    }
 button, input[type="button"],                        
 button:active, input[type="button"]:active {
     background-color: rgba(0, 0, 0, .06); 
@@ -294,9 +309,9 @@ button:active, input[type="button"]:active {
 button:hover, input[type="button"]:hover {
     background-color: rgba(0, 0, 0, .03);
 }
-button.red                                 {background-color: #D32D27; color: white}
-button.pri, button.pri:active              {background-color: #2980B8; color: white}
-button.pri:hover                           {background-color: #2F93D1}
+button.red                        {background-color: #D32D27; color: white}
+button.pri, button.pri:active     {background-color: #2980B8; color: white}
+button.pri:hover                  {background-color: #2F93D1}
 button .icon {
     float: left;
     width: 20px; height: 20px;
@@ -631,7 +646,7 @@ ul.horizontal li a.selected {
     text-overflow: ellipsis;
     padding-right: 20px;
     width: 25%;
-    color: rgba(0, 0, 0, .8);
+    color: rgba(0, 0, 0, .9);
 }
 .items .item div.name {
     font-weight: 500
@@ -724,7 +739,7 @@ ul.horizontal li a.selected {
     padding: 5px 20px;
 }
 .inlinemenu .inner ul li span {
-    color: rgba(0, 0, 0, .8);
+    color: rgba(0, 0, 0, .9);
 }
 .inlinemenu .inner ul li:not(.sep):hover {
     background-color: rgba(0, 0, 0, .07);
