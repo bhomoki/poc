@@ -262,8 +262,7 @@ h2, h2 select {
 }
 h2 select, h2 select:focus {
     border-color: transparent;
-    box-shadow: none !important;
-    background: #F9FBFD;
+    background: transparent;
     color: #2980B8;
     cursor: pointer;
 }
@@ -586,14 +585,13 @@ ul.horizontal li a.selected {
 .items .item span.itemicon {
     position: absolute; left: 8px; top: 3px;
     width: auto; height: auto;
+    box-shadow: inset 0 0 0 1px currentColor;
     background-color: transparent;
     color: #2980B8;
-    background-color: #6AB1C1;
-    background-color: #6EB1DA;
     background-color: transparent;
     border-radius: 50%;
     padding: 5px;
-    box-shadow: inset 0 0 0 1px #2980B8;
+
 }
 .items .item span.itemicon svg.icon {
     width: 14px; height: 14px;
@@ -657,7 +655,33 @@ ul.horizontal li a.selected {
     border-radius: 50%;
     padding: 8px;
     box-shadow: none;
-    background-color: #E3F1F9;
+    overflow: hidden;
+    /*background-color: #E3F1F9;*/
+}
+.item[data-itemtype="passwords"] span.itemicon {
+    color: #2980B8;
+}
+.item[data-itemtype="notes"] span.itemicon {
+    color: #A563B5;
+}
+.item[data-itemtype="addresses"] span.itemicon {
+    color: #0A6353;
+}
+.item[data-itemtype="creditcards"] span.itemicon {
+    color: #84B750;
+}
+.item[data-itemtype="ssn"] span.itemicon {
+    color: #F8C408;
+}
+.item[data-itemtype="insurance"] span.itemicon {
+    color: #E1403F;
+}
+.items.cards .item span.itemicon:after {
+    content: "";
+    position: absolute; top: 0; left: 0; z-index: 0;
+    width: 40px; height: 40px;
+    background-color: currentColor;
+    opacity: .12;
 }
 .items.cards .item span.itemicon svg.icon {
     width: 24px; height: 24px;
@@ -700,7 +724,8 @@ ul.horizontal li a.selected {
     padding: 5px 20px;
 }
 .inlinemenu .inner ul li:not(.sep):hover {
-    background-color: rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, .07);
+    background-color: #ECEEF0;
 }
 .inlinemenu .inner ul li.sep {
     cursor: default;
@@ -885,6 +910,10 @@ h4 {
     cursor: pointer;
     padding: 8px;
     border-radius: 50%;
+}
+.dialog .box .closer svg {
+    color: #2980B8;
+    width: 20px; height: 20px;
 }
 .dialog .box .closer:hover {
     background-color: rgba(0, 0, 0, .05);
