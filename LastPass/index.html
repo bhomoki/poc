@@ -137,12 +137,6 @@
                 <div>account@domain.com</div>
                 <div class="moredetails">More details displayed here.</div>
             </div>
-            <div class="item" data-folder="folder1" data-itemtype="notes">
-                <span class="itemicon"><svg class="icon"><use xlink:href="img/icons.svg#file-text"></svg></span>
-                <div class="name">My note</div>
-                <div>16542648925</div>
-                <div class="moredetails">Note text and details displayed here.</div>
-            </div>
             <div class="clears"></div>
             <div class="foldername">
                 <span id="folder2">Foldername too<svg class="icon"><use xlink:href="img/icons.svg#chevron-up"></svg></span>
@@ -347,9 +341,22 @@
             </div>
         </div>
     </div>
-    <div data-pageid="sharingcenter" class="navoption hidden">
+        <div data-pageid="sharingcenter" class="navoption hidden">
         <h2>Sharing center</h2>
-        <p>Sharing center content.</p>
+        <ul class="horizontal clearfix">
+            <li><a href='#sharingcenter'>Shared folders</a></li>
+            <li><a href='#sharingcenter_withothers'>Shared with others</a></li>
+            <li><a href='#sharingcenter_withme'>Shared with me</a></li>
+        </ul>
+        <div data-subpageid="sharingcenter">
+            Manage shared folders here...
+        </div>
+        <div data-subpageid="sharingcenter_withothers">
+            Items and folders shared with others, by me...
+        </div>
+        <div data-subpageid="sharingcenter_withme">
+            Items and folders shared with me, by others...
+        </div>
     </div>
     <div data-pageid="securitychallenge" class="navoption hidden">
         <h2>Security challenge</h2>

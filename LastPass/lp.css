@@ -265,6 +265,7 @@ h2, h2 select {
 h2 select, h2 select:focus {
     border-color: transparent;
     background: transparent;
+    box-shadow: none;
     color: #2980B8;
     cursor: pointer;
 }
@@ -701,11 +702,13 @@ ul.horizontal li a.selected {
 .items.cards .item > div {
     float: none;
     width: auto;
-    font-size: 15px;
     line-height: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.items.cards .item > div.name {
+    font-size: 15px;
 }
 .items.cards .item .moredetails {
     display: none
