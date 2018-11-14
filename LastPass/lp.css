@@ -915,7 +915,7 @@ h4 {
     transform: translate3d(0, 0, 0);
 }
 .dialog .box .inner {
-    padding: 25px 30px;
+    padding: 25px 30px 30px 30px;
 }
 .dialog .box .inner p {
     margin-bottom: 0
