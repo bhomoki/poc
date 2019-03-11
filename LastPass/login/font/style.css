@@ -1,0 +1,103 @@
+/* #### Gibson Webfont #### */
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('Gibson/gibson_regular_macroman/gibson-regular-webfont.eot');
+  src: url('Gibson/gibson_regular_macroman/gibson-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Gibson/gibson_regular_macroman/gibson-regular-webfont.woff2') format('woff2'),
+  url('Gibson/gibson_regular_macroman/gibson-regular-webfont.woff') format('woff'),
+  url('Gibson/gibson_regular_macroman/gibson-regular-webfont.ttf') format('truetype'),
+  url('Gibson/gibson_regular_macroman/gibson-regular-webfont.svg#gibsonregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('Gibson/gibson_light_macroman/gibson-light-webfont.eot');
+  src: url('Gibson/gibson_light_macroman/gibson-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Gibson/gibson_light_macroman/gibson-light-webfont.woff2') format('woff2'),
+  url('Gibson/gibson_light_macroman/gibson-light-webfont.woff') format('woff'),
+  url('Gibson/gibson_light_macroman/gibson-light-webfont.ttf') format('truetype'),
+  url('Gibson/gibson_light_macroman/gibson-light-webfont.svg#gibsonlight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('Gibson/gibson_semibolditalic_macroman/gibson-semibolditalic-webfont.eot');
+  src: url('Gibson/gibson_semibolditalic_macroman/gibson-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Gibson/gibson_semibolditalic_macroman/gibson-semibolditalic-webfont.woff2') format('woff2'),
+  url('Gibson/gibson_semibolditalic_macroman/gibson-semibolditalic-webfont.woff') format('woff'),
+  url('Gibson/gibson_semibolditalic_macroman/gibson-semibolditalic-webfont.ttf') format('truetype'),
+  url('Gibson/gibson_semibolditalic_macroman/gibson-semibolditalic-webfont.svg#gibsonlight') format('svg');
+  font-weight: 600;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('Gibson/gibson_semibold_macroman/gibson-semibold-webfont.eot');
+  src: url('Gibson/gibson_semibold_macroman/gibson-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Gibson/gibson_semibold_macroman/gibson-semibold-webfont.woff2') format('woff2'),
+  url('Gibson/gibson_semibold_macroman/gibson-semibold-webfont.woff') format('woff'),
+  url('Gibson/gibson_semibold_macroman/gibson-semibold-webfont.ttf') format('truetype'),
+  url('Gibson/gibson_semibold_macroman/gibson-semibold-webfont.svg#gibsonlight') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('Gibson/gibson_lightitalic_macroman/gibson-lightitalic-webfont.eot');
+  src: url('Gibson/gibson_lightitalic_macroman/gibson-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Gibson/gibson_lightitalic_macroman/gibson-lightitalic-webfont.woff2') format('woff2'),
+  url('Gibson/gibson_lightitalic_macroman/gibson-lightitalic-webfont.woff') format('woff'),
+  url('Gibson/gibson_lightitalic_macroman/gibson-lightitalic-webfont.ttf') format('truetype'),
+  url('Gibson/gibson_lightitalic_macroman/gibson-lightitalic-webfont.svg#gibsonlight') format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('Gibson/gibson_italic_macroman/gibson-italic-webfont.eot');
+  src: url('Gibson/gibson_italic_macroman/gibson-italic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Gibson/gibson_italic_macroman/gibson-italic-webfont.woff2') format('woff2'),
+  url('Gibson/gibson_italic_macroman/gibson-italic-webfont.woff') format('woff'),
+  url('Gibson/gibson_italic_macroman/gibson-italic-webfont.ttf') format('truetype'),
+  url('Gibson/gibson_italic_macroman/gibson-italic-webfont.svg#gibsonlight') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('Gibson/gibson_bolditalic_macroman/gibson-bolditalic-webfont.eot');
+  src: url('Gibson/gibson_bolditalic_macroman/gibson-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Gibson/gibson_bolditalic_macroman/gibson-bolditalic-webfont.woff2') format('woff2'),
+  url('Gibson/gibson_bolditalic_macroman/gibson-bolditalic-webfont.woff') format('woff'),
+  url('Gibson/gibson_bolditalic_macroman/gibson-bolditalic-webfont.ttf') format('truetype'),
+  url('Gibson/gibson_bolditalic_macroman/gibson-bolditalic-webfont.svg#gibsonlight') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('Gibson/gibson_bold_macroman/gibson-bold-webfont.eot');
+  src: url('Gibson/gibson_bold_macroman/gibson-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('Gibson/gibson_bold_macroman/gibson-bold-webfont.woff2') format('woff2'),
+  url('Gibson/gibson_bold_macroman/gibson-bold-webfont.woff') format('woff'),
+  url('Gibson/gibson_bold_macroman/gibson-bold-webfont.ttf') format('truetype'),
+  url('Gibson/gibson_bold_macroman/gibson-bold-webfont.svg#gibsonlight') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
