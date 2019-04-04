@@ -537,6 +537,11 @@
 </div>
 
 <script>
+
+    if (window.location.hash == 'nc') {
+        $(head).append($('<style></style>'));
+    };
+
     var globalWhere = '';
     var locStore = window.localStorage;
     var listControls = locStore.getItem('ListControls') || '0, 1';
@@ -545,6 +550,7 @@
         var lhash = window.location.hash
         addItem(lhash == '#vault_additem', lhash == '#vault_addfolder');
         go(lhash);
+        //$('.foldername span:first-child').removeClass('off');
     };
     function go(whereTo) {
         if (!whereTo.length) return;
@@ -555,12 +561,12 @@
             $('div[data-pageid="' + where + '"]').removeClass('hidden');
         };
         if (where == 'vault' && whereSub != 'additem' && whereSub != 'addfolder') {
+            $('.foldername span:first-child').removeClass('off');
+            $('.items .item[data-itemtype]').removeClass('hidden');
             if (whereSub) {
                 $('.items .item[data-itemtype]').addClass('hidden');
                 $('.items .item[data-itemtype="'+whereSub+'"]').removeClass('hidden');
-            }
-            else {
-                $('.items .item[data-itemtype]').removeClass('hidden');
+                $('.foldername span:first-child').removeClass('off');
             }
         };
         $('div[data-subpageid]').removeClass('shown');
@@ -671,8 +677,6 @@
         var thisId = $(this).attr('id');
         $(this).toggleClass('off');
         $(".item[data-folder='"+thisId+"']").toggleClass('hidden', $(this).hasClass('off'));
-        if (!$(this).hasClass('off'))
-            hashCh();
     });
     function toggleNav() {
         $('body').toggleClass('navclosed')
