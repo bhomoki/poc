@@ -1,0 +1,31 @@
+.widget 
+    {width: 100%; max-width: 400px; padding: 20px; margin: auto; font-weight: 700; border-radius: 30px; box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28); user-select: none;}
+
+.widget #num 
+    {width: 100%;}
+
+.widget .buttons 
+    {margin: 10px 0 0 0}
+
+.widget button 
+    {width: calc(100% / 3 - 20px / 3); margin-left: 10px; border: 1px solid #315490; color: white; box-sizing: border-box; font-size: 16px; font-family: arial, sans-serif; border-radius: 50px; cursor: pointer}
+
+.widget button, 
+.widget button:focus 
+    {background: #4472C4;}
+
+.widget button:active 
+    {background: #325A9E;}
+
+.widget button:first-child 
+    {margin: 0}
+
+.widget input 
+    {border: 1px solid lightgray; text-align: center; border-radius: 5px;}
+
+.widget input, 
+.widget button 
+    {height: 40px; padding: 0}
+
+.widget button[disabled] 
+    {background: lightgray; border-color: darkgray; pointer-events: none;}

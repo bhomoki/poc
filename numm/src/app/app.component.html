@@ -1,0 +1,6 @@
+<div class="widget">
+    <input id="num" placeholder="Number" readonly value="{{theNum}}">
+    <div class="buttons">
+        <button (click)="moveNum(false)" [disabled]="theNum === minVal">–</button><button (click)="moveNum(true)" [disabled]="theNum === maxVal">+</button><button (click)="reroll()">Reroll</button>
+    </div>
+</div>

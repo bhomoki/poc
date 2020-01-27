@@ -1,0 +1,21 @@
+body 
+    {box-sizing: border-box; font-size: 16px; margin: 0; padding: 8% 10px 10px}
+
+body, input, button 
+    {font-family: arial, sans-serif;}
+
+*, *:before, *:after 
+    {box-sizing: inherit; font-size: inherit; font-weight: inherit; transition: all .35s cubic-bezier(.19, 1, .22, 1);
+    -webkit-transition: all .35s cubic-bezier(.19, 1, .22, 1);}
+
+:focus 
+    { outline: none; }
+
+nav 
+    {text-align: center; margin-bottom: 50px}
+
+nav > *
+    {display: inline-block; margin: 15px; font-weight: 700}
+
+a, a:visited 
+    {color: #4472C4}
