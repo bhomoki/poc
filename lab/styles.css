@@ -1,0 +1,46 @@
+body {
+    font-size: 16px;
+    margin: 40px;
+}
+app-root {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+}
+* {outline: none;}
+#canvas {
+    background: #F6F6F6;
+}
+canvas.upper-canvas {
+    
+}
+.tools {
+    margin-top: 20px;
+    width: 600px;
+    display: flex;
+}
+.tools > div:last-child {
+    flex-grow: 100;
+    text-align: right;
+}
+.tools button {
+    margin-right: 10px;
+    height: 40px;
+    min-width: 60px;
+    line-height: 26px;
+    background: none;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+.tools button:hover {
+    background: #F0F0F0
+}
+*:disabled {
+    pointer-events: none !important;
+    user-select: none !important;
+    background: #E0E0E0 !important;
+    opacity: .5 !important;
+    box-shadow: none  !important;
+}
