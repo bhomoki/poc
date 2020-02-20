@@ -11,9 +11,6 @@ app-root {
 #canvas {
     background: #F6F6F6;
 }
-canvas.upper-canvas {
-    
-}
 .tools {
     margin-top: 20px;
     width: 600px;
@@ -36,6 +33,9 @@ canvas.upper-canvas {
 }
 .tools button:hover {
     background: #F0F0F0
+}
+.tools button.selected {
+    background-color: lightblue;
 }
 *:disabled {
     pointer-events: none !important;
