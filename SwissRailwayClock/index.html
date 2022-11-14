@@ -1,0 +1,511 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Urbanist:800|Urbanist:900"
+    />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+        font-size: 2.6vh;
+      }
+      html,
+      body {
+        height: 100vh;
+      }
+      body {
+        background-color: #96bfae;
+        display: grid;
+        place-items: center;
+        padding: 0;
+        margin: 0;
+      }
+
+      .clock {
+        width: 31rem;
+        height: 31rem;
+        margin-top: -2rem;
+        display: inline-block;
+        position: relative;
+        background-image: linear-gradient(
+          to left,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(255, 255, 255, 0.5) 50%,
+          rgba(0, 0, 0, 0.3) 100%
+        );
+        background-size: cover;
+        background-color: rgba(180, 180, 180, 1);
+        border: 0;
+        box-shadow: 0 0 0.23rem 0.02rem rgba(255, 255, 255, 0.7),
+          0 3.31rem 2.36rem -0.47rem rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+      }
+
+      .clock-face {
+        border: 0rem solid #0e0e10;
+        box-shadow: inset 0 0 0.3rem rgba(0, 0, 0, 0.5),
+          inset 0 2rem 2.3rem 1rem rgba(0, 0, 0, 0.4);
+        background-color: white;
+        border-radius: 50%;
+        height: calc(100% - 2rem);
+        width: calc(100% - 2rem);
+      }
+
+      .clock div {
+        position: absolute;
+        z-index: 2;
+      }
+
+      .clock-component {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: 50% 50%;
+      }
+
+      .ticks {
+        width: calc(100% - 2.2rem);
+        height: calc(100% - 2.2rem);
+        margin: 1.1rem;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='50%' ry='50%' stroke='%230e0e10' stroke-width='7%' stroke-dasharray='1.5%25 3.728%25' stroke-dashoffset='0.6%' stroke-linecap='butt'/%3e%3c/svg%3e");
+        border-radius: 100%;
+      }
+      .ticks:after {
+        position: relative;
+        z-index: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='50%' ry='50%' stroke='%230e0e10' stroke-width='25%' stroke-dasharray='4.15%25 22%25' stroke-dashoffset='1.9%' stroke-linecap='butt'/%3e%3c/svg%3e");
+        border-radius: 100%;
+      }
+
+      .hand {
+        bottom: 50%;
+        left: 50%;
+      }
+      .hand.r0 {
+        transition: none !important;
+      }
+      .hr-hand {
+        width: 1.5rem;
+        height: 12.6rem;
+        transform: translate(-50%, 3.8rem);
+        transform-origin: 50% calc(12.6rem - 3.8rem);
+      }
+      .min-hand {
+        width: 1.2rem;
+        height: 16.72rem;
+        transform: translate(-50%, 3.22rem);
+        transform-origin: 50% calc(16.72rem - 3.22rem);
+        /* transition: transform 0.11s linear; */
+      }
+      .hr-hand .hr-hand-hand,
+      .min-hand .min-hand-hand {
+        background-color: #0e0e10;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform: perspective(10rem) rotateX(10deg) translate(0, -1rem);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4),
+          inset 0 0 0.5rem rgba(100, 100, 100, 0.5);
+      }
+      .min-hand .min-hand-hand {
+        /* background-color: green */
+      }
+      .sec-hand {
+        width: 0.4rem;
+        height: 13.8rem;
+        transform: translate(-50%, 4.8rem);
+        transform-origin: 50% calc(13.8rem - 4.8rem);
+        transition: transform 0.14s cubic-bezier(0.4, 1.8, 0.54, 0.69);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+      }
+      .sec-hand .sec-hand-hand {
+        background-color: #bb1e10; /* #e11b22 */
+        width: 100%;
+        height: 100%;
+      }
+      .sec-hand .sec-hand-ball {
+        background-color: #bb1e10;
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: 50% 50%;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+      }
+
+      .pinouter {
+        background-color: #bb1e10;
+        border-radius: 50%;
+        height: 0.9rem;
+        width: 0.9rem;
+      }
+      .pinouter .pin {
+        background-color: #0e0e10;
+        border-radius: 50%;
+        height: 0.3rem;
+        width: 0.3rem;
+        margin: 0.3rem;
+        display: inline-block;
+      }
+
+      .data {
+        font-family: Urbanist, sans-serif;
+        z-index: 1 !important;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 25%;
+        color: #0e0e10;
+        font-size: 1.3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -0.05rem;
+        white-space: nowrap;
+        padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+        box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
+        border-radius: 0.2rem;
+      }
+
+      .data span {
+        color: #bb1e10;
+      }
+
+      /*
+      .hr-markers {
+        bottom: 50%;
+        left: 50%;
+      }
+      .hr-markers div {
+        background-color: black;
+        height: 28px;
+        transform-origin: 50% 134px;
+        width: 8px;
+      }
+
+      .min-markers {
+        bottom: 50%;
+        left: 50%;
+      }
+      .min-markers div {
+        background-color: black;
+        height: 8px;
+        transform-origin: 50% 134px;
+        width: 4px;
+      }
+
+      .hr-markers div:nth-child(1) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(30deg);
+      }
+      .hr-markers div:nth-child(2) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(60deg);
+      }
+      .hr-markers div:nth-child(3) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(90deg);
+      }
+      .hr-markers div:nth-child(4) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(120deg);
+      }
+      .hr-markers div:nth-child(5) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(150deg);
+      }
+      .hr-markers div:nth-child(6) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(180deg);
+      }
+      .hr-markers div:nth-child(7) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(210deg);
+      }
+      .hr-markers div:nth-child(8) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(240deg);
+      }
+      .hr-markers div:nth-child(9) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(270deg);
+      }
+      .hr-markers div:nth-child(10) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(300deg);
+      }
+      .hr-markers div:nth-child(11) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(330deg);
+      }
+      .hr-markers div:nth-child(12) {
+        transform: translate(-50%, -50%) translate(0, -120px) rotateZ(0deg);
+      }
+
+      .min-markers div:nth-child(1) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(6deg);
+      }
+      .min-markers div:nth-child(2) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(12deg);
+      }
+      .min-markers div:nth-child(3) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(18deg);
+      }
+      .min-markers div:nth-child(4) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(24deg);
+      }
+      .min-markers div:nth-child(5) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(36deg);
+      }
+      .min-markers div:nth-child(6) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(42deg);
+      }
+      .min-markers div:nth-child(7) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(48deg);
+      }
+      .min-markers div:nth-child(8) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(54deg);
+      }
+      .min-markers div:nth-child(9) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(66deg);
+      }
+      .min-markers div:nth-child(10) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(72deg);
+      }
+      .min-markers div:nth-child(11) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(78deg);
+      }
+      .min-markers div:nth-child(12) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(84deg);
+      }
+      .min-markers div:nth-child(13) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(96deg);
+      }
+      .min-markers div:nth-child(14) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(102deg);
+      }
+      .min-markers div:nth-child(15) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(108deg);
+      }
+      .min-markers div:nth-child(16) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(114deg);
+      }
+      .min-markers div:nth-child(17) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(126deg);
+      }
+      .min-markers div:nth-child(18) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(132deg);
+      }
+      .min-markers div:nth-child(19) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(138deg);
+      }
+      .min-markers div:nth-child(20) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(144deg);
+      }
+      .min-markers div:nth-child(21) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(156deg);
+      }
+      .min-markers div:nth-child(22) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(162deg);
+      }
+      .min-markers div:nth-child(23) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(168deg);
+      }
+      .min-markers div:nth-child(24) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(174deg);
+      }
+      .min-markers div:nth-child(25) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(186deg);
+      }
+      .min-markers div:nth-child(26) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(192deg);
+      }
+      .min-markers div:nth-child(27) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(198deg);
+      }
+      .min-markers div:nth-child(28) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(204deg);
+      }
+      .min-markers div:nth-child(29) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(216deg);
+      }
+      .min-markers div:nth-child(30) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(222deg);
+      }
+      .min-markers div:nth-child(31) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(228deg);
+      }
+      .min-markers div:nth-child(32) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(234deg);
+      }
+      .min-markers div:nth-child(33) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(246deg);
+      }
+      .min-markers div:nth-child(34) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(252deg);
+      }
+      .min-markers div:nth-child(35) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(258deg);
+      }
+      .min-markers div:nth-child(36) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(264deg);
+      }
+      .min-markers div:nth-child(37) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(276deg);
+      }
+      .min-markers div:nth-child(38) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(282deg);
+      }
+      .min-markers div:nth-child(39) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(288deg);
+      }
+      .min-markers div:nth-child(40) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(294deg);
+      }
+      .min-markers div:nth-child(41) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(306deg);
+      }
+      .min-markers div:nth-child(42) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(312deg);
+      }
+      .min-markers div:nth-child(43) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(318deg);
+      }
+      .min-markers div:nth-child(44) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(324deg);
+      }
+      .min-markers div:nth-child(45) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(336deg);
+      }
+      .min-markers div:nth-child(46) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(342deg);
+      }
+      .min-markers div:nth-child(47) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(348deg);
+      }
+      .min-markers div:nth-child(48) {
+        transform: translate(-50%, -50%) translate(0, -130px) rotateZ(354deg);
+      }
+      */
+    </style>
+    <script>
+      var hrTrans = 'translate(-50%, 3.8rem)';
+      var minTrans = 'translate(-50%, 3.22rem)';
+      var secTrans = 'translate(-50%, 4.8rem)';
+      var hrHand, minHand, secHand;
+      var locale = 'en-us';
+
+      window.addEventListener('DOMContentLoaded', (event) => {
+        hrHand = document.getElementById('hr-hand');
+        minHand = document.getElementById('min-hand');
+        secHand = document.getElementById('sec-hand');
+
+        // initMarkers();
+        // setClockTime();
+
+        setInterval(setClockTime, 200);
+      });
+      /*
+var initMarkers = function () {
+  var i = 0;
+  var hrMarkers = document.getElementById("hrMarkers");
+  var minMarkers = document.getElementById("minMarkers");
+
+  if (hrMarkers) {
+    for (i = 0; i < 12; i++) {
+      var hrd = document.createElement("div");
+      hrMarkers.appendChild(hrd);
+    }
+  }
+  if (minMarkers) {
+    for (i = 0; i < 48; i++) {
+      var mid = document.createElement("div");
+      minMarkers.appendChild(mid);
+    }
+  }
+};
+*/
+      var setClockTime = function () {
+        var now = new Date();
+        var hr = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        var msec = now.getMilliseconds();
+
+        setHours(hr, min, sec);
+        setMinutes(hr, min, sec, msec);
+        setSeconds(hr, min, sec);
+        setDate(now);
+      };
+
+      var setDate = function (d) {
+        let ye = new Intl.DateTimeFormat(locale, { year: 'numeric' }).format(d);
+        let mo = new Intl.DateTimeFormat(locale, { month: 'short' })
+          .format(d)
+          .replace('.', '');
+        let da = new Intl.DateTimeFormat(locale, { day: 'numeric' }).format(d);
+        let wd = new Intl.DateTimeFormat(locale, { weekday: 'short' }).format(
+          d
+        );
+        document.getElementById('data').innerHTML =
+          mo + ' <span>' + da + '</span> &bull; ' + wd;
+      };
+
+      var setHours = function (hr, min, sec) {
+        var h = (hr % 12) / 12;
+        var m = min / 720;
+        var rotation = (h + m) * 360;
+        hrHand.style.transform = getHandTransform(hrTrans, rotation);
+        hrHand.classList = 'hand hr-hand r' + rotation;
+      };
+
+      var setMinutes = function (hr, min, sec, msec) {
+        // var rotation = (min / 60) * 360;
+        var rotation = ((min + sec / 60 + msec / 1000 / 60) / 60) * 360;
+        minHand.style.transform = getHandTransform(minTrans, rotation);
+        minHand.classList = 'hand min-hand r' + rotation;
+      };
+
+      var setSeconds = function (hr, min, sec) {
+        var rotation = (sec / 60) * 360;
+        if (min > 0) {
+          rotation = min * 360 + rotation;
+        }
+        secHand.style.transform = getHandTransform(secTrans, rotation);
+        secHand.classList = 'hand sec-hand r' + rotation;
+      };
+
+      var getHandTransform = function (baseTrans, zRotation) {
+        return baseTrans + ' rotateZ(' + zRotation + 'deg)';
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="clock">
+      <div class="clock-face clock-component">
+        <div class="ticks"></div>
+        <!--
+      <div id="hrMarkers" class="hr-markers">
+      </div>
+      <div id="minMarkers" class="min-markers">
+      </div>
+-->
+        <div class="data" id="data"></div>
+      </div>
+      <div class="clock-hands clock-component">
+        <div id="hr-hand" class="hand hr-hand">
+          <div class="hr-hand-hand"></div>
+        </div>
+        <div id="min-hand" class="hand min-hand">
+          <div class="min-hand-hand"></div>
+        </div>
+        <div id="sec-hand" class="hand sec-hand">
+          <div class="sec-hand-ball"></div>
+          <div class="sec-hand-hand"></div>
+        </div>
+        <div class="pinouter clock-component">
+          <div class="pin"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
