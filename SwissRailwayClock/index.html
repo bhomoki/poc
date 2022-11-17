@@ -387,23 +387,23 @@
       */
     </style>
     <script>
-      var hrTrans = 'translate(-50%, 3.8rem)';
-      var minTrans = 'translate(-50%, 3.22rem)';
-      var secTrans = 'translate(-50%, 4.8rem)';
-      var hrHand, minHand, secHand;
-      var locale = 'en-us';
+var hrTrans = "translate(-50%, 3.8rem)";
+var minTrans = "translate(-50%, 3.22rem)";
+var secTrans = "translate(-50%, 4.8rem)";
+var hrHand, minHand, secHand;
+var locale = "en-us";
 
-      window.addEventListener('DOMContentLoaded', (event) => {
-        hrHand = document.getElementById('hr-hand');
-        minHand = document.getElementById('min-hand');
-        secHand = document.getElementById('sec-hand');
+window.addEventListener("DOMContentLoaded", (event) => {
+  hrHand = document.getElementById("hr-hand");
+  minHand = document.getElementById("min-hand");
+  secHand = document.getElementById("sec-hand");
 
-        // initMarkers();
-        // setClockTime();
+  // initMarkers();
+  // setClockTime();
 
-        setInterval(setClockTime, 200);
-      });
-      /*
+  setInterval(setClockTime, 200);
+});
+/*
 var initMarkers = function () {
   var i = 0;
   var hrMarkers = document.getElementById("hrMarkers");
@@ -423,59 +423,65 @@ var initMarkers = function () {
   }
 };
 */
-      var setClockTime = function () {
-        var now = new Date();
-        var hr = now.getHours();
-        var min = now.getMinutes();
-        var sec = now.getSeconds();
-        var msec = now.getMilliseconds();
+var setClockTime = function () {
+  var now = new Date();
+  var hr = now.getHours();
+  var min = now.getMinutes();
+  var sec = now.getSeconds();
+  var msec = now.getMilliseconds();
 
-        setHours(hr, min, sec);
-        setMinutes(hr, min, sec, msec);
-        setSeconds(hr, min, sec);
-        setDate(now);
-      };
+  setHours(hr, min, sec, msec);
+  setMinutes(hr, min, sec, msec);
+  setSeconds(hr, min, sec);
+  setDate(now);
+};
 
-      var setDate = function (d) {
-        let ye = new Intl.DateTimeFormat(locale, { year: 'numeric' }).format(d);
-        let mo = new Intl.DateTimeFormat(locale, { month: 'short' })
-          .format(d)
-          .replace('.', '');
-        let da = new Intl.DateTimeFormat(locale, { day: 'numeric' }).format(d);
-        let wd = new Intl.DateTimeFormat(locale, { weekday: 'short' }).format(
-          d
-        );
-        document.getElementById('data').innerHTML =
-          mo + ' <span>' + da + '</span> &bull; ' + wd;
-      };
+var setDate = function (d) {
+  let ye = new Intl.DateTimeFormat(locale, { year: "numeric" }).format(d);
+  let mo = new Intl.DateTimeFormat(locale, { month: "short" })
+    .format(d)
+    .replace(".", "");
+  let da = new Intl.DateTimeFormat(locale, { day: "numeric" }).format(d);
+  let wd = new Intl.DateTimeFormat(locale, { weekday: "short" }).format(d);
+  document.getElementById("data").innerHTML =
+    mo + " <span>" + da + "</span> &bull; " + wd;
+};
 
-      var setHours = function (hr, min, sec) {
-        var h = (hr % 12) / 12;
-        var m = min / 720;
-        var rotation = (h + m) * 360;
-        hrHand.style.transform = getHandTransform(hrTrans, rotation);
-        hrHand.classList = 'hand hr-hand r' + rotation;
-      };
+var setHours = function (hr, min, sec, msec) {
+  /*
+  var h = (hr % 12) / 12;
+  var m = min / 12 / 60;
+  var s = sec / 12 / 60 / 60;
+  var ms = msec / 12 / 60 / 60 / 1000;
+  var rotation = (h + m + s + ms) * 360;
+  */
+  hr = hr % 12;
+  var rotation =
+    (hr * 5 + min / 12 + sec / 12 / 60 + msec / 12 / 60 / 1000) * 6;
+  hrHand.style.transform = getHandTransform(hrTrans, rotation);
+  hrHand.classList = "hand hr-hand r" + rotation;
+};
 
-      var setMinutes = function (hr, min, sec, msec) {
-        // var rotation = (min / 60) * 360;
-        var rotation = ((min + sec / 60 + msec / 1000 / 60) / 60) * 360;
-        minHand.style.transform = getHandTransform(minTrans, rotation);
-        minHand.classList = 'hand min-hand r' + rotation;
-      };
+var setMinutes = function (hr, min, sec, msec) {
+  // var rotation = (min / 60) * 360;
+  var rotation = (min + sec / 60 + msec / 1000 / 60) * 6;
+  minHand.style.transform = getHandTransform(minTrans, rotation);
+  minHand.classList = "hand min-hand r" + rotation;
+};
 
-      var setSeconds = function (hr, min, sec) {
-        var rotation = (sec / 60) * 360;
-        if (min > 0) {
-          rotation = min * 360 + rotation;
-        }
-        secHand.style.transform = getHandTransform(secTrans, rotation);
-        secHand.classList = 'hand sec-hand r' + rotation;
-      };
+var setSeconds = function (hr, min, sec) {
+  var rotation = sec * 6;
+  if (min > 0) {
+    rotation = min * 360 + rotation;
+  }
+  secHand.style.transform = getHandTransform(secTrans, rotation);
+  secHand.classList = "hand sec-hand r" + rotation;
+};
 
-      var getHandTransform = function (baseTrans, zRotation) {
-        return baseTrans + ' rotateZ(' + zRotation + 'deg)';
-      };
+var getHandTransform = function (baseTrans, zRotation) {
+  return baseTrans + " rotateZ(" + zRotation + "deg)";
+};
+
     </script>
   </head>
 
